@@ -73,4 +73,5 @@ GitHubのリポジトリを作成します。
 ![Pagesボタン](/assets/images/blog/github-pages/2024-03-15-creating-site-by-github-pages/image6.png "Pagesボタン")
 5. 「Visit site」をクリックする。  
 ![Visit siteボタン](/assets/images/blog/github-pages/2024-03-15-creating-site-by-github-pages/image7.png "Visit siteボタン")  
-トップページ(`README.md`)が確認できます。
+トップページ(`README.md`)が確認できます。  
+![トップページ](/assets/images/blog/github-pages/2024-03-15-creating-site-by-github-pages/image8.png "トップページ")
