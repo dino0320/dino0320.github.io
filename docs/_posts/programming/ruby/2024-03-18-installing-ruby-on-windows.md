@@ -63,7 +63,8 @@ rubyコマンドを実行できるようになります。(フルパスを入力
 「Run 'ridk install' to set up MSYS2 and development toolchain.MSYS2 is required to install gems with C extensions.」を選択した場合、MSYS2のセットアップが始まります。  
 コマンドプロンプトが表示され、どのコンポーネントをインストールするか聞かれますが、デフォルトでいいはずなのでEnterを押します。
 
-![インストール完了画面](/assets/images/programming/ruby/2024-03-18-installing-ruby-on-windows/image5.png "インストール完了画面")  
+![インストール完了画面](/assets/images/programming/ruby/2024-03-18-installing-ruby-on-windows/image5.png "インストール完了画面")
+
 ![MSYS2のセットアップ](/assets/images/programming/ruby/2024-03-18-installing-ruby-on-windows/image6.png "MSYS2のセットアップ")
 
 ### 3. インストールの確認をする
