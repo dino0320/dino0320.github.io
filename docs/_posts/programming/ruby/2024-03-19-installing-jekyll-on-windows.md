@@ -20,6 +20,7 @@ HTMLやMarkdownで書かれたファイルから静的サイトを作成しま�
 2. [Jekyllをインストールする。](#2-jekyllをインストールする)
 3. [インストールの確認をする。](#3-インストールの確認をする)
 
+以下のページを参考にしています。  
 [Installing Ruby and Jekyll](https://jekyllrb.com/docs/installation/windows/)
 
 ### 1. Ruby+DevKitをインストールする
