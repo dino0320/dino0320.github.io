@@ -10,7 +10,7 @@ GitHub Pagesを利用してウェブサイトを公開します。
 ## GitHub Pagesとは
 GitHubのリポジトリから自動で静的サイトを公開してくれるサービスです。  
 HTMLやMarkdownで記載されたファイルからウェブサイト作成します。  
-[GitHub Pagesについて](https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages)
+Jekyllを使ったサイト作成については[こちら](/blog/github-pages/2024/03/20/creating-site-by-github-pages-with-jekyll)をご覧ください。
 
 ## サイト作成の流れ
 1. [GitHubのアカウントを作成する。](#1-githubのアカウントを作成する)
