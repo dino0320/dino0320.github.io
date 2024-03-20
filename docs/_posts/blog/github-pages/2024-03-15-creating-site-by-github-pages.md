@@ -16,7 +16,8 @@ HTMLやMarkdownで記載されたファイルからウェブサイト作成し�
 1. [GitHubのアカウントを作成する。](#1-githubのアカウントを作成する)
 2. [GitHubのリポジトリを作成する。](#2-githubのリポジトリを作成する)
 3. [リポジトリの設定を変更する。](#3-リポジトリの設定を変更する)
-4. [サイトを確認する。](#4-サイトを確認する)
+4. [サイトが公開されたかを確認する。](#4-サイトが公開されたかを確認する)
+5. [サイトを確認する。](#4-サイトを確認する)
 
 以下のページを参考にしています。  
 [GitHub Pages サイトを作成する](https://docs.github.com/ja/pages/getting-started-with-github-pages/creating-a-github-pages-site)
@@ -65,7 +66,18 @@ GitHubのリポジトリを作成します。
 
 6. 「Save」をクリックする。
 
-### 4. サイトを確認する
+### 4. サイトが公開されたかを確認する
+サイトが公開されたかどうかを確認します。
+1. [GitHub](https://github.com/)にアクセスする。
+2. 作成したGitHubリポジトリのページにアクセスする。  
+![GitHubリポジトリのページにアクセスするリンク](/assets/images/blog/github-pages/2024-03-15-creating-site-by-github-pages/image4.png "GitHubリポジトリのページにアクセスするリンク")
+3. 「Actions」をクリックする。  
+![Actionsボタン](/assets/images/blog/github-pages/2024-03-15-creating-site-by-github-pages/image9.png "Actionsボタン")
+4. デプロイが完了したかどうかを確認する。  
+Actionの左側にチェックがついていたらデプロイが完了しています。  
+![Actionの状態](/assets/images/blog/github-pages/2024-03-15-creating-site-by-github-pages/image10.png "Actionの状態")
+
+### 5. サイトを確認する
 公開したサイトを確認します。
 1. [GitHub](https://github.com/)にアクセスする。
 2. 作成したGitHubリポジトリのページにアクセスする。  
