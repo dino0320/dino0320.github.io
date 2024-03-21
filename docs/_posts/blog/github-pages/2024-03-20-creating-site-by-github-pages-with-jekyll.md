@@ -1,7 +1,7 @@
 ---
 layout: my-post
 title: "Jekyllを使用してGitHub Pagesのサイトを作る"
-date: 2024-03-20 00:00:00 -0000
+date: 2024-03-20 00:00:00 +0900
 categories: blog github-pages
 ---
 

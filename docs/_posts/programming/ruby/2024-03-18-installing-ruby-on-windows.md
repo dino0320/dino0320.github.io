@@ -1,7 +1,7 @@
 ---
 layout: my-post
 title: "WindowsでRubyをインストールする"
-date: 2024-03-18 00:00:00 -0000
+date: 2024-03-18 00:00:00 +0900
 categories: programming ruby
 ---
 
