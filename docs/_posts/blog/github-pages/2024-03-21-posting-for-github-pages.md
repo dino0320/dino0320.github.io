@@ -1,7 +1,7 @@
 ---
 layout: my-post
 title: "GitHub Pagesのサイトに記事を投稿する"
-date: 2024-03-21 00:00:00 +0900
+date: 2024-03-21 00:00:00 +0000
 categories: blog github-pages
 ---
 
@@ -36,7 +36,7 @@ front matterはJekyllが処理するために必要なYAML形式のブロック�
 ---
 layout: post
 title: "GitHub Pagesのサイトに記事を投稿する"
-date: 2024-03-21 00:00:00 +0900
+date: 2024-03-21 00:00:00 +0000
 categories: blog github-pages
 ---
 ```
@@ -56,7 +56,7 @@ front matterの下に記事を書いていきます。
 ---
 layout: post
 title: "GitHub Pagesのサイトに記事を投稿する"
-date: 2024-03-21 00:00:00 +0900
+date: 2024-03-21 00:00:00 +0000
 categories: blog github-pages
 ---
 
