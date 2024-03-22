@@ -12,8 +12,7 @@ Rubyで作られた静的サイトジェネレーターです。
 HTMLやMarkdownで書かれたファイルから静的サイトを作成します。  
 
 ## 環境
-- OS: Windows 10
-- システムの種類: 64 ビット オペレーティング システム
+- OS: Windows 10 64ビット
 
 ## インストールの流れ
 1. [Ruby+DevKitをインストールする。](#1-rubydevkitをインストールする)
@@ -23,17 +22,17 @@ HTMLやMarkdownで書かれたファイルから静的サイトを作成しま�
 以下のページを参考にしています。  
 [Installing Ruby and Jekyll](https://jekyllrb.com/docs/installation/windows/)
 
-### 1. Ruby+DevKitをインストールする
+## 1. Ruby+DevKitをインストールする
 Ruby+DevKitのインストールについては[こちら](/programming/ruby/installing-ruby-on-windows)をご覧ください。   
 インストールウィザードのインストール完了画面で、「Run 'ridk install' to set up MSYS2 and development toolchain.MSYS2 is required to install gems with C extensions.」を選択してください。
 
-### 2. Jekyllをインストールする
+## 2. Jekyllをインストールする
 コマンドプロンプトかPowerShellを開き、以下を実行します。
 ```
 > gem install jekyll bundler
 ```
 
-### 3. インストールの確認をする
+## 3. インストールの確認をする
 インストールできたかを確認するために、Jekyllのバージョンを確認します。  
 コマンドプロンプトかPowerShellを開き、以下を実行します。  
 ```

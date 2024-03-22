@@ -19,10 +19,10 @@ GitHub Pagesのサイトに記事を投稿します。
 4. [変更をコミット・プッシュする。](#4-変更をコミットプッシュする)
 5. [記事を確認する。](#5-記事を確認する)
 
-### 1. Jekyllを使用してGitHub Pagesのサイトを作る
+## 1. Jekyllを使用してGitHub Pagesのサイトを作る
 Jekyllを使用してのGitHub Pagesのサイト作成については[こちら](/blog/github-pages/creating-site-by-github-pages-with-jekyll)をご覧ください。  
 
-### 2. 記事を作成する
+## 2. 記事を作成する
 HTMLかMarkdownで記事を作成します。以下の3点に気を付けます。  
 - `_post` ディレクトリに配置する。  
 サイトを作成したディレクトリ以下の `_post` ディレクトリに記事を配置します。ない場合は作成します。
@@ -64,7 +64,7 @@ GitHub Pagesのサイトに記事を投稿します。
 静的サイトジェネレーターのJekyllを使用します。  
 ```
 
-### 3. ローカルで記事を確認する
+## 3. ローカルで記事を確認する
 1. ローカルでサーバーを立ち上げる。  
 コマンドプロンプトかPowerShellを開き、以下を実行します。
 ```
@@ -75,7 +75,7 @@ GitHub Pagesのサイトに記事を投稿します。
 記事のURLは `http://localhost:4000/年/月/日/タイトル` のようになります。  
 front matterで `categories` や `permalink` を定義した場合、変わる可能性があります。
 
-### 4. 変更をコミット・プッシュする
+## 4. 変更をコミット・プッシュする
 コマンドプロンプトかPowerShellを開き、以下を実行します。
 ```
 > cd <リポジトリの場所>
@@ -84,7 +84,7 @@ front matterで `categories` や `permalink` を定義した場合、変わる�
 > git push origin main
 ```
 
-### 5. 記事を確認する
+## 5. 記事を確認する
 公開した記事のURLにアクセスします。  
 記事のURLは `https://<GitHubのアカウント名>.github.io/年/月/日/タイトル` のようになります。  
 front matterで `categories` や `permalink` を定義した場合、変わる可能性があります。
