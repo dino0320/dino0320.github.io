@@ -24,7 +24,7 @@ HTMLやMarkdownで書かれたファイルから静的サイトを作成しま�
 [Installing Ruby and Jekyll](https://jekyllrb.com/docs/installation/windows/)
 
 ### 1. Ruby+DevKitをインストールする
-Ruby+DevKitのインストールについては[こちら](/programming/ruby/2024/03/18/installing-ruby-on-windows)をご覧ください。   
+Ruby+DevKitのインストールについては[こちら](/programming/ruby/installing-ruby-on-windows)をご覧ください。   
 インストールウィザードのインストール完了画面で、「Run 'ridk install' to set up MSYS2 and development toolchain.MSYS2 is required to install gems with C extensions.」を選択してください。
 
 ### 2. Jekyllをインストールする

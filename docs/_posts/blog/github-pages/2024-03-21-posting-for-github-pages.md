@@ -20,7 +20,7 @@ GitHub Pagesのサイトに記事を投稿します。
 5. [記事を確認する。](#5-記事を確認する)
 
 ### 1. Jekyllを使用してGitHub Pagesのサイトを作る
-Jekyllを使用してのGitHub Pagesのサイト作成については[こちら](/blog/github-pages/2024/03/20/creating-site-by-github-pages-with-jekyll)をご覧ください。  
+Jekyllを使用してのGitHub Pagesのサイト作成については[こちら](/blog/github-pages/creating-site-by-github-pages-with-jekyll)をご覧ください。  
 
 ### 2. 記事を作成する
 HTMLかMarkdownで記事を作成します。以下の3点に気を付けます。  

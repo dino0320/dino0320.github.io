@@ -30,10 +30,10 @@ Jekyllは静的サイトジェネレーターです。GitHub Pagesではデフ�
 [Jekyll を使用して GitHub Pages サイトを作成する](https://docs.github.com/ja/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll)
 
 ### 1. Jekyllをインストールする
-Jekyllのインストールについては[こちら](/programming/ruby/2024/03/19/installing-jekyll-on-windows)をご覧ください。  
+Jekyllのインストールについては[こちら](/programming/ruby/installing-jekyll-on-windows)をご覧ください。  
 
 ### 2. GitHub Pagesでサイトを作る
-GitHub Pagesのサイト作成については[こちら](/blog/github-pages/2024/03/15/creating-site-by-github-pages)をご覧ください。  
+GitHub Pagesのサイト作成については[こちら](/blog/github-pages/creating-site-by-github-pages)をご覧ください。  
 
 ### 3. GitHubリポジトリをクローンする
 Jekyllを使用してサイトを作成します。  
