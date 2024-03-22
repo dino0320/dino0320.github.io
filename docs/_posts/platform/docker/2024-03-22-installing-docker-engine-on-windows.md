@@ -19,6 +19,10 @@ Windows Subsystem for Linuxの略で、Windows上でLinux環境を使うこと�
 2. [Docker Engineをインストールする。](#2-docker-engineをインストールする)
 3. [sudoなしでDockerコマンドを使えるようにする。](#3-sudoなしでdockerコマンドを使えるようにする)
 
+以下のページを参考にしています。  
+- [WSL を使用して Windows に Linux をインストールする方法](https://learn.microsoft.com/ja-jp/windows/wsl/install)
+- [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+
 ## 1. WSLとUbuntuをインストールする
 WSLとUbuntuをインストールします。
 #### 1. WSLとUbuntuをインストールする。  
