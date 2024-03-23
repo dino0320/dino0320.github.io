@@ -15,7 +15,7 @@ Jekyllは静的サイトジェネレーターです。GitHub Pagesではデフ�
 - Gitを使用できる。
 - GitHubのアカウントを持っている。
 
-## テーマ追加の流れ
+## サイト作成の流れ
 1. [Jekyllをインストールする。](#1-jekyllをインストールする)
 2. [GitHub Pagesでサイトを作る。](#2-github-pagesでサイトを作る)
 3. [GitHubリポジトリをクローンする。](#3-githubリポジトリをクローンする)
