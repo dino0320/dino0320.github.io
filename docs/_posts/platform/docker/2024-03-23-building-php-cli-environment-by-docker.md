@@ -11,7 +11,8 @@ DockerでPHPをCLIで実行できる環境を構築します。
 - Ubuntu 22.04.3 LTS (WSLで起動している)
 
 ## 前提
-- Dockerをインストールしている。
+- Dockerをインストールしている。  
+WindowsでのDoker Engineのインストールについては[こちら](/platform/docker/installing-docker-engine-on-windows)をご覧ください。
 
 ## 環境構築の流れ
 1. [PHPファイルを作成する。](#1-phpファイルを作成する)
