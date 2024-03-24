@@ -9,6 +9,7 @@ DockerでPHPをCLIで実行できる環境を構築します。
 
 ## 環境
 - Ubuntu 22.04.3 LTS (WSLで起動している)
+- Docker Engine 26.0.0
 
 ## 前提
 - Dockerをインストールしている。  

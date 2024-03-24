@@ -12,7 +12,8 @@ Rubyで作られた静的サイトジェネレーターです。
 HTMLやMarkdownで書かれたファイルから静的サイトを作成します。  
 
 ## 環境
-- OS: Windows 10 64ビット
+- Windows 10 64ビット
+- Ruby 3.2.3
 
 ## インストールの流れ
 1. [Ruby+DevKitをインストールする。](#1-rubydevkitをインストールする)

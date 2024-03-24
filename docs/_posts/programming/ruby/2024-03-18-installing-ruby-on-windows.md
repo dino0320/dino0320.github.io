@@ -8,7 +8,7 @@ categories: programming ruby
 Windows環境でRubyをインストールします。
 
 ## 環境
-- OS: Windows 10 64ビット
+- Windows 10 64ビット
 
 ## インストールの流れ
 1. [RubyInstallerをダウンロードする。](#1-rubyinstallerをダウンロードする)

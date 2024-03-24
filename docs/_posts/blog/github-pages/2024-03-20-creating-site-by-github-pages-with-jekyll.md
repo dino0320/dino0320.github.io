@@ -9,10 +9,13 @@ Jekyllを使用してGitHub Pagesのサイトを作成します。
 Jekyllは静的サイトジェネレーターです。GitHub PagesではデフォルトでJekyllを使用してサイトを作成しています。  
 
 ## 環境
-- OS: Windows 10 64ビット
+- Windows 10 64ビット
+- Git for Windows 2.44.0
+- Ruby 3.2.3
+- Jekyll 4.3.3
 
 ## 前提
-- Gitを使用できる。
+- Gitをインストールしている。
 - GitHubのアカウントを持っている。
 
 ## サイト作成の流れ

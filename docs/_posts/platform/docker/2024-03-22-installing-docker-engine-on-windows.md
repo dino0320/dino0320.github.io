@@ -12,7 +12,7 @@ WindowsではDockerを導入する際[Docker Desktop for Windows](https://www.do
 Windows Subsystem for Linuxの略で、Windows上でLinux環境を使うことができます。
 
 ## 環境
-- OS: Windows 10 64ビット
+- Windows 10 64ビット
 
 ## インストールの流れ
 1. [WSLとUbuntuをインストールする。](#1-wslとubuntuをインストールする)

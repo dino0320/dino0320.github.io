@@ -8,8 +8,14 @@ categories: blog github-pages
 GitHub Pagesのサイトに記事を投稿します。  
 静的サイトジェネレーターのJekyllを使用します。  
 
+## 環境
+- Windows 10 64ビット
+- Git for Windows 2.44.0
+- Ruby 3.2.3
+- Jekyll 4.3.3
+
 ## 前提
-- Gitを使用できる。
+- Gitをインストールしている。
 - GitHubのアカウントを持っている。
 
 ## 記事投稿の流れ
