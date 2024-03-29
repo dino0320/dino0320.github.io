@@ -1,12 +1,12 @@
 ---
 layout: my-post
-title: "Laravelをインストールする"
+title: "Laravelプロジェクトを作成する"
 date: 2024-03-28 00:00:00 +0000
 categories: programming php
 ---
 
-Linux環境でLaravelをインストールします。  
-Dockerを使ってインストールします。
+Linux環境でLaravelプロジェクトを作成します。  
+Dockerを使ってLaravelをインストールし、プロジェクトを作成します。
 
 ## Laravelとは
 PHP用のWebアプリケーションフレームワークの1つです。  
@@ -21,7 +21,7 @@ Laravelはサーバー側のフレームワークになります。
 ## インストールの流れ
 1. [PHPコンテナを立ち上げる。](#1-phpコンテナを立ち上げる)
 2. [Composerをインストールする。](#2-composerをインストールする)
-3. [Laravelをインストールする。](#3-laravelをインストールする)
+3. [Laravelをインストールしてプロジェクトを作成する。](#3-laravelをインストールしてプロジェクトを作成する)
 4. [Laravelプロジェクトを確認する。](#4-laravelプロジェクトを確認する)
 
 ## 1. PHPコンテナを立ち上げる
@@ -38,7 +38,7 @@ $ docker run -it --rm --name php_to_install_laravel -w /app -v `pwd`:/app php:8.
 Laravelのインストールに必要なので、接続したコンテナ内でComposerをインストールします。  
 Composerのインストールについては[こちら](/programming/php/installing-composer-on-linux)をご覧ください。
 
-## 3. Laravelをインストールする
+## 3. Laravelをインストールしてプロジェクトを作成する
 Laravel(バージョン11)をインストールしてプロジェクトを作成します。   
 接続したコンテナ内で以下を実行します。  
 `<Laravelプロジェクト名>` はLaravelを使ったプロジェクトの名前です。任意の名前を入力します。
@@ -88,6 +88,6 @@ $ docker run -it --rm --name php_to_confirm_laravel -w /app -v `pwd`:/app -p 800
 
 コンテナはWSL上のUbuntuで立ち上げているので、Windows側から `http://localhost:8000` にアクセスします。
 
-![Laravelプロジェクトの画面](/assets/images/programming/php/installing-laravel-on-linux/image1.png "Laravelプロジェクトの画面")
+![Laravelプロジェクトの画面](/assets/images/programming/php/creating-laravel-project-on-linux/image1.png "Laravelプロジェクトの画面")
 
 Laravelプロジェクトが確認できました。
