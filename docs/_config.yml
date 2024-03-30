@@ -31,6 +31,8 @@ twitter_username: "" #jekyllrb
 #github_username: jekyll
 
 permalink: /:categories/:title:output_ext
+paginate: 10
+paginate_path: "/pages/page:num/"
 
 # Build settings
 theme: minima
