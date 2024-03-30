@@ -19,6 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: へたっぴITエンジニアのメモ帳
+author: dino0320
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   書き残さないと忘れそうなのでITに関する内容をメモしています。自分用なのでわかりづらい表現があるかもしれません。また、しっかり理解できておらず、誤った内容が記載されている場合があります。
