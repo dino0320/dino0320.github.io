@@ -2,7 +2,7 @@
 layout: my-post
 title: "LaravelプロジェクトをNGINXで動かす"
 date: 2024-03-29 00:00:00 +0000
-categories: programming php
+categories: application server
 ---
 
 Dockerを使ってLaravelプロジェクトを動かす環境を構築します。  

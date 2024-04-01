@@ -8,7 +8,7 @@ permalink: /about/
 {{ site.description | escape }}  
 
 {% if site.author %}
-  Copyright (c) {{ site.author | escape }}  
+Copyright (c) {{ site.author | escape }}  
 {% endif %}
 
 ## License
