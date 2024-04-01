@@ -8,9 +8,6 @@ categories: platform docker
 WindowsでDocker Engineをインストールします。  
 WindowsではDockerを導入する際[Docker Desktop for Windows](https://www.docker.com/ja-jp/products/docker-desktop/)を使用することが普通ですが、今回はWSLを使ってDocker Engineをインストールしてみます。
 
-## WSLとは
-Windows Subsystem for Linuxの略で、Windows上でLinux環境を使うことができます。
-
 ## 環境
 - Windows 10 64ビット
 
@@ -24,32 +21,14 @@ Windows Subsystem for Linuxの略で、Windows上でLinux環境を使うこと�
 - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
 ## 1. WSLとUbuntuをインストールする
-WSLとUbuntuをインストールします。
-#### 1. WSLとUbuntuをインストールする。  
-コマンドプロンプトかPowerShellを管理者として開き、以下を実行します。  
-WSLコマンドとUbuntuがインストールされます。
-```
-> wsl --install
-```
-WSLがインストール済みでUbuntuがインストールされてない場合、以下を実行します。
-```
-> wsl --install -d Ubuntu
-```
-#### 2. PCを再起動する。  
-PCを再起動するとUbuntuが起動するので、少し待ちます。  
-![Ubuntu起動画面](/assets/images/platform/docker/installing-docker-engine-on-windows/image1.png "Ubuntu起動画面")
-#### 3. UNIXユーザーを作成する。  
-待っているとUNUXユーザーを作成するように言われるので、任意のユーザー名とパスワードを入力します。  
-![UNIXユーザー作成画面](/assets/images/platform/docker/installing-docker-engine-on-windows/image2.png "UNIXユーザー作成画面")  
-Ubuntuが起動するまで待ちます。起動したらUbuntuを閉じて大丈夫です。  
-#### 4. WSLのバージョンを確認する。  
-Ubuntuを起動するWSLのバージョンを確認します。  
+WSLとUbuntuのインストールについては[こちら](/platform/windows/installing-wsl)をご覧ください。  
+Ubuntuを起動するWSLのバージョンが1の場合、2に変更します。  
 `wsl -l` でインストールしたLinuxディストリビューションの一覧が見れます。`v` オプションを付けると、ディストリビューションを起動するWSLのバージョンを確認できます。    
 コマンドプロンプトかPowerShellを開き、以下を実行します。
 ```
 > wsl -l -v
   NAME      STATE           VERSION
-* Ubuntu    Running         2
+* Ubuntu    Running         1
 ```
 WSLのバージョンが1の場合、2に変更します。以下を実行します。
 ```
