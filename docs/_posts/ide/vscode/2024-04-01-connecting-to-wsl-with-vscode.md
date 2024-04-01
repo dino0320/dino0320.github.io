@@ -3,7 +3,7 @@ layout: my-post
 title: "Visual Studio CodeでWSLに接続する"
 date: 2024-04-01 01:00:00 +0000
 categories: ide vscode
-title_eng: setting-php-development-environment-with-vscode
+title_eng: connecting-to-wsl-with-vscode
 ---
 
 Visual Studio Code(VSCode)でWSLに接続します。
