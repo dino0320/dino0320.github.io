@@ -35,7 +35,7 @@ Laravelプロジェクトの作成については[こちら](/programming/php/cr
 $ cd <Laravelプロジェクトのルートディレクトリのパス>
 $ docker run -it --rm --name amazonlinux_for_get_config -w /app -v `pwd`:/app amazonlinux:2023 bash
 ```
-Laravelプロジェクトのディレクトリ以下に設定ファイルを保存するため、コンテナ内の `/app` ディレクトリに `<Laravelプロジェクトのルートディレクトリのパス>` をマウントしています。  
+Laravelプロジェクトのディレクトリ以下に設定ファイルを保存するため、コンテナ内の `/app` ディレクトリに `<Laravelプロジェクトのルートディレクトリのパス>` をマウントしています。([`docker run` コマンドについて](/platform/docker/about-docker-commands#docker-run))  
 Dockerイメージは、今回は後でAWSにデプロイすることを考えてamazonlinuxにしています。設定ファイルを取得するだけなので、ここではamazonlinux以外のイメージを使用しても問題ないかもしれません。
 
 コンテナ内で以下を実行します。  

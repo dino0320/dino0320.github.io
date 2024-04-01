@@ -32,7 +32,7 @@ LaravelをインストールするためのDockerコンテナを立ち上げま�
 $ cd <Laravelプロジェクトを作成するディレクトリのパス>
 $ docker run -it --rm --name php_to_install_laravel -w /app -v `pwd`:/app php:8.3 bash
 ```
-``docker run -it --rm --name php_to_install_laravel -w /app -v `pwd`:/app php:8.3 bash`` で `php:8.3` のイメージから `php_to_install_laravel` という名前のDockerコンテナを立ち上げ、`bash` コマンドでコンテナに接続しています。コンテナ名は任意です。
+``docker run -it --rm --name php_to_install_laravel -w /app -v `pwd`:/app php:8.3 bash`` で `php:8.3` のイメージから `php_to_install_laravel` という名前のDockerコンテナを立ち上げ、`bash` コマンドでコンテナに接続しています。コンテナ名は任意です。([`docker run` コマンドについて](/platform/docker/about-docker-commands#docker-run))
 
 ## 2. Composerをインストールする
 Laravelのインストールに必要なので、接続したコンテナ内でComposerをインストールします。  
