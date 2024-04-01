@@ -1,4 +1,10 @@
 ---
 layout: post
 ---
+<p>
+  {% for category in page.categories %}
+    <a href="/categories/#{{ category }}">{{ category }}</a>
+  {% endfor %}
+</p>
+
 {{ content }}
