@@ -20,33 +20,22 @@ NGINXをインストールしたコンピューターはWebサーバーの動き
 
 ## 環境構築の流れ
 1. [Laravelプロジェクトを作成する。](#1-laravelプロジェクトを作成する)
-2. [Dockerの設定ファイルを作成する。](#2-php-fpmの設定ファイルを取得する)
-3. [設定ファイルを作成・変更する。](#3-設定ファイルを作成変更する)
-4. [Dockerの設定ファイルを作成する。](#4-dockerの設定ファイルを作成する)
-5. [Laravelプロジェクトを確認する。](#5-laravelプロジェクトを確認する)
+2. [設定ファイルを作成する。](#2-設定ファイルを作成する)
+3. [Dockerの設定ファイルを作成する。](#3-dockerの設定ファイルを作成する)
+4. [Laravelプロジェクトを確認する。](#4-laravelプロジェクトを確認する)
 
 ## 1. Laravelプロジェクトを作成する
 Laravelプロジェクトの作成については[こちら](/programming/php/creating-laravel-project-on-linux)をご覧ください。
 
-## 2. 必要な設定ファイルを取得する
-インストールするときなどに生成される設定ファイルを変更して使用したいので、NGINXとphp-fpmをインストールして必要な設定ファイルを取得します。  
-以下を実行して設定ファイルを取得するためのコンテナを立ち上げ、接続します。
-```
-$ cd <Laravelプロジェクトのルートディレクトリのパス>
-$ docker run -it --rm --name amazonlinux_for_get_config -w /app -v `pwd`:/app amazonlinux:2023 bash
-```
-Laravelプロジェクトのディレクトリ以下に設定ファイルを保存するため、コンテナ内の `/app` ディレクトリに `<Laravelプロジェクトのルートディレクトリのパス>` をマウントしています。([`docker run` コマンドについて](/platform/docker/about-docker-commands#docker-run))  
-Dockerイメージは、今回は後でAWSにデプロイすることを考えてamazonlinuxにしています。設定ファイルを取得するだけなので、ここではamazonlinux以外のイメージを使用しても問題ないかもしれません。
+## 2. 設定ファイルを作成する
+Laravelプロジェクトのディレクトリ以下で下記の設定ファイルを作成します。  
+記載方法について、Laravelプロジェクトのルートディレクトリをルートディレクトリ(`/`)とします。
 
-コンテナ内で以下を実行します。  
-Amazon Linux 2023用にyumリポジトリをセットアップするための設定ファイル `nginx.repo` を作成します。
-```
-# yum -y install vim    # vimをインストール
-# vim /etc/yum.repos.d/nginx.repo    # 設定ファイルを作成
-```
-設定ファイル `nginx.repo` の内容は以下になります。[こちら](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-prebuilt-amazon-linux-packages)を参考にしています。
+### nginx.repo
+Amazon Linux 2023用にyumリポジトリをセットアップするための設定ファイルです。[こちら](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-prebuilt-amazon-linux-packages)を参考にしています。  
+`/docker/web/nginx` ディレクトリに作成します。
 
-`/etc/yum.repos.d/nginx.repo` :
+`/docker/web/nginx/nginx.repo` :
 ```
 [nginx-stable]
 name=nginx stable repo
@@ -64,38 +53,7 @@ enabled=0
 gpgkey=https://nginx.org/keys/nginx_signing.key
 module_hotfixes=true
 ```
-NGINXをインストールします。
-```
-# yum -y install yum-utils
-# yum -y install nginx-1.24.0
-```
-php-fpmをインストールします。
-```
-# yum -y install php8.2-fpm
-```
-必要な設定ファイルをコピーします。
-```
-# mkdir -p ./docker/web/nginx/conf.d    # 設定ファイルを保存するディレクトリを作成
-# cp /etc/yum.repos.d/nginx.repo ./docker/web/nginx/nginx.repo    # Amazon Linux 2023用にyumリポジトリをセットアップするための設定ファイルをコピー
-# cp /etc/nginx/conf.d/php-fpm.conf ./docker/web/nginx/conf.d/php-fpm.conf    # NGINXのphp-fpmの設定ファイルをコピー
-# mkdir ./docker/web/php    # 設定ファイルを保存するディレクトリを作成
-# cp /etc/php-fpm.d/www.conf ./docker/web/php/www.conf    # php-fpmの設定ファイルをコピー
-```
-コンテナから抜け、設定ファイルを確認します。
-```
-# exit
-$ ls ./docker/web/nginx/
-conf.d  nginx.repo
-$ ls ./docker/web/nginx/conf.d/
-php-fpm.conf
-$ ls ./docker/web/php
-www.conf
-```
-設定ファイルを取得できました。
 
-## 3. 設定ファイルを作成・変更する
-Laravelプロジェクトのディレクトリ以下で下記の設定ファイルを作成・変更します。  
-記載方法について、Laravelプロジェクトのルートディレクトリをルートディレクトリ(`/`)とします。
 ### default.conf
 LaravelプロジェクトのためのNGINXの設定ファイルです。[こちら](https://laravel.com/docs/11.x/deployment#nginx)を参考にしています。  
 `server_name` を `localhost` に変更しています。動作確認が目的なので、少し変更を加えるだけにしています。  
@@ -137,40 +95,17 @@ server {
 }
 ```
 
-### php-fpm.conf
-NGINXのphp-fpmの設定ファイルです。  
-取得した `/docker/web/nginx/conf.d/php-fpm.conf` の以下の箇所を変更します。
+### zzz-www.conf
+php-fpmの追加の設定ファイルです。`.sock` ファイルのパスを上書きするために作成します。  
+`/docker/web/php/php-fpm.d` ディレクトリに作成します。
 
-`/docker/web/nginx/conf.d/php-fpm.conf` :
+`/docker/web/php/php-fpm.d/zzz-www.conf` :
 ```conf
-# PHP-FPM FastCGI server
-# network or unix domain socket configuration
-
-upstream php-fpm {
-        server unix:/var/run/php/php8.2-fpm.sock;    # パスを変更
-}
+[www]
+listen = /var/run/php/php8.2-fpm.sock
 ```
 
-### www.conf
-php-fpmの設定ファイルです。  
-取得した `/docker/web/php/www.conf` の以下の3箇所を変更します。
-
-`/docker/web/php/www.conf` :
-```conf
-;listen = /run/php-fpm/www.sock    # コメントアウト
-listen = /var/run/php/php8.2-fpm.sock    # 追加
-```
-```conf
-;listen.owner = nobody    # コメントアウト
-;listen.group = nobody    # コメントアウト
-listen.owner = nginx    # 追加
-listen.group = nginx    # 追加
-```
-```conf
-;listen.acl_users = apache,nginx    # コメントアウト
-```
-
-## 4. Dockerの設定ファイルを作成する
+## 3. Dockerの設定ファイルを作成する
 Laravelプロジェクトのディレクトリ以下に下記の設定ファイルを作成します。  
 記載方法について、Laravelプロジェクトのルートディレクトリをルートディレクトリ(`/`)とします。
 
@@ -185,13 +120,13 @@ services:
     build: ./docker/web
     volumes:
       - .:/srv/example.com
-      - ./docker/web/nginx/conf.d:/etc/nginx/conf.d
     ports:
       - "8080:80"
 ```
 
 ### Dockerfile
 webのDockerfileです。(NGINX + php-fpmをインストールするDockerコンテナ)  
+Dockerイメージは、今回は後でAWSにデプロイすることを考えて `amazonlinux` にしています。  
 `/docker/web` ディレクトリに作成します。
 
 `/docker/web/Dockerfile` :
@@ -202,19 +137,20 @@ FROM amazonlinux:2023
 RUN yum -y install yum-utils
 COPY nginx/nginx.repo /etc/yum.repos.d/nginx.repo    # 設定ファイルをコピー
 RUN yum -y install nginx-1.24.0
+COPY nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf    # 設定ファイルをコピー
 
 # php-fpmとphp-mysqlndインストール
 RUN yum -y install php8.2-fpm php8.2-mysqlnd
 RUN mkdir /run/php-fpm    # ディレクトリを作っておかないとエラーになる
 RUN mkdir /var/run/php    # ディレクトリを作っておかないとエラーになる
-COPY php/www.conf /etc/php-fpm.d/www.conf    # 設定ファイルをコピー
+COPY php/php-fpm.d/zzz-www.conf /etc/php-fpm.d/zzz-www.conf    # 設定ファイルをコピー
 
 # php-fpmとNGINX起動
 # nginxは「-g "daemon off;"」でフォアグラウンド実行になり、コンテナが自動的に終了しなくなる
-CMD bash -c '/usr/sbin/php-fpm && /usr/sbin/nginx -g "daemon off;"'
+CMD bash -c 'php-fpm && nginx -g "daemon off;"'
 ```
 
-## 5. Laravelプロジェクトを確認する
+## 4. Laravelプロジェクトを確認する
 Dockerコンテナを立ち上げてLaravelプロジェクトを確認します。  
 以下を実行します。
 ```
