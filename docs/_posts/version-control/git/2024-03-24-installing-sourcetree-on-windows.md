@@ -2,7 +2,7 @@
 layout: my-post
 title: "WindowsでSourcetreeをインストールする"
 date: 2024-03-24 00:00:00 +0000
-categories: platform docker
+categories: version-control git
 ---
 
 WindowsでSourcetreeをインストールします。

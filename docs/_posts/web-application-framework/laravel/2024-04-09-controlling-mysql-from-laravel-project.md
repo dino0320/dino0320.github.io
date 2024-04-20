@@ -2,7 +2,7 @@
 layout: my-post
 title: "LaravelプロジェクトからMySQLを操作する"
 date: 2024-04-09 00:00:00 +0000
-categories: application server
+categories: web-application-framework laravel
 title_eng: controlling-mysql-from-laravel-project
 ---
 

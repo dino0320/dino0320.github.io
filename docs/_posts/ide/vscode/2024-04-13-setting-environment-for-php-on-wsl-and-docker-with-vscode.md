@@ -19,7 +19,7 @@ Visual Studio Code(VSCode)でWSL + Docker上のPHPを開発するための設定
 
 ## 前提
 - WSL上のDockerコンテナで動くPHPのコードがある。  
-WSL上のDockerコンテナで動くLaravelプロジェクトの構築については[こちら](/application/server/running-laravel-project-on-nginx)をご覧ください。
+WSL上のDockerコンテナで動くLaravelプロジェクトの構築については[こちら](/web-application-framework/laravel/running-laravel-project-on-nginx)をご覧ください。
 - Visual Studio Codeをインストールしている。
 
 ## 設定の流れ

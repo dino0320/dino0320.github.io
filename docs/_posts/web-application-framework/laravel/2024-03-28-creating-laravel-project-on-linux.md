@@ -2,7 +2,8 @@
 layout: my-post
 title: "Laravelプロジェクトを作成する"
 date: 2024-03-28 00:00:00 +0000
-categories: programming php
+categories: web-application-framework laravel
+title_eng: creating-laravel-project-on-linux
 ---
 
 Linux環境でLaravelプロジェクトを作成します。  
@@ -88,6 +89,6 @@ $ docker run -it --rm --name php_to_confirm_laravel -w /app -v `pwd`:/app -p 800
 
 コンテナはWSL上のUbuntuで立ち上げているので、Windows側から `http://localhost:8000` にアクセスします。
 
-![Laravelプロジェクトの画面](/assets/images/programming/php/creating-laravel-project-on-linux/image1.png "Laravelプロジェクトの画面")
+![Laravelプロジェクトの画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image1.png "Laravelプロジェクトの画面")
 
 Laravelプロジェクトが確認できました。

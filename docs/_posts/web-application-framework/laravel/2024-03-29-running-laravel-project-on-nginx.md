@@ -2,7 +2,8 @@
 layout: my-post
 title: "LaravelプロジェクトをNGINXで動かす"
 date: 2024-03-29 00:00:00 +0000
-categories: application server
+categories: web-application-framework laravel
+title_eng: running-laravel-project-on-nginx
 ---
 
 Dockerを使ってLaravelプロジェクトを動かす環境を構築します。  
@@ -25,7 +26,7 @@ NGINXをインストールしたコンピューターはWebサーバーの動き
 4. [Laravelプロジェクトを確認する。](#4-laravelプロジェクトを確認する)
 
 ## 1. Laravelプロジェクトを作成する
-Laravelプロジェクトの作成については[こちら](/programming/php/creating-laravel-project-on-linux)をご覧ください。
+Laravelプロジェクトの作成については[こちら](/web-application-framework/laravel/creating-laravel-project-on-linux)をご覧ください。
 
 ## 2. 設定ファイルを作成する
 Laravelプロジェクトのディレクトリ以下で下記の設定ファイルを作成します。  
@@ -159,6 +160,6 @@ $ docker compose up --build -d
 ```
 コンテナはWSL上のUbuntuで立ち上げているので、Windows側から `http://localhost:8080` にアクセスします。
 
-![Laravelプロジェクトの画面](/assets/images/application/server/running-laravel-project-on-nginx/image1.png "Laravelプロジェクトの画面")
+![Laravelプロジェクトの画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image1.png "Laravelプロジェクトの画面")
 
 Laravelプロジェクトが確認できました。

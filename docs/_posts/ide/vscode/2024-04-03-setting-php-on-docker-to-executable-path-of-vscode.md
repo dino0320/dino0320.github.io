@@ -17,7 +17,7 @@ Visual Studio Code(VSCode)のPHPのExecutable PathにDockerコンテナ内のPHP
 
 ## 前提
 - PHPをインストールしているDockerコンテナがある。  
-WSL上のDockerコンテナで動くLaravelプロジェクトの構築については[こちら](/application/server/running-laravel-project-on-nginx)をご覧ください。
+WSL上のDockerコンテナで動くLaravelプロジェクトの構築については[こちら](/web-application-framework/laravel/running-laravel-project-on-nginx)をご覧ください。
 - Visual Studio Codeをインストールしている。
 
 ## 設定の流れ
