@@ -7,6 +7,7 @@ title_eng: setting-nginx-log-to-stdout
 ---
 
 NGINXのアクセスログを標準出力に、エラーログを標準エラー出力に出力するように設定します。  
+
 今回はDockerコンテナ上のNGINXを設定します。NGINXの公式Dockerイメージではなく、Amazon Linux 2023のイメージにNGINXをインストールしたものを使用しています。
 
 ## 参考ページ
@@ -30,7 +31,8 @@ WSL上のDockerコンテナでNGINXを動かす方法については[こちら](
 
 ## 1. ログファイルの場所を確認する
 NGINXのアクセスログとエラーログのファイルの場所を確認します。  
-`nginx.conf` を開き、`access_log` と `error_log` を確認します。  
+
+NGINXの設定ファイルである `nginx.conf` を開き、`access_log` と `error_log` を確認します。  
 Amazon Linux 2023の場合、`nginx.conf` はデフォルトで `/etc/nginx` ディレクトリにありました。
 
 `access_log` と `error_log` は以下の通りでした。
