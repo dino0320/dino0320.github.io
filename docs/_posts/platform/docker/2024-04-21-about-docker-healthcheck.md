@@ -3,7 +3,7 @@ layout: my-post
 title: "Dockerのhealthcheckについて"
 date: 2024-04-21 00:00:00 +0000
 categories: platform docker
-title_eng: aboutl-docker-healthcheck
+title_eng: about-docker-healthcheck
 ---
 
 Dockerのhealthcheckについて調査しました。
