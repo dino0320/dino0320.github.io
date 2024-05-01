@@ -6,16 +6,13 @@ categories: web-application-framework laravel
 title_eng: about-laravel-service-container
 ---
 
-LaravelのService Containerがよくわからなかったので調査しました。
+LaravelのService Containerについて調査しました。
 
 ## 参考ページ
 - [Service Container](https://laravel.com/docs/11.x/container)
 - [【Laravel】サービスコンテナとは？２つの強力な武器を持ったインスタンス化マシーン。簡単に解説。](https://qiita.com/minato-naka/items/afa4b930a2afac23261b)
 
 ## 環境
-- Windows 10 64ビット
-- WSL2 + Ubuntu 22.04.3 LTS
-- Docker Engine 26.0.0
 - Laravel 11
 
 ## もくじ

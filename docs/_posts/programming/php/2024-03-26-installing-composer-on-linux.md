@@ -13,7 +13,7 @@ Composerは `vendor` ディレクトリを作成し、プロジェクトが使�
 
 ## 環境
 - Debian GNU/Linux 12 (bookworm)
-- PHP 8.2.17 (cli)、PHP 8.3.4 (cli)
+- PHP 8.2.17、PHP 8.3.4
 
 ## インストールの流れ
 1. [Composerをインストールする。](#1-composerをインストールする)

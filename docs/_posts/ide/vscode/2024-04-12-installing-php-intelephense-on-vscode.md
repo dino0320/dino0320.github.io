@@ -14,7 +14,7 @@ VSCodeのPHP用の拡張機能です。コード補完や定義へのジャン�
 ## 環境
 - Windows 10 64ビット
 - Visual Studio Code 1.87.2
-- PHP 8.2.15 (cli)
+- PHP 8.2.15
 
 ## インストールの流れ
 1. [PHP Intelephenseをインストールする。](#1-php-intelephenseをインストールする)

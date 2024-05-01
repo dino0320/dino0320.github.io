@@ -14,7 +14,7 @@ Visual Studio Code(VSCode)でWSL + Docker上のPHPを開発するための設定
 - Windows 10 64ビット
 - Ubuntu 22.04.3 LTS (WSLで起動している)
 - Docker Engine 26.0.0
-- PHP 8.2.15 (cli)
+- PHP 8.2.15
 - Visual Studio Code 1.87.2
 
 ## 前提
