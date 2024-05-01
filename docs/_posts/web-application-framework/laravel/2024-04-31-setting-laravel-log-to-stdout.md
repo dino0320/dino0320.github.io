@@ -16,7 +16,8 @@ Dockerコンテナ上のLaravelアプリケーションのログをDockerのロ�
 - [Docker運用のためのLaravelログ出力](https://qiita.com/batch9703/items/e277b2a2a4caa967ed99)
 
 ## 前提
-- php-fpmをインストールしたDockerコンテナがある。
+- Laravelプロジェクトを動かすDockerコンテナがある。  
+LaravelプロジェクトをNGINXで動かす方法については[こちら](/web-application-framework/laravel/running-laravel-project-on-nginx)をご覧ください。
 
 ## 環境
 - Windows 10 64ビット

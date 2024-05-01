@@ -16,7 +16,7 @@ Dockerを使用して環境を構築しています。
 
 ## 前提
 - Laravelプロジェクトを動かすDockerコンテナがある。(Docker Compose使用)  
-LaravelプロジェクトをNGINXで動かす方法については[こちら](/application/server/running-laravel-project-on-nginx)をご覧ください。
+LaravelプロジェクトをNGINXで動かす方法については[こちら](/web-application-framework/laravel/running-laravel-project-on-nginx)をご覧ください。
 
 ## 設定の流れ
 1. [MySQLのDockerコンテナを作成する。](#1-mysqlのdockerコンテナを作成する)
