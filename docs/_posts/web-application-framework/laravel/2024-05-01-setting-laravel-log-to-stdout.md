@@ -216,7 +216,6 @@ Dockerコンテナを起動すると、Laravelのログが標準エラー出力�
 ```php
 Route::get('/', function () {
     Log::info('test'); // 追加
-    return view('welcome');
 });
 ```
 
