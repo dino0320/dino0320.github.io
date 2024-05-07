@@ -163,40 +163,10 @@ class ClassB
 }
 ```
 
-ClassAのインスタンスを作成するため、Controllerを作成し、コンストラクタの引数にClassAを指定します。  
-以下のコマンドを実行して、TestControllerを作成します。
-```
-php artisan make:controller TestController
-```
-TestControllerにコンストラクタとViewを返す関数を作成します。
-
-`TestController` :
-```php
-<?php
-
-namespace App\Http\Controllers;
-
-use App\Providers\ClassA;
-use Illuminate\Contracts\View\View;
-
-class TestController extends Controller
-{
-    // コンストラクタを追加。引数にClassAを指定。
-    public function __construct(ClassA $class_a)
-    {
-    }
-
-    // 適当なViewを返す関数を作成
-    public function show(): View
-    {
-        return view('welcome');
-    }
-}
-```
-TestControllerのインスタンスを作成するため、適当なRouteを定義します。  
+ClassAのインスタンスを作成するため、適当なRouteのクロージャの引数にClassAを指定します。  
 `web.php` などに以下を定義します。
 ```php
-Route::get('/', [TestController::class, 'show']);
+Route::get('/', function (ClassA $class_a) {});
 ```
 ブラウザなどでルートにアクセスすると、以下のようなログが出力されます。
 ```
