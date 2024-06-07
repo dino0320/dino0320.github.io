@@ -9,13 +9,15 @@ title_eng: installing-composer-on-docker
 Dockerイメージビルド時にComposerをインストールするようにします。
 
 ## 環境
+- Windows 10 64ビット
 - Ubuntu 22.04.3 LTS (WSLで起動している)
 - Docker Engine 26.0.0
+- Amazon Linux 2023(DockerコンテナのOS)
 
 ## インストールの流れ
 1. [Composerインストール用のスクリプトを作成する。](#1-composerインストール用のスクリプトを作成する)
 2. [Dockerイメージビルド時にComposerをインストールする。](#2-dockerイメージビルド時にcomposerをインストールする)
-3. [インストールの確認をする](#3-インストールの確認をする)
+3. [インストールの確認をする。](#3-インストールの確認をする)
 
 ## 1. Composerインストール用のスクリプトを作成する
 Composerをインストールするためのスクリプトを作成します。  
@@ -72,6 +74,7 @@ Dockerイメージビルド時にComposerをインストールするようにし
 
 `Dockerfile` :
 ```dockerfile
+# 今回はAmazon Linux 2023を使用する
 FROM amazonlinux:2023
 
 # Composerのインストールに必要なのでphpとunzipをインストールする
