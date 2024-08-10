@@ -4,6 +4,7 @@ title: "LaravelのMiddlewareについて"
 date: 2024-05-02 00:00:00 +0000
 categories: web-application-framework laravel
 title_eng: about-laravel-middleware
+lang: ja
 ---
 
 LaravelのMiddlewareについて調査しました。

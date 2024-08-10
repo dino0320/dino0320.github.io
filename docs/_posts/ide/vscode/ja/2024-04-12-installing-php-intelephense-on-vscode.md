@@ -4,6 +4,7 @@ title: "Visual Studio CodeでPHP Intelephenseをインストールする"
 date: 2024-04-12 00:00:00 +0000
 categories: ide vscode
 title_eng: installing-php-intelephense-on-vscode
+lang: ja
 ---
 
 Visual Studio Code(VSCode)で拡張機能のPHP Intelephenseをインストールします。

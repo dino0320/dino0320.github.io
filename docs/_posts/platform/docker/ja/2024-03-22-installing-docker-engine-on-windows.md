@@ -3,6 +3,7 @@ layout: my-post
 title: "WindowsでDocker Engineをインストールする"
 date: 2024-03-22 00:00:00 +0000
 categories: platform docker
+lang: ja
 ---
 
 WindowsでDocker Engineをインストールします。  

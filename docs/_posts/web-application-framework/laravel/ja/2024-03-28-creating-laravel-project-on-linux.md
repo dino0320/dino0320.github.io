@@ -4,6 +4,7 @@ title: "Laravelプロジェクトを作成する"
 date: 2024-03-28 00:00:00 +0000
 categories: web-application-framework laravel
 title_eng: creating-laravel-project-on-linux
+lang: ja
 ---
 
 Linux環境でLaravelプロジェクトを作成します。  

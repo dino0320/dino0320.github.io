@@ -3,6 +3,7 @@ layout: my-post
 title: "WindowsでRubyをインストールする"
 date: 2024-03-18 00:00:00 +0000
 categories: programming ruby
+lang: ja
 ---
 
 Windows環境でRubyをインストールします。

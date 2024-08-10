@@ -4,6 +4,7 @@ title: "WSL + Docker上のPHPコードをVSCodeでXdebugする"
 date: 2024-04-02 00:00:00 +0000
 categories: ide vscode
 title_eng: xdebug-php-with-vscode-on-wsl-and-docker
+lang: ja
 ---
 
 WSL上のDockerコンテナで動くPHPのコードをVisual Studio Code(VSCode)でXdebugできるようにします。

@@ -4,6 +4,7 @@ title: "Dockerイメージビルド時にNode.jsをインストールする"
 date: 2024-06-07 00:00:00 +0000
 categories: programming javascript
 title_eng: installing-node-on-docker
+lang: ja
 ---
 
 Dockerイメージビルド時にNode.jsをインストールするようにします。

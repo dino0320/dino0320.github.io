@@ -4,6 +4,7 @@ title: "LaravelプロジェクトをNGINXで動かす"
 date: 2024-03-29 00:00:00 +0000
 categories: web-application-framework laravel
 title_eng: running-laravel-project-on-nginx
+lang: ja
 ---
 
 Dockerを使ってLaravelプロジェクトを動かす環境を構築します。  

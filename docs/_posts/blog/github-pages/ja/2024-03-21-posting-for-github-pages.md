@@ -3,6 +3,7 @@ layout: my-post
 title: "GitHub Pagesのサイトに記事を投稿する"
 date: 2024-03-21 00:00:00 +0000
 categories: blog github-pages
+lang: ja
 ---
 
 GitHub Pagesのサイトに記事を投稿します。  

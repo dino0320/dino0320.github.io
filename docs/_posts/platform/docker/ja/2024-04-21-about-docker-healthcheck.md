@@ -4,6 +4,7 @@ title: "Dockerのhealthcheckについて"
 date: 2024-04-21 00:00:00 +0000
 categories: platform docker
 title_eng: about-docker-healthcheck
+lang: ja
 ---
 
 Dockerのhealthcheckについて調査しました。

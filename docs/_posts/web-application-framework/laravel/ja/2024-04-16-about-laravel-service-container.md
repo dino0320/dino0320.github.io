@@ -4,6 +4,7 @@ title: "LaravelのService Containerについて"
 date: 2024-04-16 00:00:00 +0000
 categories: web-application-framework laravel
 title_eng: about-laravel-service-container
+lang: ja
 ---
 
 LaravelのService Containerについて調査しました。

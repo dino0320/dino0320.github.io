@@ -3,6 +3,7 @@ layout: my-post
 title: "WindowsでJekyllをインストールする"
 date: 2024-03-19 00:00:00 +0000
 categories: programming ruby
+lang: ja
 ---
 
 Windows環境でJekyllをインストールします。

@@ -1,11 +1,18 @@
 ---
-layout: my-page
+layout: page
 title: About
 permalink: /about/
+lang: ja
 ---
 
 ## Blog
 {{ site.description | escape }}  
+These posts is for myself.  
+So I'd apologize if their contents are confusing or incorrect.  
+
+ITに関する内容をメモしています。  
+自分用なのでわかりづらい表現があるかもしれません。  
+また、しっかり理解できておらず、誤った内容が記載されている場合がありますが、ご了承いただけますと幸いです。
 
 {% if site.author %}
 Copyright (c) {{ site.author | escape }}  

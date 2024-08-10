@@ -4,6 +4,7 @@ title: "NGINXのログを標準出力に設定する"
 date: 2024-04-20 00:00:00 +0000
 categories: web-server-application nginx
 title_eng: setting-nginx-log-to-stdout
+lang: ja
 ---
 
 NGINXのアクセスログを標準出力に、エラーログを標準エラー出力に出力するように設定します。  

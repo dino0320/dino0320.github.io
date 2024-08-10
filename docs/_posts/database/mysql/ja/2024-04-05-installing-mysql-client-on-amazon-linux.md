@@ -4,6 +4,7 @@ title: "Amazon Linux 2023にMySQLクライアントをインストールする"
 date: 2024-04-05 00:00:00 +0000
 categories: database mysql
 title_eng: installing-mysql-client-on-amazon-linux
+lang: ja
 ---
 
 Amazon Linux 2023のDockerイメージから作成したDockerコンテナにMySQLクライアントをインストールします。  

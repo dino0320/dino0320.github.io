@@ -22,7 +22,7 @@ title: へたっぴITエンジニアのメモ帳
 author: dino0320
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  書き残さないと忘れそうなのでITに関する内容をメモしています。自分用なのでわかりづらい表現があるかもしれません。また、しっかり理解できておらず、誤った内容が記載されている場合があります。
+  I take notes about IT.
 #  Write an awesome description for your new site here. You can edit this
 #  line in _config.yml. It will appear in your document head meta (for
 #  Google search results) and in your feed.xml site description.
@@ -35,6 +35,7 @@ permalink: /:categories/:title:output_ext
 paginate: 10
 paginate_path: "/pages/page:num/"
 show_excerpts: 1
+lang: ja
 
 # Build settings
 theme: minima

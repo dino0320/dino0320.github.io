@@ -4,6 +4,7 @@ title: "Dockerイメージビルド時にComposerをインストールする"
 date: 2024-05-18 00:00:00 +0000
 categories: programming php
 title_eng: installing-composer-on-docker
+lang: ja
 ---
 
 Dockerイメージビルド時にComposerをインストールするようにします。

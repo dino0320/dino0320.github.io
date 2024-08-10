@@ -3,6 +3,7 @@ layout: my-post
 title: "Composerをインストールする"
 date: 2024-03-26 00:00:00 +0000
 categories: programming php
+lang: ja
 ---
 
 Linux環境でComposerをインストールします。

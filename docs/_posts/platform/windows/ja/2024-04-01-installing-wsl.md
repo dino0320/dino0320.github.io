@@ -3,6 +3,7 @@ layout: my-post
 title: "WSLをインストールする"
 date: 2024-04-01 00:00:00 +0000
 categories: platform windows
+lang: ja
 ---
 
 WSLをインストールします。

@@ -4,6 +4,7 @@ title: "WSL + Dockerコンテナ上のLaravelでViteをインストールする"
 date: 2024-06-08 00:00:00 +0000
 categories: web-application-framework laravel
 title_eng: installing-vite-with-laravel-on-wsl-and-docker
+lang: ja
 ---
 
 WSL + Dockerコンテナ上で動くLaravelプロジェクトでViteをインストールします。

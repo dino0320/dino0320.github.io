@@ -4,6 +4,7 @@ title: "Laravelのログを標準出力に設定する"
 date: 2024-05-01 00:00:00 +0000
 categories: web-application-framework laravel
 title_eng: setting-laravel-log-to-stdout
+lang: ja
 ---
 
 Laravelのログを標準出力に出力するように設定します。  

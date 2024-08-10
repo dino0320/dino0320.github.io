@@ -3,7 +3,7 @@ layout: post
 ---
 <p>
   {% for category in page.categories %}
-    <a href="/categories/#{{ category }}">{{ category }}</a>
+    <a href="/categories-{{ page.lang }}/#{{ category }}">{{ category }}</a>
   {% endfor %}
 </p>
 

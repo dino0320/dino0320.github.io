@@ -4,6 +4,7 @@ title: "Laravelで複数のデータベース設定を利用する"
 date: 2024-07-06 00:00:00 +0000
 categories: web-application-framework laravel
 title_eng: using-multiple-database-config
+lang: ja
 ---
 
 Laravelで複数のデータベース設定を利用する方法です。  

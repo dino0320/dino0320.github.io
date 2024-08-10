@@ -4,6 +4,7 @@ title: "Visual Studio CodeでWSL + Docker上のPHPの開発環境を整える"
 date: 2024-04-13 00:00:00 +0000
 categories: ide vscode
 title_eng: setting-environment-for-php-on-wsl-and-docker-with-vscode
+lang: ja
 ---
 
 Visual Studio Code(VSCode)でWSL + Docker上のPHPを開発するための設定を行います。  

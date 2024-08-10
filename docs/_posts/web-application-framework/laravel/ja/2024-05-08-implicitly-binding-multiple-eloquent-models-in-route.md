@@ -4,6 +4,7 @@ title: "Laravelのルート定義で複数のEloquentモデルを暗黙的にバ
 date: 2024-05-08 00:00:00 +0000
 categories: web-application-framework laravel
 title_eng: implicitly-binding-multiple-eloquent-models-in-route
+lang: ja
 ---
 
 Laravelのルート定義で複数のEloquentモデルを暗黙的にバインドすることについて試しました。

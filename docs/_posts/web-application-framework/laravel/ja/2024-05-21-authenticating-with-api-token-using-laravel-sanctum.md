@@ -4,6 +4,7 @@ title: "Laravel Sanctumを使ってAPIトークンで認証を行う"
 date: 2024-05-21 00:00:00 +0000
 categories: web-application-framework laravel
 title_eng: authenticating-with-api-token-using-laravel-sanctum
+lang: ja
 ---
 
 Laravel Sanctumを使ったAPIトークンでの認証を試します。

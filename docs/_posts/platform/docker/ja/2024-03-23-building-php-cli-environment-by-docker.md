@@ -3,6 +3,7 @@ layout: my-post
 title: "DockerでPHPをCLIで実行できる環境を構築する"
 date: 2024-03-23 00:00:00 +0000
 categories: platform docker
+lang: ja
 ---
 
 DockerでPHPをCLIで実行できる環境を構築します。

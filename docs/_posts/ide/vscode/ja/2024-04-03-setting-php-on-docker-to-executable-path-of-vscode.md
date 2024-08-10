@@ -4,6 +4,7 @@ title: "VSCodeのPHPのExecutable PathにDockerコンテナ内のPHPを設定す
 date: 2024-04-03 00:00:00 +0000
 categories: ide vscode
 title_eng: setting-php-on-docker-to-executable-path-of-vscode
+lang: ja
 ---
 
 Visual Studio Code(VSCode)のPHPのExecutable PathにDockerコンテナ内のPHPを設定します。  

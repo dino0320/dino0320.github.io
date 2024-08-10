@@ -4,6 +4,7 @@ title: "Dockerのdepends onについて"
 date: 2024-04-23 00:00:00 +0000
 categories: platform docker
 title_eng: about-docker-depends-on
+lang: ja
 ---
 
 Dockerの `depends on` について調査しました。

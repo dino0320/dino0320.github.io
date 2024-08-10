@@ -4,6 +4,7 @@ title: "Chrome Remote Desktopを使ってみる"
 date: 2024-08-02 00:00:00 +0000
 categories: web-browser google-chrome
 title_eng: set-up-chrome-remote-desktop
+lang: ja
 ---
 
 Chrome Remote Desktopを利用してパソコンから別のパソコンを操作してみます。
