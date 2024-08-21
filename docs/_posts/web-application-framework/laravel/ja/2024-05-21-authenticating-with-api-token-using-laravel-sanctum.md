@@ -10,8 +10,8 @@ lang: ja
 Laravel Sanctumを使ったAPIトークンでの認証を試します。
 
 ## 参考ページ
-- [Laravel Sanctum](https://laravel.com/docs/11.x/sanctum)
-- [【Laravel】SanctumでAPIトークン認証の使い方とSPA認証との比較](https://qiita.com/104dev/items/0787a81f7dda892ce86a)
+- [Laravel Sanctum - Laravel 11.x](https://laravel.com/docs/11.x/sanctum)
+- [【Laravel】SanctumでAPIトークン認証の使い方とSPA認証との比較 - Qiita](https://qiita.com/104dev/items/0787a81f7dda892ce86a)
 
 ## Laravel Sanctumとは
 Laravel Sanctumは、SPA(single page applications)やモバイルアプリケーション、シンプルなトークンベースのAPIなどで使われる認証システムです。  

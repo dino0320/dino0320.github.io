@@ -10,11 +10,11 @@ lang: ja
 WSL + Dockerコンテナ上で動くLaravelプロジェクトでViteをインストールします。
 
 ## 参考ページ
-- [Asset Bundling (Vite)](https://laravel.com/docs/11.x/vite)
+- [Asset Bundling (Vite) - Laravel 11.x](https://laravel.com/docs/11.x/vite)
 - [Vite](https://ja.vitejs.dev/)
-- [DockerでLEMP環境を作成した際にLaravel Viteがエラーになった件](https://qiita.com/asaii-tone/items/88dcb4d40522dea415b0)
-- [Laravel 9 + VITEの開発環境をdockerで実現する方法](https://qiita.com/hitotch/items/aa319c49d625c2a9b65e)
-- [Docker + Viteな環境でホットリロードが効かない時の対策](https://zenn.dev/hctaw_srp/articles/1f7f67de03d710)
+- [DockerでLEMP環境を作成した際にLaravel Viteがエラーになった件 - Qiita](https://qiita.com/asaii-tone/items/88dcb4d40522dea415b0)
+- [Laravel 9 + VITEの開発環境をdockerで実現する方法 - Qiita](https://qiita.com/hitotch/items/aa319c49d625c2a9b65e)
+- [Docker + Viteな環境でホットリロードが効かない時の対策 - Zenn](https://zenn.dev/hctaw_srp/articles/1f7f67de03d710)
 
 ## Viteとは
 Viteはフロントエンドビルドツールで、高速な開発サーバーや、CSSやJavascriptファイルをビルドするコマンドなどを提供します。  

@@ -10,8 +10,8 @@ lang: ja
 Laravelのルート定義で複数のEloquentモデルを暗黙的にバインドすることについて試しました。
 
 ## 参考ページ
-- [Routing](https://laravel.com/docs/11.x/routing#implicit-binding)
-- [Eloquent: Relationships](https://laravel.com/docs/11.x/eloquent-relationships#one-to-many)
+- [Routing - Laravel 11.x](https://laravel.com/docs/11.x/routing#implicit-binding)
+- [Eloquent: Relationships - Laravel 11.x](https://laravel.com/docs/11.x/eloquent-relationships#one-to-many)
 
 ## 前提
 - LaravelプロジェクトのDBとしてMySQLを使用している。  

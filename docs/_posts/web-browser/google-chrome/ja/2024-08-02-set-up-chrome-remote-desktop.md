@@ -10,7 +10,7 @@ lang: ja
 Chrome Remote Desktopを利用してパソコンから別のパソコンを操作してみます。
 
 ## 参考ページ
-- [【AV1 VS VP9】AV1とVP9の違い：次世代ビデオコーデック徹底比較（画質、圧縮率、互換性、応用…）](https://www.winxdvd.com/video-convert/av1-vs-vp9.htm)
+- [【AV1 VS VP9】AV1とVP9の違い：次世代ビデオコーデック徹底比較（画質、圧縮率、互換性、応用…） - Digiarty WinXDVD](https://www.winxdvd.com/video-convert/av1-vs-vp9.htm)
 
 ## 環境
 ### 接続先PC

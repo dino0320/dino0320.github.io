@@ -12,7 +12,7 @@ NGINXのアクセスログを標準出力に、エラーログを標準エラー
 今回はDockerコンテナ上のNGINXを設定します。NGINXの公式Dockerイメージではなく、Amazon Linux 2023のイメージにNGINXをインストールしたものを使用しています。
 
 ## 参考ページ
-- [コンテナ内のプロセスのログ出力先を標準出力/標準エラー出力に設定する方法](https://qiita.com/sshota0809/items/a86cd3379f88fb5cd1b8)
+- [コンテナ内のプロセスのログ出力先を標準出力/標準エラー出力に設定する方法 - Qiita](https://qiita.com/sshota0809/items/a86cd3379f88fb5cd1b8)
 
 ## 前提
 - NGINXをインストールしたDockerコンテナがある。  

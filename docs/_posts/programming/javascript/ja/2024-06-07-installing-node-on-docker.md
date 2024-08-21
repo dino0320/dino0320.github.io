@@ -10,7 +10,7 @@ lang: ja
 Dockerイメージビルド時にNode.jsをインストールするようにします。
 
 ## 参考ページ
-- [Download Node.js](https://nodejs.org/en/download/package-manager)
+- [Download Node.js® - Node.js](https://nodejs.org/en/download/package-manager)
 
 ## 環境
 - Windows 10 64ビット

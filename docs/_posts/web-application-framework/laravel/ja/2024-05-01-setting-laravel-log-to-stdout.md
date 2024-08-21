@@ -13,8 +13,8 @@ Dockerコンテナ上のLaravelアプリケーションのログをDockerのロ�
 今回はAmazon Linux 2023のイメージのコンテナ上に作成したLaravelアプリケーションの設定を行います。
 
 ## 参考ページ
-- [Logging](https://laravel.com/docs/11.x/logging)
-- [Docker運用のためのLaravelログ出力](https://qiita.com/batch9703/items/e277b2a2a4caa967ed99)
+- [Logging - Laravel 11.x](https://laravel.com/docs/11.x/logging)
+- [Docker運用のためのLaravelログ出力 - Qiita](https://qiita.com/batch9703/items/e277b2a2a4caa967ed99)
 
 ## 前提
 - Laravelプロジェクトを動かすDockerコンテナがある。  

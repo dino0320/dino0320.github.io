@@ -10,7 +10,7 @@ lang: ja
 LaravelのMiddlewareについて調査しました。
 
 ## 参考ページ
-- [Middleware](https://laravel.com/docs/11.x/middleware)
+- [Middleware - Laravel 11.x](https://laravel.com/docs/11.x/middleware)
 
 ## 環境
 - Laravel 11

@@ -10,7 +10,7 @@ lang: ja
 Gitのconfigの `core.fileMode` について調査しました。
 
 ## 参考ページ
-- [git config](https://git-scm.com/docs/git-config)
+- [git-config Documentation - Git](https://git-scm.com/docs/git-config)
 
 ## 環境
 - Windows 10 64ビット

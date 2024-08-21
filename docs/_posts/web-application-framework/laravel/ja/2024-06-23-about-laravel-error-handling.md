@@ -11,7 +11,7 @@ LaravelのError Handlingについて調査しました。
 例外発生時のログ記録処理やレスポンス処理などを試しました。
 
 ## 参考ページ
-- [Error Handling](https://laravel.com/docs/11.x/errors)
+- [Error Handling - Laravel 11.x](https://laravel.com/docs/11.x/errors)
 
 ## 環境
 - Laravel 11

@@ -10,8 +10,8 @@ lang: ja
 LaravelのService Containerについて調査しました。
 
 ## 参考ページ
-- [Service Container](https://laravel.com/docs/11.x/container)
-- [【Laravel】サービスコンテナとは？２つの強力な武器を持ったインスタンス化マシーン。簡単に解説。](https://qiita.com/minato-naka/items/afa4b930a2afac23261b)
+- [Service Container - Laravel 11.x](https://laravel.com/docs/11.x/container)
+- [【Laravel】サービスコンテナとは？２つの強力な武器を持ったインスタンス化マシーン。簡単に解説。 - Qiita](https://qiita.com/minato-naka/items/afa4b930a2afac23261b)
 
 ## 環境
 - Laravel 11
