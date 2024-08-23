@@ -3,7 +3,7 @@ layout: my-post
 title: "LaravelでRedisを使うようにSessionの設定をする"
 date: 2024-05-12 00:00:00 +0000
 categories: web-application-framework laravel
-title_eng: setting-session-using-redis-on-laravel
+page_name: setting-session-using-redis-on-laravel
 lang: ja
 ---
 

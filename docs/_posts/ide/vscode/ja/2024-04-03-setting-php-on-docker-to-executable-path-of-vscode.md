@@ -3,7 +3,7 @@ layout: my-post
 title: "VSCodeのPHPのExecutable PathにDockerコンテナ内のPHPを設定する"
 date: 2024-04-03 00:00:00 +0000
 categories: ide vscode
-title_eng: setting-php-on-docker-to-executable-path-of-vscode
+page_name: setting-php-on-docker-to-executable-path-of-vscode
 lang: ja
 ---
 
@@ -53,11 +53,11 @@ docker exec -it <コンテナ名> php $@
 ## 2. VSCodeのPHPの設定を変更する
 VSCodeのPHPの設定を変更します。  
 VSCodeを開き、「設定」をクリックします。  
-![設定ボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image1.png "設定ボタン")
+![設定ボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "設定ボタン")
 
 「ワークスペース」タブを選択し、「拡張機能」の「PHP」をクリックします。  
 `php.validate.executablePath` の「setting.jsonで編集」をクリックします。  
-![setting.jsonで編集のリンク](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image2.png "setting.jsonで編集のリンク")
+![setting.jsonで編集のリンク](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image2.png "setting.jsonで編集のリンク")
 
 `setting.json` の `php.validate.executablePath` に `php.sh` のパスを指定します。  
 今回はワークスペースのルートディレクトリに置いています。

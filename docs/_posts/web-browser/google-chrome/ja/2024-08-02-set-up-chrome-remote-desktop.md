@@ -3,7 +3,7 @@ layout: my-post
 title: "Chrome Remote Desktopを使ってみる"
 date: 2024-08-02 00:00:00 +0000
 categories: web-browser google-chrome
-title_eng: set-up-chrome-remote-desktop
+page_name: set-up-chrome-remote-desktop
 lang: ja
 ---
 
@@ -33,37 +33,37 @@ Chrome Remote Desktopを利用してパソコンから別のパソコンを操�
 Chromeを開き、[chrome ウェブストア](https://chromewebstore.google.com/)にアクセスしてChrome Remote DesktopをChromeに追加します。  
 ChromeではGoogleアカウントにログインする必要があります。
 
-![chrome ウェブストアのChrome Remote Desktopノページ](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image1.png "chrome ウェブストアのChrome Remote Desktopノページ")
+![chrome ウェブストアのChrome Remote Desktopノページ](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "chrome ウェブストアのChrome Remote Desktopノページ")
 
 Chromeの拡張機能からChrome Remote Desktopを開きます。
 
-![Chromeの拡張機能一覧](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image2.png "Chromeの拡張機能一覧")
+![Chromeの拡張機能一覧](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image2.png "Chromeの拡張機能一覧")
 
 リモート アクセスの設定のダウンロードボタンをクリックします。
 
-![インストーラのダウンロードボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image3.png "インストーラのダウンロードボタン")
+![インストーラのダウンロードボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image3.png "インストーラのダウンロードボタン")
 
 利用規約とプライバシーポリシーを読み、「同意してインストール」をクリックします。
 
-![インストールの準備完了画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image4.png "インストールの準備完了画面")
+![インストールの準備完了画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image4.png "インストールの準備完了画面")
 
 ステータスバーまたはダウンロードフォルダから `chromeremotedesktophost.msi` という名前のインストーラを実行します。
 
 リモート アクセスの設定に戻り、「オンにする」をクリックします。
 
-![リモートアクセスを許可するボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image5.png "リモートアクセスを許可するボタン")
+![リモートアクセスを許可するボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image5.png "リモートアクセスを許可するボタン")
 
 任意のPC名を入力します。
 
-![名前の選択画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image6.png "名前の選択画面")
+![名前の選択画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image6.png "名前の選択画面")
 
 任意のPINを入力します。
 
-![PINの入力画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image7.png "PINの入力画面")
+![PINの入力画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image7.png "PINの入力画面")
 
 「起動」をクリックすると、このPCに別のPCから接続できるようになります。
 
-![接続できるPC一覧](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image8.png "接続できるPC一覧")
+![接続できるPC一覧](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image8.png "接続できるPC一覧")
 
 ## 接続元PCでChrome Remote Desktopの設定をする
 接続元PCでChrome Remote Desktopを設定します。
@@ -73,11 +73,11 @@ Chromeでは接続先PCでログインしたものと同じGoogleアカウント
 
 接続できるようにしたPCをクリックします。
 
-![接続できるPC一覧](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image9.png "接続できるPC一覧")
+![接続できるPC一覧](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image9.png "接続できるPC一覧")
 
 接続先PCの設定で入力したPINを入力します。
 
-![PINの入力画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image10.png "PINの入力画面")
+![PINの入力画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image10.png "PINの入力画面")
 
 以上で接続先PCを操作できるようになります。
 
@@ -85,14 +85,14 @@ Chromeでは接続先PCでログインしたものと同じGoogleアカウント
 PCに接続後、画面右側の「>」マークをクリックすることでオプションパネルを開くことができます。  
 オプションパネルでは接続を切断したり、接続の設定を変更したりできます。
 
-![オプションパネル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image11.png "オプションパネル")
+![オプションパネル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image11.png "オプションパネル")
 
 以下は一部のオプションについてです。
 
 ### 接続の切断
 オプションパネル左上の「切断」をクリックすることでPCへの接続を終了できます。
 
-![接続の切断ボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image12.png "接続の切断ボタン")
+![接続の切断ボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image12.png "接続の切断ボタン")
 
 ### 動画コーデック
 動画コーデック(動画の圧縮方法)はVP8、VP9、AV1の3つから選べます。  
@@ -110,6 +110,6 @@ VP8はPCの処理能力は求められませんが、圧縮率が低いため通
 ## 接続先PCの設定を削除する
 [こちら](#接続先pcでchrome-remote-desktopの設定をする)で設定した接続先PCの設定を削除するには、[Chrome リモートデスクトップ](https://remotedesktop.google.com/access)にアクセスしてごみ箱マークをクリックします。
 
-![リモート接続を無効にするボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image13.png "リモート接続を無効にするボタン")
+![リモート接続を無効にするボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image13.png "リモート接続を無効にするボタン")
 
 おそらく接続先PCからでも接続元PCからでも操作できると思います。

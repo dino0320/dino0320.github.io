@@ -3,7 +3,7 @@ layout: my-post
 title: "LaravelプロジェクトをNGINXで動かす"
 date: 2024-03-29 00:00:00 +0000
 categories: web-application-framework laravel
-title_eng: running-laravel-project-on-nginx
+page_name: running-laravel-project-on-nginx
 lang: ja
 ---
 
@@ -161,6 +161,6 @@ $ docker compose up --build -d
 ```
 コンテナはWSL上のUbuntuで立ち上げているので、Windows側から `http://localhost:8080` にアクセスします。
 
-![Laravelプロジェクトの画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image1.png "Laravelプロジェクトの画面")
+![Laravelプロジェクトの画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Laravelプロジェクトの画面")
 
 Laravelプロジェクトが確認できました。

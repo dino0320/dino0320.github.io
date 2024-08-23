@@ -3,7 +3,7 @@ layout: my-post
 title: "初心者がゲーミングPCを自作する"
 date: 2024-07-24 00:00:00 +0000
 categories: hardware pc
-title_eng: building-self-pc
+page_name: building-self-pc
 lang: ja
 ---
 

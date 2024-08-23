@@ -3,7 +3,7 @@ layout: my-post
 title: "Amazon Linux 2023にSQLiteをインストールする"
 date: 2024-06-29 00:00:00 +0000
 categories: database sqlite
-title_eng: installing-sqlite-on-amazon-linux
+page_name: installing-sqlite-on-amazon-linux
 lang: ja
 ---
 

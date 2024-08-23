@@ -3,7 +3,7 @@ layout: my-post
 title: "レインボーテーブルを使ってハッシュ値から平文を取得する"
 date: 2024-08-21 00:00:00 +0000
 categories: security hash
-title_eng: getting-plaintext-from-hash-value-using-rainbow-table
+page_name: getting-plaintext-from-hash-value-using-rainbow-table
 lang: ja
 ---
 
@@ -194,7 +194,7 @@ function getTargetPlaintext(int $reductionCount, string $hashValue, array $rainb
 }
 ```
 
-※チェインの最初の数は `0～チェインの数` の整数にしています。  
+※チェインの最初の値は `0～チェインの数` の整数にしています。  
 ※ハッシュ関数にはMD5を使用しています。
 
 コマンドラインで以下のように実行できるようにしています。  

@@ -3,7 +3,7 @@ layout: my-post
 title: "Laravelのルート定義で複数のEloquentモデルを暗黙的にバインドする"
 date: 2024-05-08 00:00:00 +0000
 categories: web-application-framework laravel
-title_eng: implicitly-binding-multiple-eloquent-models-in-route
+page_name: implicitly-binding-multiple-eloquent-models-in-route
 lang: ja
 ---
 

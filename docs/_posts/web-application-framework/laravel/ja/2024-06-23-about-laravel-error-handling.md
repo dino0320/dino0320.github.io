@@ -3,7 +3,7 @@ layout: my-post
 title: "LaravelのError Handlingについて"
 date: 2024-06-23 00:00:00 +0000
 categories: web-application-framework laravel
-title_eng: about-laravel-error-handling
+page_name: about-laravel-error-handling
 lang: ja
 ---
 

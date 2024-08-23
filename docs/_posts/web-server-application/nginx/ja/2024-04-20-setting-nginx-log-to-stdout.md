@@ -3,7 +3,7 @@ layout: my-post
 title: "NGINXのログを標準出力に設定する"
 date: 2024-04-20 00:00:00 +0000
 categories: web-server-application nginx
-title_eng: setting-nginx-log-to-stdout
+page_name: setting-nginx-log-to-stdout
 lang: ja
 ---
 

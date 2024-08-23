@@ -3,7 +3,7 @@ layout: my-post
 title: "WSL + Dockerコンテナ上のLaravelでViteをインストールする"
 date: 2024-06-08 00:00:00 +0000
 categories: web-application-framework laravel
-title_eng: installing-vite-with-laravel-on-wsl-and-docker
+page_name: installing-vite-with-laravel-on-wsl-and-docker
 lang: ja
 ---
 
@@ -246,7 +246,7 @@ npm run dev
 ブラウザなどで `/` にアクセスします。  
 ブラウザのデベロッパーツールなどで、`resources/js/test.js` で実行した `console.log('テスト')` の結果が確認できると思います。
 
-![test.jsの結果](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image1.png "test.jsの結果")
+![test.jsの結果](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "test.jsの結果")
 
 `resources/js/test.js` を以下のように変更すると、ブラウザをリロードしなくても動的に結果が更新されることが分かります。
 
@@ -255,7 +255,7 @@ npm run dev
 console.log('てすと');
 ```
 
-![更新後のtest.jsの結果](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image2.png "更新後のtest.jsの結果")
+![更新後のtest.jsの結果](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image2.png "更新後のtest.jsの結果")
 
 ### ビルドする
 CSSやJavascriptをビルドして最適化したアセットを使用するようにします。
@@ -271,7 +271,7 @@ npm run build
 ブラウザなどで `/` にアクセスします。  
 ブラウザのデベロッパーツールなどで、`resources/js/test.js` で実行した `console.log('テスト')` の結果が確認できると思います。
 
-![test.jsの結果](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image1.png "test.jsの結果")
+![test.jsの結果](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "test.jsの結果")
 
 ビルドした場合、`resources/js/test.js` を変更してもブラウザが更新されることはありません。  
 変更したい場合、変更後に再びビルドする必要があります。

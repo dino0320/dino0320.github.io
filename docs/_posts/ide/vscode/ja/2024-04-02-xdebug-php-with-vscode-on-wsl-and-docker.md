@@ -3,7 +3,7 @@ layout: my-post
 title: "WSL + Docker上のPHPコードをVSCodeでXdebugする"
 date: 2024-04-02 00:00:00 +0000
 categories: ide vscode
-title_eng: xdebug-php-with-vscode-on-wsl-and-docker
+page_name: xdebug-php-with-vscode-on-wsl-and-docker
 lang: ja
 ---
 
@@ -95,20 +95,20 @@ Xdebugの設定がいろいろ表示されたらインストール成功です�
 ## 3. VSCodeの拡張機能であるPHP Debugをインストールする
 VSCodeの拡張機能であるPHP Debugをインストールします。  
 VSCodeを開き、「拡張機能」をクリックします。  
-![拡張機能を開くボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image1.png "拡張機能を開くボタン")
+![拡張機能を開くボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "拡張機能を開くボタン")
 
 検索バーに「php debug」と入力し、検索結果の「PHP Debug」をインストールします。  
-![拡張機能のPHP Debug](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image2.png "拡張機能のPHP Debug")
+![拡張機能のPHP Debug](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image2.png "拡張機能のPHP Debug")
 
 設定ファイルを作成します。  
 「実行とデバッグ」をクリックします。  
-![実行とデバッグを開くボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image3.png "実行とデバッグを開くボタン")
+![実行とデバッグを開くボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image3.png "実行とデバッグを開くボタン")
 
 「launch.jsonファイルを作成します」をクリックします。  
-![launch.jsonファイルを作成するリンク](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image4.png "launch.jsonファイルを作成するリンク")
+![launch.jsonファイルを作成するリンク](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image4.png "launch.jsonファイルを作成するリンク")
 
 デバッガーの選択で「PHP」を選択します。  
-![デバッガーの選択](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image5.png "デバッガーの選択")
+![デバッガーの選択](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image5.png "デバッガーの選択")
 
 作成された `launch.json` に `pathMappings` を追加します。  
 VSCodeで開いたディレクトリにDockerコンテナ内の対応するディレクトリをマップします。  
@@ -140,12 +140,12 @@ PHP Debugのインストールと設定ができました。
 Dockerコンテナを起動します。  
 
 VSCodeで、 `launch.json` で設定した「Listen for Xdebug」を実行します。  
-![デバッグの開始ボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image6.png "デバッグの開始ボタン")
+![デバッグの開始ボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image6.png "デバッグの開始ボタン")
 
 ブラウザからアクセスできるPHPファイルを開き、適当な行にブレークポイントを設定します。  
-![ブレークポイント](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image7.png "ブレークポイント")
+![ブレークポイント](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image7.png "ブレークポイント")
 
 ブラウザからPHPファイルにアクセスします。    
-![ブレークポイントで止まる処理](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image8.png "ブレークポイントで止まる処理")
+![ブレークポイントで止まる処理](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image8.png "ブレークポイントで止まる処理")
 
 ブレークポイントで処理が止まることを確認できました。

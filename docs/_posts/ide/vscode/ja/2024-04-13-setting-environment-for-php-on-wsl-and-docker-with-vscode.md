@@ -3,7 +3,7 @@ layout: my-post
 title: "Visual Studio CodeでWSL + Docker上のPHPの開発環境を整える"
 date: 2024-04-13 00:00:00 +0000
 categories: ide vscode
-title_eng: setting-environment-for-php-on-wsl-and-docker-with-vscode
+page_name: setting-environment-for-php-on-wsl-and-docker-with-vscode
 lang: ja
 ---
 
@@ -46,12 +46,12 @@ VSCodeでPHP Intelephenseをインストールする方法については[こち
 PHPDocを自動生成してほしいので、PHP DocBlockerをインストールします。  
 
 VSCodeを開き、「拡張機能」をクリックします。  
-![拡張機能を開くボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image1.png "拡張機能を開くボタン")
+![拡張機能を開くボタン](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "拡張機能を開くボタン")
 
 検索バーに「php doc」と入力し、検索結果の「PHP DocBlocker」をインストールします。  
-![拡張機能のPHP DocBlocker](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image2.png "拡張機能のPHP DocBlocker")
+![拡張機能のPHP DocBlocker](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image2.png "拡張機能のPHP DocBlocker")
 
 PHP DocBlockerをインストールできました。  
 
 PHPの関数などの上で `/**` を入力してEnterを押すと、PHPDocが自動で生成されるようになります。  
-![PHPDoc例](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.title_eng }}/image3.png "PHPDoc例")
+![PHPDoc例](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image3.png "PHPDoc例")

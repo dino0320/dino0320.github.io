@@ -3,7 +3,7 @@ layout: my-post
 title: "Dockerのdepends onについて"
 date: 2024-04-23 00:00:00 +0000
 categories: platform docker
-title_eng: about-docker-depends-on
+page_name: about-docker-depends-on
 lang: ja
 ---
 

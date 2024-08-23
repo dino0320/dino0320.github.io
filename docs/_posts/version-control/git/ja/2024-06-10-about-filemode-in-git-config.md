@@ -3,7 +3,7 @@ layout: my-post
 title: "GitのfileModeについて"
 date: 2024-06-10 00:00:00 +0000
 categories: version-control git
-title_eng: about-filemode-in-git-config
+page_name: about-filemode-in-git-config
 lang: ja
 ---
 
