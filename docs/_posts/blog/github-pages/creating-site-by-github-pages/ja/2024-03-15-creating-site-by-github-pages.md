@@ -38,13 +38,13 @@ GitHubのリポジトリを作成します。
 ![GitHubリポジトリ作成ページにアクセスするボタン](/assets/images/blog/github-pages/creating-site-by-github-pages/image2.png "GitHubリポジトリ作成ページにアクセスするボタン")
 3. 以下の項目を確認する。
 
-|項目|説明|
-|----|----|
-|Owner|リポジトリを所有するアカウントを選択します。|
-|Repository name|リポジトリ名です。リポジトリ名は `<アカウント名>.github.io` にする必要があります。アカウント名は全て小文字にして入力します。|
-|Description|リポジトリの説明です。任意の説明を入力します。|
-|リポジトリの可視性|「Public」か「Private」を選択します。「Public」を選択するとリポジトリが公開され、「Private」を選択するとリポジトリの公開を制限することができます。アカウントがGitHub Freeの場合、「Public」を選択する必要があります。|
-|Add a README file|`README.md` を追加するかどうかです。GitHub Pagesでは `index.html` または `index.md`、`README.md` がトップページになります。今回はチェックを入れます。|
+    |項目|説明|
+    |----|----|
+    |Owner|リポジトリを所有するアカウントを選択します。|
+    |Repository name|リポジトリ名です。リポジトリ名は `<アカウント名>.github.io` にする必要があります。アカウント名は全て小文字にして入力します。|
+    |Description|リポジトリの説明です。任意の説明を入力します。|
+    |リポジトリの可視性|「Public」か「Private」を選択します。「Public」を選択するとリポジトリが公開され、「Private」を選択するとリポジトリの公開を制限することができます。アカウントがGitHub Freeの場合、「Public」を選択する必要があります。|
+    |Add a README file|`README.md` を追加するかどうかです。GitHub Pagesでは `index.html` または `index.md`、`README.md` がトップページになります。今回はチェックを入れます。|
 
 4. 「Create repository」をクリックする。  
 ![GitHubリポジトリ作成ボタン](/assets/images/blog/github-pages/creating-site-by-github-pages/image3.png "GitHubリポジトリ作成ボタン")
@@ -60,10 +60,10 @@ GitHubのリポジトリを作成します。
 ![Pagesボタン](/assets/images/blog/github-pages/creating-site-by-github-pages/image6.png "Pagesボタン")
 5. 「Build and deployment」の以下の項目を確認する。
 
-|項目|説明|
-|----|----|
-|Source|サイトの公開元です。今回は「Deploy from a branch」を選択します。特定のブランチにプッシュされたときにサイトを公開します。|
-|Branch|ブランチとルートフォルダを選択します。選択したブランチにプッシュすると、選択したルートフォルダ内の変更がサイトに公開されます。ルートフォルダは `/` または `/docs` を指定できます。今回はブランチは `main` を選択し、ルートフォルダは `/` を選択します。|
+    |項目|説明|
+    |----|----|
+    |Source|サイトの公開元です。今回は「Deploy from a branch」を選択します。特定のブランチにプッシュされたときにサイトを公開します。|
+    |Branch|ブランチとルートフォルダを選択します。選択したブランチにプッシュすると、選択したルートフォルダ内の変更がサイトに公開されます。ルートフォルダは `/` または `/docs` を指定できます。今回はブランチは `main` を選択し、ルートフォルダは `/` を選択します。|
 
 6. 「Save」をクリックする。
 
