@@ -6,7 +6,7 @@ categories: blog github-pages
 lang: en
 ---
 
-I write how to publish a Website Using GitHub Pages.
+This article is about a way to publish a Website Using GitHub Pages.
 
 ## What is GitHub Pages?
 
