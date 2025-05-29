@@ -53,7 +53,7 @@ categories: blog github-pages
 |変数|説明|
 |----|----|
 |layout|サイトを作成したディレクトリ以下の `_layout` ディレクトリにあるレイアウト用のファイル名を入力します。`jekyll new` コマンドを実行した場合、デフォルトでは[minima](https://github.com/jekyll/minima)テーマを使用します。そのためminimaが定義しているレイアウトを使うことができます。(post、pageなど)|
-|title|記事のタイトルを入力します。|
+|title|任意の記事のタイトルを入力します。ファイル名のタイトルと同じである必要はありません。|
 |date|投稿日時を入力します。|
 |categories|記事のカテゴリを入力します。スペースで区切ることで複数指定できます。記事のURLのディレクトリ部分が `/blog/github-pages/2024/03/21/posting-for-github-pages` のようになります。|
 
@@ -94,4 +94,5 @@ front matterで `categories` や `permalink` を定義した場合、変わる�
 ## 5. 記事を確認する
 公開した記事のURLにアクセスします。  
 記事のURLは `https://<GitHubのアカウント名>.github.io/年/月/日/タイトル` のようになります。  
+例: `https://dino0320.github.io/2024/03/21/posting-for-github-pages`  
 front matterで `categories` や `permalink` を定義した場合、変わる可能性があります。
