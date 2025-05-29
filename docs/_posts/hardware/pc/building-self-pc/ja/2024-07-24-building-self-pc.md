@@ -84,7 +84,7 @@ M.2タイプで1TBのものから値段で選びました。
 今回選んだマザーボードにはヒートシンクがついていました。
 
 ### グラフィックスボード
-#### [PNY GeForce RTX 4060 Ti 8GB VERTO ダブルファン](https://www.pny.com.tw/jp/products-detail/geforce-rtx-4060-Ti-8G-pny-DF/)
+#### [PNY GeForce RTX 4060 Ti 8GB VERTO ダブルファン](https://www.pny.com/pny-geforce-rtx-4060-ti-8gb-verto-dual-fan)
 
 GPUはベンチマークを見て選択しました。  
 サイバーパンク2077がレイトレーシングでも30fpsで動きそうなのでNVIDIAのGeForce RTX 4060 Tiにしました。
