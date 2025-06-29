@@ -45,7 +45,7 @@ plugins:
 
 google_analytics: G-LZCZCMY8DM
 
-#url: "https://dino0320.github.io" # the base hostname & protocol for your site
+url: "https://dino0320.github.io" # the base hostname & protocol for your site
 
 # Exclude from processing.
 # The following items will not be processed, by default.
