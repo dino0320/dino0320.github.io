@@ -42,9 +42,8 @@ theme: minima
 plugins:
   - jekyll-feed
 
-jekyll.environment: production
-site.google_analytics: G-LZCZCMY8DM
-site.google_verification: q0MISXFlCskg1X8izP0pWbl8LduBhGfBPOVVpiiMDpk
+google_analytics: G-LZCZCMY8DM
+google_verification: q0MISXFlCskg1X8izP0pWbl8LduBhGfBPOVVpiiMDpk
 
 # Exclude from processing.
 # The following items will not be processed, by default.
