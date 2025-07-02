@@ -1,7 +1,7 @@
 ---
 layout: my-post
 title: "Seed Database with Data from CSV"
-date: 2025-07-02 00:00:00 +0000
+date: 2025-07-03 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: seed-database-with-data-from-csv-en
 lang: en
