@@ -44,7 +44,6 @@ plugins:
   - jekyll-sitemap
 
 google_analytics: G-LZCZCMY8DM
-google_adsense: ca-pub-4415436624590004
 
 # Exclude from processing.
 # The following items will not be processed, by default.
