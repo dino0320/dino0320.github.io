@@ -16,9 +16,9 @@ We'll configure our Docker image to install Composer during the build process.
 - Amazon Linux 2023(used as the OS for the Docker container)
 
 ## Installation Steps
-1. [Composerインストール用のスクリプトを作成する。](#1-composerインストール用のスクリプトを作成する)
-2. [Dockerイメージビルド時にComposerをインストールする。](#2-dockerイメージビルド時にcomposerをインストールする)
-3. [インストールの確認をする。](#3-インストールの確認をする)
+1. [Create a Script to Install Composer](#1-create-a-script-to-install-composer)
+2. [Install Composer During the Docker Image Build](#2-install-composer-during-the-docker-image-build)
+3. [Verify That Composer Is Installed](#3-verify-that-composer-is-installed)
 
 ## 1. Create a Script to Install Composer
 We’ll start by creating a script to install Composer.
