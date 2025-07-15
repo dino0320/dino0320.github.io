@@ -23,11 +23,11 @@ For more information, follow [this instruction](/aws/cli/install-aws-cli-on-wind
 - Windows 10 64-bit
 
 ## Configuration Steps
-1. [Check SSO start URL and SSO Region](#1-check-sso-start-url-and-sso-region)
+1. [Check SSO Start URL and SSO Region](#1-check-sso-start-url-and-sso-region)
 2. [Configure an SSO Session and a Profile](#2-configure-an-sso-session-and-a-profile)
 3. [SSO Sign In and Sign Out](#3-sso-sign-in-and-sign-out)
 
-## 1. Check SSO start URL and SSO Region
+## 1. Check SSO Start URL and SSO Region
 Navigate to the AWS access portal.  
 For more information, check [this article](/aws/iam/create-user-with-administrative-access-in-iam-identity-center-en).
 
