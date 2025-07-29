@@ -84,9 +84,6 @@ SESSION_CONNECTION=default    # Specify the Redis server to use from config/data
 ## 4. Verify the Configuration
 To confirm that sessions are stored in Redis:
 
-Dockerコンテナを起動します。  
-`docker-compose.yml` のあるディレクトリに移動し、以下を実行します。
-
 Navigate to the directory containing `docker-compose.yml` and run the following command to start the Docker container.
 
 ```bash
