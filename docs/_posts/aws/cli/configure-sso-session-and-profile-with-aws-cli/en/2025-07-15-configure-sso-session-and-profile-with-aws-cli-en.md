@@ -14,7 +14,7 @@ This article explains how to configure an SSO session and a profile with the AWS
 
 ## Prerequisite
 - An AWS account
-- A user in IAM Identify Center  
+- A user in IAM Identity Center  
 For more information, follow [this instruction](/aws/iam/create-user-with-administrative-access-in-iam-identity-center-en).
 - AWS CLI already installed  
 For more information, follow [this instruction](/aws/cli/install-aws-cli-on-windows-en)
