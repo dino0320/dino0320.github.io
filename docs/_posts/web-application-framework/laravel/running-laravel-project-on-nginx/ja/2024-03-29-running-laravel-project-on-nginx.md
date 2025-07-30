@@ -124,6 +124,7 @@ services:
       - .:/srv/example.com
     ports:
       - "8080:80"
+    command: bash -c "chmod 755 /srv/example.com/docker/web/start.sh && /srv/example.com/docker/web/start.sh"
 ```
 
 ### Dockerfile
@@ -147,10 +148,29 @@ RUN yum -y install php8.2-fpm php8.2-mysqlnd
 RUN mkdir /run/php-fpm
 RUN mkdir /var/run/php
 COPY php/php-fpm.d/zzz-www.conf /etc/php-fpm.d/zzz-www.conf
+```
+
+### start.sh
+Dockerコンテナ起動時に実行される `start.sh` を作成します。
+
+`start.sh`:
+
+```sh
+#!/bin/bash
+
+set -euxo pipefail
+
+PROJECT_PATH=/srv/example.com
+
+# Nginxユーザーに以下のファイルにアクセスする権限を与える
+chmod 777 "$PROJECT_PATH/storage/logs"
+chmod 777 "$PROJECT_PATH/storage/framework/views"
+chmod 777 "$PROJECT_PATH/database/database.sqlite"
 
 # php-fpmとNGINX起動
 # nginxは「-g "daemon off;"」でフォアグラウンド実行になり、コンテナが自動的に終了しなくなる
-CMD bash -c 'php-fpm && nginx -g "daemon off;"'
+php-fpm
+nginx -g "daemon off;"
 ```
 
 ## 4. Laravelプロジェクトを確認する

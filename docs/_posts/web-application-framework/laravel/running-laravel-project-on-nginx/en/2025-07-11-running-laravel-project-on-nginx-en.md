@@ -125,6 +125,7 @@ services:
       - .:/srv/example.com
     ports:
       - "8080:80"
+    command: bash -c "chmod 755 /srv/example.com/docker/web/start.sh && /srv/example.com/docker/web/start.sh"
 ```
 
 ### Dockerfile
@@ -148,10 +149,29 @@ RUN yum -y install php8.2-fpm php8.2-mysqlnd
 RUN mkdir /run/php-fpm
 RUN mkdir /var/run/php
 COPY php/php-fpm.d/zzz-www.conf /etc/php-fpm.d/zzz-www.conf
+```
+
+### start.sh
+Create `start.sh` which runs when the Docker container starts.
+
+`start.sh`:
+
+```sh
+#!/bin/bash
+
+set -euxo pipefail
+
+PROJECT_PATH=/srv/example.com
+
+# Grant a Nginx user permission to access these files.
+chmod 777 "$PROJECT_PATH/storage/logs"
+chmod 777 "$PROJECT_PATH/storage/framework/views"
+chmod 777 "$PROJECT_PATH/database/database.sqlite"
 
 # Start php-fpm and NGINX
 # By using -g "daemon off;", NGINX runs in the foreground, preventing the container from exiting automatically.
-CMD bash -c 'php-fpm && nginx -g "daemon off;"'
+php-fpm
+nginx -g "daemon off;"
 ```
 
 ## 4. Check the Laravel Project
