@@ -78,7 +78,7 @@ FROM amazonlinux:2023
 # Xdebugインストール
 RUN yum -y install php-pear php-devel
 RUN pecl install xdebug-3.3.1
-COPY php/conf.d/99-xdebug.ini /etc/php.d/99-xdebug.ini    # 設定ファイルをコピー
+COPY php/conf.d/99-xdebug.ini /etc/php.d/99-xdebug.ini
 
 ～省略～
 ```

@@ -68,7 +68,7 @@ FROM amazonlinux:2023
 # Install PhpRedis
 RUN yum -y install php-pear-1:1.10.13 php8.2-devel
 RUN pecl install redis-6.1.0
-COPY 50-valkey.ini /etc/php.d/50-valkey.ini    # Copy the PHP configuration file
+COPY 50-valkey.ini /etc/php.d/50-valkey.ini
 ```
 
 Refer to [this page](https://valkey.io/clients/) for supported PhpRedis versions.

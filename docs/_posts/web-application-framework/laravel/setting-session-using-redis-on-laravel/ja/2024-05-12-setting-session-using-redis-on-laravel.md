@@ -69,7 +69,7 @@ FROM amazonlinux:2023
 # PhpRedisインストール
 RUN yum -y install php-pear-1:1.10.13 php8.2-devel
 RUN pecl install redis-6.0.2
-COPY 50-redis.ini /etc/php.d/50-redis.ini    # PHPの追加の設定ファイルをコピー
+COPY 50-redis.ini /etc/php.d/50-redis.ini
 ```
 
 ## 3. Laravelの設定を変更する

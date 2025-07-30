@@ -68,7 +68,7 @@ FROM amazonlinux:2023
 # PhpRedisインストール
 RUN yum -y install php-pear-1:1.10.13 php8.2-devel
 RUN pecl install redis-6.1.0
-COPY 50-valkey.ini /etc/php.d/50-valkey.ini    # PHP設定ファイルをコピー
+COPY 50-valkey.ini /etc/php.d/50-valkey.ini
 ```
 
 対応しているPhpRedisのバージョンについては[こちらのページ](https://valkey.io/clients/)を参照してください。

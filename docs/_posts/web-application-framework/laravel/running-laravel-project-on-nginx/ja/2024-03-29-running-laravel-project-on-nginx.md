@@ -137,15 +137,16 @@ FROM amazonlinux:2023
 
 # NGINXインストール
 RUN yum -y install yum-utils
-COPY nginx/nginx.repo /etc/yum.repos.d/nginx.repo    # 設定ファイルをコピー
+COPY nginx/nginx.repo /etc/yum.repos.d/nginx.repo
 RUN yum -y install nginx-1.24.0
-COPY nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf    # 設定ファイルをコピー
+COPY nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 
 # php-fpmとphp-mysqlndインストール
 RUN yum -y install php8.2-fpm php8.2-mysqlnd
-RUN mkdir /run/php-fpm    # ディレクトリを作っておかないとエラーになる
-RUN mkdir /var/run/php    # ディレクトリを作っておかないとエラーになる
-COPY php/php-fpm.d/zzz-www.conf /etc/php-fpm.d/zzz-www.conf    # 設定ファイルをコピー
+# ディレクトリを作っておかないとエラーになる
+RUN mkdir /run/php-fpm
+RUN mkdir /var/run/php
+COPY php/php-fpm.d/zzz-www.conf /etc/php-fpm.d/zzz-www.conf
 
 # php-fpmとNGINX起動
 # nginxは「-g "daemon off;"」でフォアグラウンド実行になり、コンテナが自動的に終了しなくなる

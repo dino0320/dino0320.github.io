@@ -138,15 +138,16 @@ FROM amazonlinux:2023
 
 # Install NGINX
 RUN yum -y install yum-utils
-COPY nginx/nginx.repo /etc/yum.repos.d/nginx.repo    # Copy the configuration file
+COPY nginx/nginx.repo /etc/yum.repos.d/nginx.repo
 RUN yum -y install nginx-1.24.0
-COPY nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf    # Copy the configuration file
+COPY nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 
 # Install php-fpm and php-mysqlnd
 RUN yum -y install php8.2-fpm php8.2-mysqlnd
-RUN mkdir /run/php-fpm    # Not creating the directory in advance will cause an error
-RUN mkdir /var/run/php    # Not creating the directory in advance will cause an error
-COPY php/php-fpm.d/zzz-www.conf /etc/php-fpm.d/zzz-www.conf    # Copy the configuration file
+# Not creating the directory in advance will cause an error
+RUN mkdir /run/php-fpm
+RUN mkdir /var/run/php
+COPY php/php-fpm.d/zzz-www.conf /etc/php-fpm.d/zzz-www.conf
 
 # Start php-fpm and NGINX
 # By using -g "daemon off;", NGINX runs in the foreground, preventing the container from exiting automatically.

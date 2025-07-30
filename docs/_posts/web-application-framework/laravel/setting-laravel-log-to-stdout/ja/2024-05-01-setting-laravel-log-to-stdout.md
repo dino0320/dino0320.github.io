@@ -167,8 +167,9 @@ FROM amazonlinux:2023
 ～php-fpmのインストール処理～
 
 # 以下を追加
-COPY zzz-www.conf /etc/php-fpm.d/zzz-www.conf    # 追加のconfigファイルをコピー
-RUN sed -i "s/error_log = .*/error_log = \/dev\/stderr/" /etc/php-fpm.conf    # error_log を変更
+COPY zzz-www.conf /etc/php-fpm.d/zzz-www.conf
+# error_log を変更
+RUN sed -i "s/error_log = .*/error_log = \/dev\/stderr/" /etc/php-fpm.conf
 ```
 
 Dockerコンテナを起動すると、Laravelのログが標準エラー出力に出力されるはずです。
@@ -203,9 +204,10 @@ FROM amazonlinux:2023
 ～php-fpmのインストール処理～
 
 # 以下を追加
-COPY zzz-php-fpm.conf /etc/php-fpm.d/zzz-php-fpm.conf    # zzz-php-fpm.conf をコピー
-COPY zzz-www.conf /etc/php-fpm.d/zzz-www.conf    # zzz-www.conf をコピー
-RUN sed -i "s/error_log/;error_log/" /etc/php-fpm.conf    # error_log をコメントアウト
+COPY zzz-php-fpm.conf /etc/php-fpm.d/zzz-php-fpm.conf
+COPY zzz-www.conf /etc/php-fpm.d/zzz-www.conf
+# error_log をコメントアウト
+RUN sed -i "s/error_log/;error_log/" /etc/php-fpm.conf
 ```
 
 Dockerコンテナを起動すると、Laravelのログが標準エラー出力に出力されると思います。
@@ -271,8 +273,9 @@ FROM amazonlinux:2023
 ～php-fpmのインストール処理～
 
 # 以下を追加
-COPY zzz-www.conf /etc/php-fpm.d/zzz-www.conf    # zzz-www.conf をコピー
-RUN sed -i "s/php_admin_value\[error_log\]/;php_admin_value\[error_log\]/" /etc/php-fpm.d/www.conf    # php_admin_value[error_log] をコメントアウト
+COPY zzz-www.conf /etc/php-fpm.d/zzz-www.conf
+# php_admin_value[error_log] をコメントアウト
+RUN sed -i "s/php_admin_value\[error_log\]/;php_admin_value\[error_log\]/" /etc/php-fpm.d/www.conf
 ```
 
 Dockerコンテナを起動すると、PHPのログが標準エラー出力に出力されると思います。

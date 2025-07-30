@@ -167,8 +167,9 @@ FROM amazonlinux:2023
 ... install php-fpm, etc.
 
 # Add the following
-COPY zzz-www.conf /etc/php-fpm.d/zzz-www.conf    # Copy an additional config file
-RUN sed -i "s/error_log = .*/error_log = \/dev\/stderr/" /etc/php-fpm.conf    # Change error_log
+COPY zzz-www.conf /etc/php-fpm.d/zzz-www.conf
+# Change error_log
+RUN sed -i "s/error_log = .*/error_log = \/dev\/stderr/" /etc/php-fpm.conf
 ```
 
 Once the container starts, Laravel logs should be output to standard error.
@@ -204,9 +205,10 @@ FROM amazonlinux:2023
 ... install php-fpm, etc.
 
 # Add the following
-COPY zzz-php-fpm.conf /etc/php-fpm.d/zzz-php-fpm.conf    # Copy zzz-php-fpm.conf
-COPY zzz-www.conf /etc/php-fpm.d/zzz-www.conf    # Copy zzz-www.conf
-RUN sed -i "s/error_log/;error_log/" /etc/php-fpm.conf    # Comment error_log out
+COPY zzz-php-fpm.conf /etc/php-fpm.d/zzz-php-fpm.conf
+COPY zzz-www.conf /etc/php-fpm.d/zzz-www.conf
+# Comment error_log out
+RUN sed -i "s/error_log/;error_log/" /etc/php-fpm.conf
 ```
 
 When you start the Docker container, Laravel logs should be output to standard error.
@@ -269,8 +271,9 @@ FROM amazonlinux:2023
 ... install php-fpm, etc.
 
 # Add the following
-COPY zzz-www.conf /etc/php-fpm.d/zzz-www.conf    # Copy zzz-www.conf
-RUN sed -i "s/php_admin_value\[error_log\]/;php_admin_value\[error_log\]/" /etc/php-fpm.d/www.conf    # Comment php_admin_value[error_log] out
+COPY zzz-www.conf /etc/php-fpm.d/zzz-www.conf
+# Comment php_admin_value[error_log] out
+RUN sed -i "s/php_admin_value\[error_log\]/;php_admin_value\[error_log\]/" /etc/php-fpm.d/www.conf
 ```
 
 Once you launch the Docker container, the PHP error logs should be output to standard error.
