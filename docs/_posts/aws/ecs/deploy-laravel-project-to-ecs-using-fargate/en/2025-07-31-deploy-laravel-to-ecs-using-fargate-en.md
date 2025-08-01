@@ -24,7 +24,9 @@ For more information, follow [this instruction](/aws/cli/install-aws-cli-on-linu
 For more information, follow [this instruction](/aws/cli/configure-sso-session-and-profile-with-aws-cli-en)
 
 ## Environment
-- Ubuntu 22.04.3 LTS
+- Ubuntu 22.04.3 LTS (running on WSL)
+- Docker Engine 26.0.0
+- Laravel 11
 
 ## Deployment Steps
 1. [Create Laravel Project](#1-create-laravel-project)

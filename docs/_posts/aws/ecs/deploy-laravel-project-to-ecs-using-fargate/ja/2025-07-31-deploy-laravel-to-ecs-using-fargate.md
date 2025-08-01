@@ -24,7 +24,9 @@ Fargateを利用してAmazon ECSにLaravelプロジェクトをデプロイし�
 詳しくは[こちらの手順](/aws/cli/configure-sso-session-and-profile-with-aws-cli)を参照してください。
 
 ## 環境
-- Ubuntu 22.04.3 LTS
+- Ubuntu 22.04.3 LTS (WSLで起動している)
+- Docker Engine 26.0.0
+- Laravel 11
 
 ## デプロイ手順
 1. [Laravelプロジェクトの作成](#1-laravelプロジェクトの作成)
