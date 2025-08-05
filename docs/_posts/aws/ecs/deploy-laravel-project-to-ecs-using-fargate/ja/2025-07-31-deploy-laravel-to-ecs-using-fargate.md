@@ -13,6 +13,7 @@ Fargateを利用してAmazon ECSにLaravelプロジェクトをデプロイし�
 - [Pushing a Docker image to an Amazon ECR private repository](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html)
 - [Learn how to create an Amazon ECS Linux task for the Fargate launch type](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/getting-started-fargate.html)
 - [Amazon ECS task execution IAM role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html)
+- [Amazon ECR interface VPC endpoints (AWS PrivateLink)](https://docs.aws.amazon.com/AmazonECR/latest/userguide/vpc-endpoints.html)
 
 ## 前提
 - AWSアカウント
@@ -28,6 +29,11 @@ Fargateを利用してAmazon ECSにLaravelプロジェクトをデプロイし�
 - Docker Engine 26.0.0
 - Laravel 11
 
+## アーキテクチャー図
+今回作成するシステムのアーキテクチャー図です。
+
+![アーキテクチャー図](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image37.png "アーキテクチャー図")
+
 ## デプロイ手順
 1. [Laravelプロジェクトの作成](#1-laravelプロジェクトの作成)
 2. [リポジトリの作成](#2-リポジトリの作成)
@@ -35,8 +41,11 @@ Fargateを利用してAmazon ECSにLaravelプロジェクトをデプロイし�
 4. [クラスターの作成](#4-クラスターの作成)
 5. [ECSタスク実行用IAMロールの作成](#5-ecsタスク実行用iamロールの作成)
 6. [タスク定義の作成](#6-タスク定義の作成)
-7. [サービスの作成](#7-サービスの作成)
-8. [Laravelプロジェクトの確認](#8-laravelプロジェクトの確認)
+7. [セキュリティグループの作成](#7-セキュリティグループの作成)
+8. [VPCエンドポイントの作成](#8-vpcエンドポイントの作成)
+9. [アプリケーションロードバランサーの作成](#9-アプリケーションロードバランサーの作成)
+10. [サービスの作成](#10-サービスの作成)
+11. [Laravelプロジェクトの確認](#11-laravelプロジェクトの確認)
 
 ## 1. Laravelプロジェクトの作成
 Laravelプロジェクトを作成します。  
@@ -176,7 +185,7 @@ Nextをクリックします。
 
 管理コンソールのTask definitionsにアクセスします。
 
-![AWS管理コンソールのECS](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image6.png "AWS管理コンソールのECS")
+!AWS管理コンソールの[ECS](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image6.png "AWS管理コンソールのECS")
 
 「Create new task definition with JSON」を選択します。
 
@@ -221,7 +230,116 @@ Nextをクリックします。
 
 Createをクリックします。
 
-## 7. サービスの作成
+## 7. セキュリティグループの作成
+AWS管理コンソールの[VPC](https://console.aws.amazon.com/vpc/)にアクセスし、Security groupsをクリックします。
+
+![AWSマネジメント管理のVPC](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image36.png "AWSマネジメント管理のVPC")
+
+Create security groupをクリックし、以下のセキュリティグループを作成します。
+
+### プライベート用
+インバウンドルール:
+
+| Type | Port range | Source | Note |
+|------|------------|--------|------|
+| All traffic | All | このセキュリティグループID | VPCエンドポイントへのアクセス用 |
+| All traffic | All | パブリック用のセキュリティグループID | ロードバランサーからECSタスクへのアクセスを許可するため |
+
+アウトバウンドルール:
+
+| Type | Port range | Source | Note |
+|------|------------|--------|------|
+| HTTPS | 443 | 0.0.0.0/0 | ECRイメージの取得用 |
+
+### パブリック用
+インバウンドルール:
+
+| Type | Port range | Source | Note |
+|------|------------|--------|------|
+| HTTP | 80 | 0.0.0.0/0 | ロードバランサーへのアクセスを許可するため |
+
+アウトバウンドルール:
+
+| Type | Port range | Source | Note |
+|------|------------|--------|------|
+| All traffic | All | Security group ID for private | ECSタスクへのアクセスを許可するため |
+
+## 8. VPCエンドポイントの作成
+プライベートサブネット内のECSタスクからECRイメージを取得するために、VPCエンドポイントを作成します。  
+この例では以下の3つのエンドポイントが必要です。
+
+- `com.amazonaws.region.ecr.dkr`
+- `com.amazonaws.region.ecr.api`
+- `com.amazonaws.region.s3` (Gateway)  
+ECRはイメージレイヤーの保存にAmazon S3を使用しているためです。
+
+AWS管理コンソールの[VPC](https://console.aws.amazon.com/vpc/)にアクセスし、Endpointsをクリックします。
+
+![AWSマネジメント管理のVPC](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image32.png "AWSマネジメント管理のVPC")
+
+Create endpointをクリックします。
+
+![エンドポイント一覧画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image33.png "エンドポイント一覧画面")
+
+名前を入力し、「Type」には「AWS services」を選択します。
+
+![エンドポイント作成画面1](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image34.png "エンドポイント作成画面1")
+
+`com.amazonaws.region.ecr.dkr` を選択します。
+
+![エンドポイント作成画面2](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image35.png "エンドポイント作成画面2")
+
+VPC、プライベートサブネット、プライベート用のセキュリティグループを選択します。
+
+Create endpointをクリックします。
+
+他のエンドポイントについても同様の手順を繰り返します。
+
+## 9. アプリケーションロードバランサーの作成
+Fargateコンテナに対するトラフィックを分散させるために、アプリケーションロードバランサーを作成します。
+
+AWSマネジメント管理の[EC2](https://console.aws.amazon.com/ec2/)にアクセスし、Load Balancersをクリックします。
+
+![AWSマネジメント管理のEC2](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image21.png "AWS管理コンソールのEC2")
+
+Create Application Load Balancerをクリックします。
+
+![ロードバランサー一覧画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image22.png "ロードバランサー一覧画面")
+
+ロードバランサー名を入力し、「Scheme」には「Internet-facing」、「IP address type」には「IPv4」を選択します。
+
+![ロードバランサー作成画面1](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image23.png "ロードバランサー作成画面1")
+
+VPC、パブリックサブネット、パブリック用のセキュリティグループを選択します。
+
+次にCreate target groupをクリックします。
+
+![ロードバランサー作成画面2](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image24.png "ロードバランサー作成画面2")
+
+「target type」に「IP addresses」を選択します。
+
+!ターゲットグループ作成画面1](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image25.png "ターゲットグループ作成画面1")
+
+ターゲットグループ名を入力し、「Protocol」には「HTTP」、「Port」には「80」を指定します。  
+「IP address type」には「IPv4」を選択します。
+
+![ターゲットグループ作成画面2](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image26.png "ターゲットグループ作成画面2")
+
+VPCを選択します。
+
+「Health checks」は以下のように構成します。
+
+![ターゲットグループ作成画面3](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image27.png "ターゲットグループ作成画面3")
+
+Nextをクリックし、Create target groupをクリックします。
+
+ロードバランサーの作成画面に戻り、先ほど作成したターゲットグループをリスナーに設定します。
+
+![ロードバランサー作成画面3](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image28.png "ロードバランサー作成画面3")
+
+Create load balancerをクリックします。
+
+## 10. サービスの作成
 再びECSクラスター画面に戻り、対象のクラスターを選択します。
 
 ![クラスター一覧画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image14.png "クラスター一覧画面")
@@ -234,24 +352,26 @@ Createをクリックします。
 
 ![サービス作成画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image16.png "サービス作成画面")
 
-VPC、サブネット、セキュリティグループを選択します。  
-この例ではパブリックサブネットと、任意のIPからのHTTPアクセスをインバウンド・アウトバウンドルールに定義し、任意のIPからのHTTPSアクセスをアウトバウンドルールに定義したセキュリティグループを選択しています。  
-（任意のデバイスからLaravelのWebページを見るため(HTTP)と、ECSサービスにECRリポジトリからのイメージのプルを許可するため(HTTPS)）
+VPC、プライベートサブネット、プライベート用のセキュリティグループを選択します。
 
-「Public IP」をオンにして、Createをクリックします。
+「Public IP」のオプションはオフにします。
 
 ![サービス作成画面のネットワーク](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image17.png "サービス作成画面のネットワーク")
 
-## 8. Laravelプロジェクトの確認
-クラスター画面からサービスを選びます。
+続けて、ロードバランシングの設定を行います。  
+先ほど作成したロードバランサーを指定します。
 
-![サービス一覧画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image18.png "サービス一覧画面")
+![サービス作成画面のロードバランシング1](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image30.png "サービス作成画面のロードバランシング1")
 
-稼働中のタスクをクリックします。
+![サービス作成画面のロードバランシング2](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image31.png "サービス作成画面のロードバランシング2")
 
-![タスク一覧画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image19.png "タスク一覧画面")
+Createをクリックします。
 
-タスク詳細の「Configuration」からパブリックIPアドレスを取得し、ブラウザで `http://<パブリックIP>` にアクセスします。
+## 11. Laravelプロジェクトの確認
+ロードバランサーの「Details」セクションからDNS名を取得します。
+
+ブラウザで `http://<取得したDNS名>` にアクセスします。  
+（例： `http://laravel-project-load-balancer-xxxxx.xxxxx.elb.amazonaws.com`）。
 
 LaravelのWebページが表示されれば、ECSへのデプロイは成功です。
 

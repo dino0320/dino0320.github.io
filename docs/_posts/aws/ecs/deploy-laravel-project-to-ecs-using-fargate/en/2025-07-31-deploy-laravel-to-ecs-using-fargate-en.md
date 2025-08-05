@@ -13,6 +13,7 @@ This article explains how to deploy a Laravel project to Amazon ECS on AWS using
 - [Pushing a Docker image to an Amazon ECR private repository](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html)
 - [Learn how to create an Amazon ECS Linux task for the Fargate launch type](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/getting-started-fargate.html)
 - [Amazon ECS task execution IAM role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html)
+- [Amazon ECR interface VPC endpoints (AWS PrivateLink)](https://docs.aws.amazon.com/AmazonECR/latest/userguide/vpc-endpoints.html)
 
 ## Prerequisites
 - An AWS account
@@ -28,6 +29,11 @@ For more information, follow [this instruction](/aws/cli/configure-sso-session-a
 - Docker Engine 26.0.0
 - Laravel 11
 
+## Architecture Diagram
+This is an architecture diagram for the system we'll build.
+
+![Architecture Diagram](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image37.png "Architecture Diagram")
+
 ## Deployment Steps
 1. [Create Laravel Project](#1-create-laravel-project)
 2. [Create Repository](#2-create-repository)
@@ -35,8 +41,11 @@ For more information, follow [this instruction](/aws/cli/configure-sso-session-a
 4. [Create Cluster](#4-create-cluster)
 5. [Create ECS Task Execution IAM Role](#5-create-ecs-task-execution-iam-role)
 6. [Create Task Definition](#6-create-task-definition)
-7. [Create Service](#7-create-service)
-8. [Verify Laravel Project](#8-verify-laravel-project)
+7. [Create Security Group](#7-create-security-group)
+8. [Create VPC Endpoints](#8-create-vpc-endpoints)
+9. [Create Application Load Balancer](#9-create-application-load-balancer)
+10. [Create Service](#10-create-service)
+11. [Verify Laravel Project](#11-verify-laravel-project)
 
 ## 1. Create Laravel Project
 Create a Laravel project.  
@@ -230,8 +239,123 @@ Add the "portMapping" and "command" items.
 
 Click the "Create" button.
 
-## 7. Create Service
-Return to your clusters screen on AWS Management Console.  
+## 7. Create Security Group
+Go to [VPC on AWS Management Console](https://console.aws.amazon.com/vpc/), then click "Security groups".
+
+![VPC on AWS Management Console](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image36.png "VPC on AWS Management Console")
+
+Click "Create security group".  
+Create the following security groups.
+
+### For private
+
+Inbound rules:
+
+| Type | Port range | Source | Note |
+|------|------------|--------|------|
+| All traffic | All | This security group ID | To access VPC endpoints. |
+| All traffic | All | Security group ID for public | To allow the Load Balancer to access ECS tasks. |
+
+Outbound rules:
+
+| Type | Port range | Source | Note |
+|------|------------|--------|------|
+| HTTPS | 443 | 0.0.0.0/0 | To pull ECR images. |
+
+### For public
+
+Inbound rules:
+
+| Type | Port range | Source | Note |
+|------|------------|--------|------|
+| HTTP | 80 | 0.0.0.0/0 | To allow access to the Load Balancer. |
+
+Outbound rules:
+
+| Type | Port range | Source | Note |
+|------|------------|--------|------|
+| All traffic | All | Security group ID for private | To allow access to ECS tasks. |
+
+## 8. Create VPC Endpoints
+To pull ECR images from ECS tasks in private subnets.  
+In this example, the following three endpoints are required.
+
+- `com.amazonaws.region.ecr.dkr`
+- `com.amazonaws.region.ecr.api`
+- `com.amazonaws.region.s3` (Gateway)  
+This is because ECR uses Amazon S3 to store image layers.
+
+Go to [VPC on AWS Management Console](https://console.aws.amazon.com/vpc/).  
+Click "Endpoints".
+
+![VPC on AWS Management Console](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image32.png "VPC on AWS Management Console")
+
+Click "Create endpoint".
+
+![Endpoints](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image33.png "Endpoints")
+
+Enter a name and select "AWS services" for the Type.
+
+![Endpoint creation1](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image34.png "Endpoint creation1")
+
+Choose `com.amazonaws.region.ecr.dkr`.
+
+![Endpoint creation2](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image35.png "Endpoint creation2")
+
+Select your VPC, private subnets and security group for private.
+
+Click "Create endpoint".
+
+Repeat the same steps for the others.
+
+## 9. Create Application Load Balancer
+Create an Application Load Balancer to distribute incoming traffic across Fargate containers.
+
+Go to [EC2 on AWS Management Console](https://console.aws.amazon.com/ec2/).  
+Click "Load Balancers".
+
+![EC2 on AWS Management Console](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image21.png "EC2 on AWS Management Console")
+
+Click "Create Application Load Balancer".
+
+![Load balancers on AWS Management Console](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image22.png "Load balancers on AWS Management Console")
+
+Enter a Load Balancer name, choose "Internet-facing" for the Scheme, and select "IPv4" for the IP address type.
+
+![Load balancer creation1](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image23.png "Load balancer creation1")
+
+Select your VPC, public subnets and security group for public.
+
+Then click "Create target group".
+
+![Load balancer creation2](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image24.png "Load balancer creation2")
+
+Choose "IP addresses" as the target type.
+
+![Target group creation1](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image25.png "Target group creation1")
+
+Enter "Target group name" and specify "HTTP" for the Protocol and "80" for the Port.  
+Select "IPv4" for the IP address type.
+
+![Target group creation2](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image26.png "Target group creation2")
+
+Select your VPC.
+
+Configure the Health checks as follows.
+
+![Target group creation3](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image27.png "Target group creation3")
+
+Click "Next", then click "Create target group".
+
+Return to the Load Balancer creation screen.  
+Select the target group you just created as the listener’s target.
+
+![Load balancer creation3](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image28.png "Load balancer creation3")
+
+Click "Create load balancer".
+
+## 10. Create Service
+Return to your [clusters screen on AWS Management Console](https://console.aws.amazon.com/ecs/clusters/).  
 Click your cluster.
 
 ![Clusters on AWS Management Console](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image14.png "Clusters on AWS Management Console")
@@ -240,32 +364,30 @@ Click the "Create" button.
 
 ![Services on AWS Management Console](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image15.png "Services on AWS Management Console")
 
-Enter the task definition family, then the latest revision and service name will be automatically populated.  
+Enter the task definition family; the latest revision and service name will be populated automatically.  
 In this example, the service name was changed as follows.
 
 ![Service Creation](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image16.png "Service Creation")
 
-Select your VPC, subnets and security group.  
-In this example, I chose public subnets and a security group which allows your device to access this service to see a Laravel web page and allows this ECS service to pull images from the ECR repository.  
-I configured inbound and outbound rules that allow any IP address to access via HTTP and an outbound rule that allows any IP address to access via HTTPS.  
-Then turn the "Public IP" button on.
+Select your VPC, private subnets and security group for private.
+
+Then turn the "Public IP" button off.
 
 ![Network on Service Creation](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image17.png "Network on Service Creation")
 
+Then configure the Load balancing.  
+Specify the load balancer you created.
+
+![Load balancing on Service Creation1](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image30.png "Load balancing on Service Creation1")
+
+![Load balancing on Service Creation2](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image31.png "Load balancing on Service Creation2")
+
 Click the "Create" button.
 
-## 8. Verify Laravel Project
-Navigate to your cluster and click your service.
+## 11. Verify Laravel Project
+Retrieve the DNS name from the "Details" section of your load balancer.
 
-![Services on your cluster](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image18.png "Services on your cluster")
-
-Click a task running.
-
-![Tasks on your service](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image19.png "Tasks on your service")
-
-Retrieve the Public IP address from the "Configuration" section of the task details.
-
-Access `http://<Your task Public IP>` in your browser.  
+Access `http://<Your load balancer DNS name>` in your browser (e.g. `http://laravel-project-load-balancer-xxxxx.xxxxx.elb.amazonaws.com`).  
 If you see the following web page, your Laravel project was successfully deployed to ECS.
 
 ![Laravel project web page](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image20.png "Laravel project web page")
