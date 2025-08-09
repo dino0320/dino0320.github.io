@@ -135,6 +135,7 @@ Options:
 |name|Assigns a name to the container. In the example, `php-cli` is specified.|
 |w|Sets the working directory inside the container. In the example, `/app` is used.|
 |v|Mounts a host directory to the container. The example mounts the current host directory to `/app` inside the container using the `pwd` command.|
+|p|Forward a host's port to the Docker container's port. For example, `-p 8080:80` (`8080` is the host's port, `80` is the container's port)|
 
 ## docker stop
 The `docker stop` command stops running Docker containers.
