@@ -7,6 +7,8 @@ page_name: specify-absolute-path-in-path-option-of-artisan-migrate-command
 lang: ja
 ---
 
+`artisan migrate` コマンドで絶対パスを指定します。
+
 ## 環境
 - Laravel 11
 

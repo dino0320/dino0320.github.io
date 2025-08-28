@@ -7,6 +7,8 @@ page_name: specify-absolute-path-in-path-option-of-artisan-migrate-command-en
 lang: en
 ---
 
+Specify an absolute path in the path option of the `artisan migrate` command.
+
 ## Environment
 - Laravel 11
 
