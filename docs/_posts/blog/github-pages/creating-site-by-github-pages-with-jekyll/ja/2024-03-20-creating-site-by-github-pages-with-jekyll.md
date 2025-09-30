@@ -86,7 +86,7 @@ GitHub Pagesを使う場合は `github-pages` が必要なので、次の行を�
 ```
 gem "github-pages", group: :jekyll_plugins
 ```
-上記の行に `, "~> <github-pagesのバージョン>"` を追加します。`<github-pagesのバージョン>` には[Dependency versions](https://pages.github.com/versions/)の `github-pages` のバージョンを入力します。  
+上記の行に `, "~> <github-pagesのバージョン>"` を追加します。`<github-pagesのバージョン>` には[Dependency versions](https://pages.github.com/versions.json)の `github-pages` のバージョンを入力します。  
 ```
 gem "github-pages", "~> <github-pagesのバージョン>", group: :jekyll_plugins
 ```

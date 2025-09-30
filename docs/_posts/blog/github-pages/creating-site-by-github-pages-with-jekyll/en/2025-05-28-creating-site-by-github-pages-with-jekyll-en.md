@@ -93,7 +93,7 @@ Add a version constraint like this:
 ```
 gem "github-pages", "~> <github-pages version>", group: :jekyll_plugins
 ```
-Replace `<github-pages version>` with the version listed under [Dependency versions](https://pages.github.com/versions/).  
+Replace `<github-pages version>` with the version listed under [Dependency versions](https://pages.github.com/versions.json).  
 
 Comment out the line that defines `jekyll`, as it is already included in `github-pages`:
 ```
