@@ -145,7 +145,7 @@ RUN yum -y install nginx-1.24.0
 COPY nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 
 # Install php-fpm and php-mysqlnd
-RUN yum -y install php8.2-fpm php8.2-mysqlnd
+RUN yum -y install php8.2-fpm php8.2-mysqlnd php8.2-mbstring
 # Not creating the directory in advance will cause an error
 RUN mkdir /run/php-fpm
 RUN mkdir /var/run/php
