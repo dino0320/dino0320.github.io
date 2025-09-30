@@ -24,7 +24,8 @@ Installing NGINX on a computer enables it to function as a web server.
 1. [Create a Laravel Project](#1-create-a-laravel-project)
 2. [Create Configuration Files](#2-create-configuration-files)
 3. [Create Docker Configuration Files](#3-create-docker-configuration-files)
-4. [Check the Laravel Project](#4-check-the-laravel-project)
+4. [Add permissions](#4-add-permissions)
+5. [Check the Laravel Project](#5-check-the-laravel-project)
 
 ## 1. Create a Laravel Project
 To create a Laravel project, please refer to [this guide](/web-application-framework/laravel/creating-laravel-project-on-linux-en).
@@ -36,9 +37,9 @@ In this explanation, the root directory of the Laravel project is referred to as
 ### nginx.repo
 This configuration file sets up a YUM repository for Amazon Linux 2023.  
 Based on [this guide](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-prebuilt-amazon-linux-packages).
-Create this file in the `/docker/web/nginx` directory.
+Create this file in the `docker/web/nginx` directory.
 
-`/docker/web/nginx/nginx.repo` :
+`docker/web/nginx/nginx.repo` :
 ```
 [nginx-stable]
 name=nginx stable repo
@@ -60,9 +61,9 @@ module_hotfixes=true
 ### default.conf
 This is the NGINX configuration file for the Laravel project, based on [this official documentation](https://laravel.com/docs/11.x/deployment#nginx).  
 We only change it as setting `server_name` to `localhost` as this is for testing.  
-Create this file in the `/docker/web/nginx/conf.d` directory.
+Create this file in the `docker/web/nginx/conf.d` directory.
 
-`/docker/web/nginx/conf.d/default.conf` :
+`docker/web/nginx/conf.d/default.conf` :
 ```conf
 server {
     listen 80;
@@ -100,9 +101,9 @@ server {
 
 ### zzz-www.conf
 This is an additional PHP-FPM configuration file used to override the `.sock` file path.  
-Create this file in the `/docker/web/php/php-fpm.d` directory.
+Create this file in the `docker/web/php/php-fpm.d` directory.
 
-`/docker/web/php/php-fpm.d/zzz-www.conf` :
+`docker/web/php/php-fpm.d/zzz-www.conf` :
 ```conf
 [www]
 listen = /var/run/php/php8.2-fpm.sock
@@ -114,7 +115,7 @@ The root directory of the Laravel project is assumed to be `/`.
 
 ### docker-compose.yml
 This is the Docker Compose configuration file.  
-Create this file in the `/` directory.
+Create this file in the project root directory.
 
 `/docker-compose.yml` :
 ```yml
@@ -125,15 +126,15 @@ services:
       - .:/srv/example.com
     ports:
       - "8080:80"
-    command: bash -c "chmod 755 /srv/example.com/docker/web/start.sh && /srv/example.com/docker/web/start.sh"
+    command: bash -c "/srv/example.com/docker/web/start.sh"
 ```
 
 ### Dockerfile
 This is the Dockerfile for the web service (NGINX + PHP-FPM).  
 We’re using the `amazonlinux` base image with future AWS deployment in mind.  
-Create this file in the `/docker/web` directory.
+Create this file in the `docker/web` directory.
 
-`/docker/web/Dockerfile` :
+`docker/web/Dockerfile` :
 ```dockerfile
 FROM amazonlinux:2023
 
@@ -152,9 +153,10 @@ COPY php/php-fpm.d/zzz-www.conf /etc/php-fpm.d/zzz-www.conf
 ```
 
 ### start.sh
-Create `start.sh` which runs when the Docker container starts.
+Create `start.sh` which runs when the Docker container starts.  
+Create this file in the `docker/web` directory.
 
-`start.sh`:
+`docker/web/start.sh`:
 
 ```sh
 #!/bin/bash
@@ -163,18 +165,27 @@ set -euxo pipefail
 
 PROJECT_PATH=/srv/example.com
 
-# Grant a Nginx user permission to access these files.
-chmod 777 "$PROJECT_PATH/storage/logs"
-chmod 777 "$PROJECT_PATH/storage/framework/views"
-chmod 777 "$PROJECT_PATH/database/database.sqlite"
-
 # Start php-fpm and NGINX
 # By using -g "daemon off;", NGINX runs in the foreground, preventing the container from exiting automatically.
 php-fpm
 nginx -g "daemon off;"
 ```
 
-## 4. Check the Laravel Project
+## 4. Add permissions
+Add permissions to certain files so that specific users, such as the Nginx user and root, can access them.
+
+```
+$ cd <path-to-your-laravel-project-root>
+$ chmod 777 storage/logs
+$ chmod 777 storage/framework/views
+$ chmod 777 database
+$ chmod 777 database/database.sqlite
+$ chmod 755 docker/web/start.sh
+```
+
+Because `chmod 777` is not recommended, use this setting only in a development environment.
+
+## 5. Check the Laravel Project
 Start the Docker container and check the Laravel project.  
 Run the following commands:
 

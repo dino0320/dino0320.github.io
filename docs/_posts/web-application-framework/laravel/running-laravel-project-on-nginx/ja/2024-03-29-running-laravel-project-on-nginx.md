@@ -24,7 +24,8 @@ NGINXをインストールしたコンピューターはWebサーバーの動き
 1. [Laravelプロジェクトを作成する。](#1-laravelプロジェクトを作成する)
 2. [設定ファイルを作成する。](#2-設定ファイルを作成する)
 3. [Dockerの設定ファイルを作成する。](#3-dockerの設定ファイルを作成する)
-4. [Laravelプロジェクトを確認する。](#4-laravelプロジェクトを確認する)
+4. [権限を与える](#4-権限を与える)
+5. [Laravelプロジェクトを確認する。](#5-laravelプロジェクトを確認する)
 
 ## 1. Laravelプロジェクトを作成する
 Laravelプロジェクトの作成については[こちら](/web-application-framework/laravel/creating-laravel-project-on-linux)をご覧ください。
@@ -35,9 +36,9 @@ Laravelプロジェクトのディレクトリ以下で下記の設定ファイ�
 
 ### nginx.repo
 Amazon Linux 2023用にyumリポジトリをセットアップするための設定ファイルです。[こちら](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-prebuilt-amazon-linux-packages)を参考にしています。  
-`/docker/web/nginx` ディレクトリに作成します。
+`docker/web/nginx` ディレクトリに作成します。
 
-`/docker/web/nginx/nginx.repo` :
+`docker/web/nginx/nginx.repo` :
 ```
 [nginx-stable]
 name=nginx stable repo
@@ -59,9 +60,9 @@ module_hotfixes=true
 ### default.conf
 LaravelプロジェクトのためのNGINXの設定ファイルです。[こちら](https://laravel.com/docs/11.x/deployment#nginx)を参考にしています。  
 `server_name` を `localhost` に変更しています。動作確認が目的なので、少し変更を加えるだけにしています。  
-`/docker/web/nginx/conf.d` ディレクトリに作成します。
+`docker/web/nginx/conf.d` ディレクトリに作成します。
 
-`/docker/web/nginx/conf.d/default.conf` :
+`docker/web/nginx/conf.d/default.conf` :
 ```conf
 server {
     listen 80;
@@ -99,9 +100,9 @@ server {
 
 ### zzz-www.conf
 php-fpmの追加の設定ファイルです。`.sock` ファイルのパスを上書きするために作成します。  
-`/docker/web/php/php-fpm.d` ディレクトリに作成します。
+`docker/web/php/php-fpm.d` ディレクトリに作成します。
 
-`/docker/web/php/php-fpm.d/zzz-www.conf` :
+`docker/web/php/php-fpm.d/zzz-www.conf` :
 ```conf
 [www]
 listen = /var/run/php/php8.2-fpm.sock
@@ -113,9 +114,9 @@ Laravelプロジェクトのディレクトリ以下に下記の設定ファイ�
 
 ### docker-compose.yml
 Docker Composeの設定ファイルです。  
-`/` ディレクトリに作成します。
+プロジェクトのルートディレクトリに作成します。
 
-`/docker-compose.yml` :
+`docker-compose.yml` :
 ```yml
 services:
   web:
@@ -124,15 +125,15 @@ services:
       - .:/srv/example.com
     ports:
       - "8080:80"
-    command: bash -c "chmod 755 /srv/example.com/docker/web/start.sh && /srv/example.com/docker/web/start.sh"
+    command: bash -c "/srv/example.com/docker/web/start.sh"
 ```
 
 ### Dockerfile
 webのDockerfileです。(NGINX + php-fpmをインストールするDockerコンテナ)  
 Dockerイメージは、今回は後でAWSにデプロイすることを考えて `amazonlinux` にしています。  
-`/docker/web` ディレクトリに作成します。
+`docker/web` ディレクトリに作成します。
 
-`/docker/web/Dockerfile` :
+`docker/web/Dockerfile` :
 ```dockerfile
 FROM amazonlinux:2023
 
@@ -151,9 +152,10 @@ COPY php/php-fpm.d/zzz-www.conf /etc/php-fpm.d/zzz-www.conf
 ```
 
 ### start.sh
-Dockerコンテナ起動時に実行される `start.sh` を作成します。
+Dockerコンテナ起動時に実行される `start.sh` を作成します。  
+`docker/web` ディレクトリに作成します。
 
-`start.sh`:
+`docker/web/start.sh`:
 
 ```sh
 #!/bin/bash
@@ -162,24 +164,35 @@ set -euxo pipefail
 
 PROJECT_PATH=/srv/example.com
 
-# Nginxユーザーに以下のファイルにアクセスする権限を与える
-chmod 777 "$PROJECT_PATH/storage/logs"
-chmod 777 "$PROJECT_PATH/storage/framework/views"
-chmod 777 "$PROJECT_PATH/database/database.sqlite"
-
 # php-fpmとNGINX起動
 # nginxは「-g "daemon off;"」でフォアグラウンド実行になり、コンテナが自動的に終了しなくなる
 php-fpm
 nginx -g "daemon off;"
 ```
 
-## 4. Laravelプロジェクトを確認する
+## 4. 権限を与える
+Nginxユーザーやrootユーザーが実行できないとエラーになってしまうファイルやディレクトリに権限を与えます。
+
+```
+$ cd <Laravelプロジェクトのルートディレクトリのパス>
+$ chmod 777 storage/logs
+$ chmod 777 storage/framework/views
+$ chmod 777 database
+$ chmod 777 database/database.sqlite
+$ chmod 755 docker/web/start.sh
+```
+
+`chmod 777` はセキュリティ的によくないのでユーザーをグループに入れるのが無難です。
+
+## 5. Laravelプロジェクトを確認する
 Dockerコンテナを立ち上げてLaravelプロジェクトを確認します。  
 以下を実行します。
+
 ```
 $ cd <Laravelプロジェクトのルートディレクトリのパス>
 $ docker compose up --build -d
 ```
+
 コンテナはWSL上のUbuntuで立ち上げているので、Windows側から `http://localhost:8080` にアクセスします。
 
 ![Laravelプロジェクトの画面](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Laravelプロジェクトの画面")
