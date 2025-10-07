@@ -24,8 +24,7 @@ Installing NGINX on a computer enables it to function as a web server.
 1. [Create a Laravel Project](#1-create-a-laravel-project)
 2. [Create Configuration Files](#2-create-configuration-files)
 3. [Create Docker Configuration Files](#3-create-docker-configuration-files)
-4. [Add permissions](#4-add-permissions)
-5. [Check the Laravel Project](#5-check-the-laravel-project)
+4. [Check the Laravel Project](#4-check-the-laravel-project)
 
 ## 1. Create a Laravel Project
 To create a Laravel project, please refer to [this guide](/web-application-framework/laravel/creating-laravel-project-on-linux-en).
@@ -100,12 +99,14 @@ server {
 ```
 
 ### zzz-www.conf
-This is an additional PHP-FPM configuration file used to override the `.sock` file path.  
+This is an additional PHP-FPM configuration file used to set the user and group to `nginx` and to override the `.sock` file path.  
 Create this file in the `docker/web/php/php-fpm.d` directory.
 
 `docker/web/php/php-fpm.d/zzz-www.conf` :
 ```conf
 [www]
+user = nginx
+group = nginx
 listen = /var/run/php/php8.2-fpm.sock
 ```
 
@@ -163,7 +164,8 @@ Create this file in the `docker/web` directory.
 
 set -euxo pipefail
 
-PROJECT_PATH=/srv/example.com
+# Add the nginx user to the root group for permission access.
+usermod -aG root nginx
 
 # Start php-fpm and NGINX
 # By using -g "daemon off;", NGINX runs in the foreground, preventing the container from exiting automatically.
@@ -171,21 +173,7 @@ php-fpm
 nginx -g "daemon off;"
 ```
 
-## 4. Add permissions
-Add permissions to certain files so that specific users, such as the Nginx user and root, can access them.
-
-```
-$ cd <path-to-your-laravel-project-root>
-$ chmod 777 storage/logs
-$ chmod 777 storage/framework/views
-$ chmod 777 database
-$ chmod 777 database/database.sqlite
-$ chmod 755 docker/web/start.sh
-```
-
-Because `chmod 777` is not recommended, use this setting only in a development environment.
-
-## 5. Check the Laravel Project
+## 4. Check the Laravel Project
 Start the Docker container and check the Laravel project.  
 Run the following commands:
 

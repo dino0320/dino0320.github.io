@@ -24,8 +24,7 @@ NGINXをインストールしたコンピューターはWebサーバーの動き
 1. [Laravelプロジェクトを作成する。](#1-laravelプロジェクトを作成する)
 2. [設定ファイルを作成する。](#2-設定ファイルを作成する)
 3. [Dockerの設定ファイルを作成する。](#3-dockerの設定ファイルを作成する)
-4. [権限を与える](#4-権限を与える)
-5. [Laravelプロジェクトを確認する。](#5-laravelプロジェクトを確認する)
+4. [Laravelプロジェクトを確認する。](#4-laravelプロジェクトを確認する)
 
 ## 1. Laravelプロジェクトを作成する
 Laravelプロジェクトの作成については[こちら](/web-application-framework/laravel/creating-laravel-project-on-linux)をご覧ください。
@@ -99,12 +98,14 @@ server {
 ```
 
 ### zzz-www.conf
-php-fpmの追加の設定ファイルです。`.sock` ファイルのパスを上書きするために作成します。  
+php-fpmの追加の設定ファイルです。実行ユーザーとグループを `nginx` にし、`.sock` ファイルのパスを上書きするために作成します。  
 `docker/web/php/php-fpm.d` ディレクトリに作成します。
 
 `docker/web/php/php-fpm.d/zzz-www.conf` :
 ```conf
 [www]
+user = nginx
+group = nginx
 listen = /var/run/php/php8.2-fpm.sock
 ```
 
@@ -162,7 +163,8 @@ Dockerコンテナ起動時に実行される `start.sh` を作成します。
 
 set -euxo pipefail
 
-PROJECT_PATH=/srv/example.com
+# アクセス権限のために、nginxユーザーにrootグループを追加する
+usermod -aG root nginx
 
 # php-fpmとNGINX起動
 # nginxは「-g "daemon off;"」でフォアグラウンド実行になり、コンテナが自動的に終了しなくなる
@@ -170,21 +172,7 @@ php-fpm
 nginx -g "daemon off;"
 ```
 
-## 4. 権限を与える
-Nginxユーザーやrootユーザーが実行できないとエラーになってしまうファイルやディレクトリに権限を与えます。
-
-```
-$ cd <Laravelプロジェクトのルートディレクトリのパス>
-$ chmod 777 storage/logs
-$ chmod 777 storage/framework/views
-$ chmod 777 database
-$ chmod 777 database/database.sqlite
-$ chmod 755 docker/web/start.sh
-```
-
-`chmod 777` はセキュリティ的によくないのでユーザーをグループに入れるのが無難です。
-
-## 5. Laravelプロジェクトを確認する
+## 4. Laravelプロジェクトを確認する
 Dockerコンテナを立ち上げてLaravelプロジェクトを確認します。  
 以下を実行します。
 
