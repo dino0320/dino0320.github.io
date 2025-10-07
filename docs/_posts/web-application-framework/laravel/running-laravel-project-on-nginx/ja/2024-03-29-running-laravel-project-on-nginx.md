@@ -125,7 +125,7 @@ services:
       - .:/srv/example.com
     ports:
       - "8080:80"
-    command: bash -c "/srv/example.com/docker/web/start.sh"
+    command: /srv/example.com/docker/web/start.sh
 ```
 
 ### Dockerfile
