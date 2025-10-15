@@ -121,14 +121,21 @@ export default function TestForm() {
 次に、`onSubmit` 関数を修正して、Inertia経由でLaravelにデータを送信します。
 
 ```tsx
-// 2. 送信ハンドラを定義
-  function onSubmit(values: z.infer<typeof formSchema>) {
-  // フォームの値を処理
-  // ✅ 型安全かつバリデーション済み
-  console.log(values)
-  // /show-username にデータを送信
-  router.post('/show-username', values) // 追加
-}
+import { router } from '@inertiajs/react' // 追加
+
+// ...
+
+  // 2. 送信ハンドラを定義
+    function onSubmit(values: z.infer<typeof formSchema>) {
+    // フォームの値を処理
+    // ✅ 型安全かつバリデーション済み
+    console.log(values)
+    // /show-username にデータを送信
+    router.post('/show-username', values) // 追加
+  }
+
+// ...
+
 ```
 
 次にArtisanコマンドでコントローラを作成します。

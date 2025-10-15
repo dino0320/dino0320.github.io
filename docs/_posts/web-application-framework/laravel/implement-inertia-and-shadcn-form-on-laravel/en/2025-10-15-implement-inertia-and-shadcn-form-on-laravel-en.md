@@ -121,14 +121,21 @@ Install any missing packages.
 Next, modify the `onSubmit` function to post data to Laravel via Inertia:
 
 ```tsx
-// 2. Define a submit handler.
-function onSubmit(values: z.infer<typeof formSchema>) {
-  // Do something with the form values.
-  // ✅ This will be type-safe and validated.
-  console.log(values)
-  // Post values to /show-username
-  router.post('/show-username', values) // Added
-}
+import { router } from '@inertiajs/react' // Added
+
+// ...
+
+  // 2. Define a submit handler.
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    // Do something with the form values.
+    // ✅ This will be type-safe and validated.
+    console.log(values)
+    // Post values to /show-username
+    router.post('/show-username', values) // Added
+  }
+
+// ...
+
 ```
 
 Generate a controller using Artisan:
