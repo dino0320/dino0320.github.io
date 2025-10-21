@@ -11,4 +11,10 @@
   {%- if jekyll.environment == 'production' and site.google_adsense -%}
     {%- include google-adsense.html -%}
   {%- endif -%}
+  {%- if page.layout == 'my-post' -%}
+    {%- assign ja_url = page.url | replace: '-en.html', '.html' -%}
+    {%- assign en_url = ja_url | replace: '.html', '-en.html' -%}
+    <link rel="alternate" href="{{ site.url }}{{ ja_url }}" hreflang="ja" />
+    <link rel="alternate" href="{{ site.url }}{{ en_url }}" hreflang="en" />
+  {%- endif -%}
 </head>
