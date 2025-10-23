@@ -9,6 +9,8 @@ lang: ja
 
 LaravelプロジェクトでInertia.jsとshadcn/uiを使ってフォームを実装する方法を説明します。
 
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image3.png "サムネイル")
+
 ## 参考
 - [shadcn/ui Form](https://ui.shadcn.com/docs/components/form)
 - [inertia.js Pages](https://inertiajs.com/pages)

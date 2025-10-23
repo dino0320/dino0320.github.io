@@ -9,6 +9,8 @@ lang: en
 
 This article explains how to implement an Inertia.js + shadcn/ui form in a Laravel project.
 
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image3.png "Thumbnail")
+
 ## References
 - [shadcn/ui Form](https://ui.shadcn.com/docs/components/form)
 - [inertia.js Pages](https://inertiajs.com/pages)
