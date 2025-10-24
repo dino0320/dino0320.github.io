@@ -3,10 +3,13 @@ layout: my-post
 title: "Installing Jekyll on Windows"
 date: 2025-07-08 00:00:00 +0000
 categories: programming ruby
+page_name: installing-jekyll-on-windows-en
 lang: en
 ---
 
 This guide explains how to install Jekyll on a Windows system.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## What is Jekyll?
 Jekyll is a static site generator written in Ruby.  

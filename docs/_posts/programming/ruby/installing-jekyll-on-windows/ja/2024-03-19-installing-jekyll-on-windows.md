@@ -3,10 +3,13 @@ layout: my-post
 title: "WindowsでJekyllをインストールする"
 date: 2024-03-19 00:00:00 +0000
 categories: programming ruby
+page_name: installing-jekyll-on-windows
 lang: ja
 ---
 
 Windows環境でJekyllをインストールします。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## Jekyllとは
 Rubyで作られた静的サイトジェネレーターです。  
