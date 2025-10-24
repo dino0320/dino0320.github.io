@@ -5,6 +5,7 @@ date: 2025-10-15 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: implement-inertia-and-shadcn-form-on-laravel-en
 lang: en
+image: /assets/images/web-application-framework/laravel/implement-inertia-and-shadcn-form-on-laravel-en/image3.png
 ---
 
 This article explains how to implement an Inertia.js + shadcn/ui form in a Laravel project.

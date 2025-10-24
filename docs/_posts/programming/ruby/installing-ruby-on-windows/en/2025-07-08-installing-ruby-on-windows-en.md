@@ -5,6 +5,7 @@ date: 2025-07-08 00:00:00 +0000
 categories: programming ruby
 page_name: installing-ruby-on-windows-en
 lang: en
+image: /assets/images/programming/ruby/installing-ruby-on-windows-en/image7.png
 ---
 
 This guide explains how to install Ruby on a Windows system.

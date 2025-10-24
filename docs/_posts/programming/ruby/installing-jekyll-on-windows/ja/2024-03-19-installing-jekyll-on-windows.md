@@ -5,6 +5,7 @@ date: 2024-03-19 00:00:00 +0000
 categories: programming ruby
 page_name: installing-jekyll-on-windows
 lang: ja
+image: /assets/images/programming/ruby/installing-jekyll-on-windows/image1.png
 ---
 
 Windows環境でJekyllをインストールします。

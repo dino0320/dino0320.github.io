@@ -5,6 +5,7 @@ date: 2024-03-15 00:00:00 +0000
 categories: blog github-pages
 page_name: creating-site-by-github-pages
 lang: ja
+image: /assets/images/blog/github-pages/creating-site-by-github-pages/image11.png
 ---
 
 GitHub Pagesを利用してウェブサイトを公開します。

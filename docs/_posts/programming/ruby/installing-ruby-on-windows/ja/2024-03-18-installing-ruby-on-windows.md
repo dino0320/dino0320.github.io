@@ -5,6 +5,7 @@ date: 2024-03-18 00:00:00 +0000
 categories: programming ruby
 page_name: installing-ruby-on-windows
 lang: ja
+image: /assets/images/programming/ruby/installing-ruby-on-windows/image7.png
 ---
 
 Windows環境でRubyをインストールします。

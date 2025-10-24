@@ -5,6 +5,7 @@ date: 2025-05-28 00:00:00 +0000
 categories: blog github-pages
 page_name: creating-site-by-github-pages-en
 lang: en
+image: /assets/images/blog/github-pages/creating-site-by-github-pages-en/image11.png
 ---
 
 This article is about a way to publish a Website Using GitHub Pages.
