@@ -3,10 +3,13 @@ layout: my-post
 title: "GitHub Pagesでサイトを作る"
 date: 2024-03-15 00:00:00 +0000
 categories: blog github-pages
+page_name: creating-site-by-github-pages
 lang: ja
 ---
 
 GitHub Pagesを利用してウェブサイトを公開します。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image11.png "サムネイル")
 
 ## GitHub Pagesとは
 GitHubのリポジトリから自動で静的サイトを公開してくれるサービスです。  

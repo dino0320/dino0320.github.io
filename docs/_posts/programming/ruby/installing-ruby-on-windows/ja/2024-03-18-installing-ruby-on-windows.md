@@ -3,10 +3,13 @@ layout: my-post
 title: "WindowsでRubyをインストールする"
 date: 2024-03-18 00:00:00 +0000
 categories: programming ruby
+page_name: installing-ruby-on-windows
 lang: ja
 ---
 
 Windows環境でRubyをインストールします。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image7.png "サムネイル")
 
 ## 環境
 - Windows 10 64ビット

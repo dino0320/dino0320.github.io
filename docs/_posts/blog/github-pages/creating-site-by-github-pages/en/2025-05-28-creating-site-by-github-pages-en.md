@@ -3,10 +3,13 @@ layout: my-post
 title: "Creating website by GitHub Pages"
 date: 2025-05-28 00:00:00 +0000
 categories: blog github-pages
+page_name: creating-site-by-github-pages-en
 lang: en
 ---
 
 This article is about a way to publish a Website Using GitHub Pages.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image11.png "Thumbnail")
 
 ## What is GitHub Pages?
 

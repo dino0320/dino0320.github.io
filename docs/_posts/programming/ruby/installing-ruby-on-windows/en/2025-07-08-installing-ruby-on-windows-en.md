@@ -3,10 +3,13 @@ layout: my-post
 title: "Installing Ruby on Windows"
 date: 2025-07-08 00:00:00 +0000
 categories: programming ruby
+page_name: installing-ruby-on-windows-en
 lang: en
 ---
 
 This guide explains how to install Ruby on a Windows system.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image7.png "Thumbnail")
 
 ## Environment
 - Windows 10 64-bit
