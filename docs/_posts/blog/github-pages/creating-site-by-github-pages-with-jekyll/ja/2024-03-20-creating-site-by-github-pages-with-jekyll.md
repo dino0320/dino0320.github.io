@@ -3,11 +3,15 @@ layout: my-post
 title: "Jekyllを使用してGitHub Pagesのサイトを作る"
 date: 2024-03-20 00:00:00 +0000
 categories: blog github-pages
+page_name: creating-site-by-github-pages-with-jekyll
 lang: ja
+image: /assets/images/blog/github-pages/creating-site-by-github-pages-with-jekyll/image7.png
 ---
 
 Jekyllを使用してGitHub Pagesのサイトを作成します。  
 Jekyllは静的サイトジェネレーターです。GitHub PagesではデフォルトでJekyllを使用してサイトを作成しています。  
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image7.png "サムネイル")
 
 ## 環境
 - Windows 10 64ビット

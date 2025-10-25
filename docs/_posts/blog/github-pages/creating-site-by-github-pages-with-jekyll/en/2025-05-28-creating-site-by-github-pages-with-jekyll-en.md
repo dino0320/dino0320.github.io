@@ -3,11 +3,15 @@ layout: my-post
 title: "Creating site by github pages with jekyll"
 date: 2025-05-28 00:00:00 +0000
 categories: blog github-pages
+page_name: creating-site-by-github-pages-with-jekyll-en
 lang: en
+image: /assets/images/blog/github-pages/creating-site-by-github-pages-with-jekyll-en/image7.png
 ---
 
 This article is about creating a website by GitHub Pages with Jekyll.  
 Jekyll is a static site generator. GitHub Pages uses Jekyll by default to create and publish sites.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image7.png "Thumbnail")
 
 ## Environment  
 - Windows 10 64-bit  
