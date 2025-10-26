@@ -3,11 +3,15 @@ layout: my-post
 title: "GitHub Pagesのサイトに記事を投稿する"
 date: 2024-03-21 00:00:00 +0000
 categories: blog github-pages
+page_name: posting-for-github-pages
 lang: ja
+image: /assets/images/blog/github-pages/posting-for-github-pages/image1.png
 ---
 
 GitHub Pagesのサイトに記事を投稿します。  
 静的サイトジェネレーターのJekyllを使用します。  
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 環境
 - Windows 10 64ビット

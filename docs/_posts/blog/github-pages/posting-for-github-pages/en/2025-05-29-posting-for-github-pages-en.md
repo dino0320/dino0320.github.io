@@ -3,11 +3,15 @@ layout: my-post
 title: "Posting for GitHub Pages"
 date: 2025-05-29 00:00:00 +0000
 categories: blog github-pages
+page_name: posting-for-github-pages-en
 lang: en
+image: /assets/images/blog/github-pages/posting-for-github-pages-en/image1.png
 ---
 
 This article is about posting an article to a GitHub Pages site.  
 Use the static site generator Jekyll.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Environment  
 - Windows 10 64-bit  
