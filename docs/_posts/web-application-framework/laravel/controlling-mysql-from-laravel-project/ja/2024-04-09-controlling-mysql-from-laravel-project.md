@@ -13,6 +13,7 @@ Dockerを使用して環境を構築しています。
 ## 環境
 - Ubuntu 22.04.3 LTS (WSLで起動している)
 - Docker Engine 26.0.0
+- PHP 8.2.15
 - Laravel 11
 
 ## 前提
@@ -21,8 +22,9 @@ LaravelプロジェクトをNGINXで動かす方法については[こちら](/w
 
 ## 設定の流れ
 1. [MySQLのDockerコンテナを作成する。](#1-mysqlのdockerコンテナを作成する)
-2. [Laravelの設定を変更する。](#2-laravelの設定を変更する)
-3. [設定の確認をする。](#3-設定の確認をする)
+2. [php8.2-mysqlndをインストールする](#2-php82-mysqlndをインストールする)
+3. [Laravelの設定を変更する。](#3-laravelの設定を変更する)
+4. [設定の確認をする。](#4-設定の確認をする)
 
 ## 1. MySQLのDockerコンテナを作成する
 MySQLのDockerコンテナを作成します。  
@@ -40,9 +42,19 @@ services:
       MYSQL_ROOT_PASSWORD: root    # rootユーザーのパスワード
       MYSQL_DATABASE: database    # デフォルトのデータベース名
 ```
-今回は今後AWSにデプロイすることを考えて、Amazon Auroraに合わせてMySQLサーバーのバージョンを `8.0.34` にしています。
+今回は今後AWSにデプロイすることを考えて、Amazon RDSに合わせてMySQLサーバーのバージョンを `8.0.34` にしています。
 
-## 2. Laravelの設定を変更する
+## 2. php-mysqlndをインストールする
+PHPからMySQLに接続するために、LaravelプロジェクトのDockerコンテナ内に `php-mysqlnd` モジュールをインストールします。  
+Laravelコンテナの `Dockerfile` を次のように編集します。
+
+`Dockerfile`:
+
+```Dockerfile
+RUN yum -y install php8.2-mysqlnd
+```
+
+## 3. Laravelの設定を変更する
 MySQLに接続するようにLaravelの設定を変更します。  
 `.env` のデータベースに関する環境変数を以下のように変更します。
 
@@ -56,7 +68,7 @@ DB_USERNAME=root    # rootユーザー名を指定
 DB_PASSWORD=root    # rootユーザーのパスワードを指定
 ```
 
-## 3. 設定の確認をする
+## 4. 設定の確認をする
 MySQLを操作できるか確認します。  
 新しいテーブルを作成し、Laravelプロジェクトからインサートします。
 

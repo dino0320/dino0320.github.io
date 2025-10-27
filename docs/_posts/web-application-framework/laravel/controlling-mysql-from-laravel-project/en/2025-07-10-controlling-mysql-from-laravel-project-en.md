@@ -13,6 +13,7 @@ We're using Docker to set up the environment.
 ## Environment
 - Ubuntu 22.04.3 LTS (running on WSL)
 - Docker Engine 26.0.0
+- PHP 8.2.15
 - Laravel 11
 
 ## Prerequisites
@@ -21,8 +22,9 @@ For instructions on how to run a Laravel project with NGINX, refer to [this guid
 
 ## Setup Overview
 1. [Create a MySQL Docker Container](#1-create-a-mysql-docker-container)
-2. [Update Laravel Configuration](#2-update-laravel-configuration)
-3. [Verify the Configuration](#3-verify-the-configuration)
+2. [Install php8.2-mysqlnd](#2-install-php82-mysqlnd)
+3. [Update Laravel Configuration](#3-update-laravel-configuration)
+4. [Verify the Configuration](#4-verify-the-configuration)
 
 ## 1. Create a MySQL Docker Container
 We'll create a Docker container for MySQL.  
@@ -42,9 +44,19 @@ services:
       MYSQL_DATABASE: database     # default database name
 ```
 
-In this setup, we're using MySQL version `8.0.34` to match Amazon Aurora for future deployment on AWS.
+In this setup, we're using MySQL version `8.0.34` to match Amazon RDS for future deployment on AWS.
 
-## 2. Update Laravel Configuration
+## 2. Install php-mysqlnd
+To connect to MySQL from PHP, install the `php-mysqlnd` module in your Laravel project's Docker container.  
+Edit the `Dockerfile` of your Laravel container as follows:
+
+`Dockerfile`:
+
+```Dockerfile
+RUN yum -y install php8.2-mysqlnd
+```
+
+## 3. Update Laravel Configuration
 Update Laravel’s settings to connect to the MySQL database.  
 Edit the environment variables related to the database in your `.env` file as follows:
 
@@ -59,7 +71,7 @@ DB_USERNAME=root     # MySQL root user
 DB_PASSWORD=root     # Root password
 ```
 
-## 3. Verify the Configuration
+## 4. Verify the Configuration
 Check if Laravel can interact with the MySQL database.  
 Create a new table and insert data from the Laravel project.
 
