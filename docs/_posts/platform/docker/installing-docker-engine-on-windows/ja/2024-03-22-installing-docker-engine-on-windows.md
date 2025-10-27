@@ -3,11 +3,15 @@ layout: my-post
 title: "WindowsでDocker Engineをインストールする"
 date: 2024-03-22 00:00:00 +0000
 categories: platform docker
+page_name: installing-docker-engine-on-windows
 lang: ja
+image: /assets/images/platform/docker/installing-docker-engine-on-windows/image1.png
 ---
 
 WindowsでDocker Engineをインストールします。  
 WindowsではDockerを導入する際[Docker Desktop for Windows](https://www.docker.com/ja-jp/products/docker-desktop/)を使用することが普通ですが、今回はWSLを使ってDocker Engineをインストールしてみます。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 環境
 - Windows 10 64ビット

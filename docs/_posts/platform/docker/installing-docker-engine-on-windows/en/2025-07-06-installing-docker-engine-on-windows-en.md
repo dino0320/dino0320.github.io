@@ -3,11 +3,15 @@ layout: my-post
 title: "Installing Docker Engine on Windows"
 date: 2025-07-06 00:00:00 +0000
 categories: platform docker
+page_name: installing-docker-engine-on-windows-en
 lang: en
+image: /assets/images/platform/docker/installing-docker-engine-on-windows-en/image1.png
 ---
 
 This guide explains how to install Docker Engine on Windows.  
 Although using [Docker Desktop for Windows](https://www.docker.com/ja-jp/products/docker-desktop/) is the standard method for installing Docker on Windows, here we’ll install Docker Engine using WSL (Windows Subsystem for Linux).
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## References  
 - [WSL を使用して Windows に Linux をインストールする方法](https://learn.microsoft.com/ja-jp/windows/wsl/install)
