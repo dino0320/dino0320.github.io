@@ -71,8 +71,8 @@ COPY docker/web/nginx/nginx.repo /etc/yum.repos.d/nginx.repo
 RUN yum -y install nginx-1.24.0
 COPY docker/web/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 
-# php-fpmとphp-mysqlndインストール
-RUN yum -y install php8.2-fpm php8.2-mysqlnd
+# php-fpmインストール
+RUN yum -y install php8.2-fpm php8.2-mbstring
 # 事前にディレクトリを作成しておかないとエラーになる
 RUN mkdir /run/php-fpm
 RUN mkdir /var/run/php
