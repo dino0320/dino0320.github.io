@@ -7,8 +7,8 @@ lang: ja
 
 ## Blog
 {{ site.description | escape }}  
-These posts is for myself.  
-So I'd apologize if their contents are confusing or incorrect.  
+These posts are mainly for my own reference,  
+so I apologize if some of the content is confusing or inaccurate.
 
 ITに関する内容をメモしています。  
 自分用なのでわかりづらい表現があるかもしれません。  
