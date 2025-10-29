@@ -3,10 +3,14 @@ layout: my-post
 title: "Setting Up a PHP CLI Environment with Docker"
 date: 2025-07-06 00:00:00 +0000
 categories: platform docker
+page_name: building-php-cli-environment-by-docker-en
 lang: en
+image: /assets/images/platform/docker/building-php-cli-environment-by-docker-en/image1.png
 ---
 
 In this guide, we’ll set up an environment where you can run PHP from the command line using Docker.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Environment
 - Ubuntu 22.04.3 LTS (Running on WSL)
