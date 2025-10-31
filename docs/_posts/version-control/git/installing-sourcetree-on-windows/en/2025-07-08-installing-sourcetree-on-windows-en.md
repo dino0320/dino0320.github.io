@@ -3,10 +3,14 @@ layout: my-post
 title: "Installing Sourcetree on Windows"
 date: 2025-07-08 00:00:00 +0000
 categories: version-control git
+page_name: installing-sourcetree-on-windows-en
 lang: en
+image: /assets/images/version-control/git/installing-sourcetree-on-windows-en/image9.png
 ---
 
 This guide walks you through installing Sourcetree on a Windows system.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image9.png "Thumbnail")
 
 ## What is Sourcetree?
 Sourcetree is a free Git client with a graphical interface.  

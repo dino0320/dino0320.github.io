@@ -3,10 +3,14 @@ layout: my-post
 title: "WindowsでSourcetreeをインストールする"
 date: 2024-03-24 00:00:00 +0000
 categories: version-control git
+page_name: installing-sourcetree-on-windows
 lang: ja
+image: /assets/images/version-control/git/installing-sourcetree-on-windows/image9.png
 ---
 
 WindowsでSourcetreeをインストールします。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image9.png "サムネイル")
 
 ## Sourcetreeとは
 Sourcetreeは無料のGitクライアントです。  
