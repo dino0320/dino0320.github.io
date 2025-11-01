@@ -3,10 +3,14 @@ layout: my-post
 title: "Composerをインストールする"
 date: 2024-03-26 00:00:00 +0000
 categories: programming php
+page_name: installing-composer-on-linux
 lang: ja
+image: /assets/images/programming/php/installing-composer-on-linux/image2.png
 ---
 
 Linux環境でComposerをインストールします。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image2.png "サムネイル")
 
 ## Composerとは
 プロジェクトが使うPHPのライブラリの依存関係を管理するツールです。プロジェクトで使用したいライブラリを、依存するライブラリも含めてインストールしてくれます。  

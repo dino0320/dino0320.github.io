@@ -3,10 +3,14 @@ layout: my-post
 title: "Installing Composer"
 date: 2025-07-07 00:00:00 +0000
 categories: programming php
+page_name: installing-composer-on-linux-en
 lang: en
+image: /assets/images/programming/php/installing-composer-on-linux-en/image2.png
 ---
 
 We will install Composer in a Linux environment.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image2.png "Thumbnail")
 
 ## What is Composer?
 Composer is a tool for managing PHP library dependencies used in your project.  
