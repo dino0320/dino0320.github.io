@@ -5,10 +5,13 @@ date: 2025-07-10 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: creating-laravel-project-on-linux-en
 lang: en
+image: /assets/images/web-application-framework/laravel/creating-laravel-project-on-linux-en/image2.png
 ---
 
 This guide explains how to create a Laravel project in a Linux environment.  
 We’ll install Laravel using Docker and create a new project.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image2.png "Thumbnail")
 
 ## What is Laravel?
 Laravel is one of the web application frameworks for PHP.  

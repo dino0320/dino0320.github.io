@@ -5,10 +5,13 @@ date: 2024-03-28 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: creating-laravel-project-on-linux
 lang: ja
+image: /assets/images/web-application-framework/laravel/creating-laravel-project-on-linux/image2.png
 ---
 
 Linux環境でLaravelプロジェクトを作成します。  
 Dockerを使ってLaravelをインストールし、プロジェクトを作成します。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image2.png "サムネイル")
 
 ## Laravelとは
 PHP用のWebアプリケーションフレームワークの1つです。  
