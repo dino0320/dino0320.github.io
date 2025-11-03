@@ -5,10 +5,13 @@ date: 2024-03-29 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: running-laravel-project-on-nginx
 lang: ja
+image: /assets/images/web-application-framework/laravel/running-laravel-project-on-nginx/image2.png
 ---
 
 Dockerを使ってLaravelプロジェクトを動かす環境を構築します。  
 NGINX + php-fpmでLaravelプロジェクトを動かします。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image2.png "サムネイル")
 
 ## NGINXとは
 NGINXはオープンソースなWebサーバーソフトウェアです。  

@@ -5,10 +5,13 @@ date: 2025-07-11 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: running-laravel-project-on-nginx-en
 lang: en
+image: /assets/images/web-application-framework/laravel/running-laravel-project-on-nginx-en/image2.png
 ---
 
 We’ll set up an environment to run a Laravel project using Docker.  
 The project will run on NGINX + PHP-FPM.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image2.png "Thumbnail")
 
 ## What is NGINX?
 NGINX is open-source web server software.  
