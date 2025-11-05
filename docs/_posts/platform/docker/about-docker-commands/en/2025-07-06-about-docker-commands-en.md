@@ -3,11 +3,15 @@ layout: my-post
 title: "Frequently Used Docker Commands"
 date: 2025-07-06 00:00:00 +0000
 categories: platform docker
+page_name: about-docker-commands-en
 lang: en
+image: /assets/images/platform/docker/about-docker-commands-en/image1.png
 ---
 
 This is a summary of Docker commands I frequently use.  
 Only the commands and options I personally use are listed here.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Environment
 - Ubuntu 22.04.3 LTS (Running on WSL)

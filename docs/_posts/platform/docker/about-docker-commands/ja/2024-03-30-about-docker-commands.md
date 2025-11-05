@@ -3,11 +3,15 @@ layout: my-post
 title: "よく使うDockerコマンドについて"
 date: 2024-03-30 00:00:00 +0000
 categories: platform docker
+page_name: about-docker-commands
 lang: ja
+image: /assets/images/platform/docker/about-docker-commands/image1.png
 ---
 
 よく使うDockerコマンドについてまとめます。  
 個人的によく使うコマンドとオプションだけ記載しています。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 環境
 - Ubuntu 22.04.3 LTS (WSLで起動している)
