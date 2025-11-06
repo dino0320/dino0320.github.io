@@ -3,10 +3,14 @@ layout: my-post
 title: "WSLをインストールする"
 date: 2024-04-01 00:00:00 +0000
 categories: platform windows
+page_name: installing-wsl
 lang: ja
+image: /assets/images/platform/windows/installing-wsl/image3.png
 ---
 
 WSLをインストールします。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image3.png "サムネイル")
 
 ## WSLとは
 Windows Subsystem for Linuxの略で、Windows上でLinux環境を使うことができます。

@@ -3,10 +3,14 @@ layout: my-post
 title: "Installing WSL"
 date: 2025-07-06 00:00:00 +0000
 categories: platform windows
+page_name: installing-wsl-en
 lang: en
+image: /assets/images/platform/windows/installing-wsl-en/image3.png
 ---
 
 This guide explains how to install WSL.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image3.png "Thumbnail")
 
 ## What is WSL?
 WSL stands for Windows Subsystem for Linux, which allows you to use a Linux environment directly on Windows.
