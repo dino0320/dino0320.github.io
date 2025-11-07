@@ -5,9 +5,12 @@ date: 2024-04-01 01:00:00 +0000
 categories: ide vscode
 page_name: connecting-to-wsl-with-vscode
 lang: ja
+image: /assets/images/ide/vscode/connecting-to-wsl-with-vscode/image7.png
 ---
 
 Visual Studio Code(VSCode)でWSLに接続します。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image7.png "サムネイル")
 
 ## 環境
 - Windows 10 64ビット

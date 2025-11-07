@@ -5,9 +5,12 @@ date: 2025-07-05 00:00:00 +0000
 categories: ide vscode
 page_name: connecting-to-wsl-with-vscode-en
 lang: en
+image: /assets/images/ide/vscode/connecting-to-wsl-with-vscode-en/image7.png
 ---
 
 This guide explains how to connect to WSL (Windows Subsystem for Linux) using Visual Studio Code (VSCode).
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image7.png "Thumbnail")
 
 ## Environment
 - Windows 10 64-bit
