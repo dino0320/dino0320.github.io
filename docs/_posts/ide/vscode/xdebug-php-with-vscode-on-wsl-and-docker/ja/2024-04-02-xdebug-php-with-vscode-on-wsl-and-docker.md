@@ -5,9 +5,12 @@ date: 2024-04-02 00:00:00 +0000
 categories: ide vscode
 page_name: xdebug-php-with-vscode-on-wsl-and-docker
 lang: ja
+image: /assets/images/ide/vscode/xdebug-php-with-vscode-on-wsl-and-docker/image9.png
 ---
 
 WSL上のDockerコンテナで動くPHPのコードをVisual Studio Code(VSCode)でXdebugできるようにします。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image9.png "サムネイル")
 
 ## 環境
 - Windows 10 64ビット

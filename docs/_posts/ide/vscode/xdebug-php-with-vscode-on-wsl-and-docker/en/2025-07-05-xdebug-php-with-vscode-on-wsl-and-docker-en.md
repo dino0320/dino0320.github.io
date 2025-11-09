@@ -5,9 +5,12 @@ date: 2025-07-05 00:00:00 +0000
 categories: ide vscode
 page_name: xdebug-php-with-vscode-on-wsl-and-docker-en
 lang: en
+image: /assets/images/ide/vscode/xdebug-php-with-vscode-on-wsl-and-docker-en/image9.png
 ---
 
 This guide explains how to set up Visual Studio Code (VSCode) to debug PHP code running inside a Docker container on WSL using Xdebug.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image9.png "Thumbnail")
 
 ## Environment
 - Windows 10 64-bit
