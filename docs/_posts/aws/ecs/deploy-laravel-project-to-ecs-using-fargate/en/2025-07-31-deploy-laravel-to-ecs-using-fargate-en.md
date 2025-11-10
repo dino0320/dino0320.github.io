@@ -348,7 +348,7 @@ Configure the Health checks as follows.
 Click "Next", then click "Create target group".
 
 Return to the Load Balancer creation screen.  
-Select the target group you just created as the listener’s target.
+Select the target group you just created as the listener's target.
 
 ![Load balancer creation3](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image28.png "Load balancer creation3")
 

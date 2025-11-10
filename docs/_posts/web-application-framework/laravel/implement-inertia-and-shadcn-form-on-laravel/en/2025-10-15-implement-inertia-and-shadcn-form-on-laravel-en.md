@@ -47,7 +47,7 @@ npx shadcn@latest add form
 After running this command, you should see a `form.tsx` file in the `resources/js/components/ui` directory.
 
 ## 2. Implement a Test Form
-Let’s create a test form using Inertia.js and shadcn/ui Form.
+Let's create a test form using Inertia.js and shadcn/ui Form.
 
 Create a file named `resources/js/Pages/TestForm.tsx` based on the [shadcn/ui documentation](https://ui.shadcn.com/docs/components/form).
 

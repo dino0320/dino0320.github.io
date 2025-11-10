@@ -35,7 +35,7 @@ PHP Intelephense is now installed.
 
 ## 2. Configure Basic PHP Intelephense Settings
 Follow the [official Quick Start guide](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client) to configure the extension.    
-Here are the two main steps (license key input is required for premium features, but we’ll skip that in this guide):  
+Here are the two main steps (license key input is required for premium features, but we'll skip that in this guide):  
 1. [Disable the built-in PHP language features](#1-disable-the-built-in-php-language-features)
 2. [Add Non-standard PHP File Extensions to files.associations](#2-add-non-standard-php-file-extensions-to-filesassociations)
 
@@ -83,7 +83,7 @@ This allows Intelephense to tailor suggestions and diagnostics to your version o
 
 Open Settings in VSCode, and in the Workspace tab, search for `intelephense.environment.phpVersion`.  
 Set the value to match your PHP version.  
-For example, if you’re using PHP 8.2, enter `8.2`.
+For example, if you're using PHP 8.2, enter `8.2`.
 
 ![intelephense.environment.phpVersion Setting](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image8.png "intelephense.environment.phpVersion Setting")
 

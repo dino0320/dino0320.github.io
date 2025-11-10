@@ -50,7 +50,7 @@ For instructions, see [this article](/web-application-framework/laravel/installi
 
 ## 1. Install Composer Package
 Install the following Composer package:  
-(If you don’t have Composer installed, refer to [this article](/programming/php/installing-composer-on-linux-en).)
+(If you don't have Composer installed, refer to [this article](/programming/php/installing-composer-on-linux-en).)
 
 ```bash
 composer require inertiajs/inertia-laravel

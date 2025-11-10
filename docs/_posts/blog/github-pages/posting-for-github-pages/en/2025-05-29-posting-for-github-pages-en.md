@@ -37,11 +37,11 @@ For details on creating a GitHub Pages site using Jekyll, see [here](/blog/githu
 Write your article in HTML or Markdown. Pay attention to the following three points:  
 
 - Place the file in the `_posts` directory.  
-  Put your article in the `_posts` directory under your site’s root directory. Create the directory if it doesn’t exist.
+  Put your article in the `_posts` directory under your site's root directory. Create the directory if it doesn't exist.
 
 - Name the file as `year-month-day-title`.  
   Use four digits for the year, and two digits for the month and day.  
-  The article’s URL will include `/year/month/day/title`.  
+  The article's URL will include `/year/month/day/title`.  
   Example: `2025-05-29-posting-for-github-pages-en.md`
 
 - Add front matter at the top of the file.  
@@ -64,7 +64,7 @@ For more variables, refer to [Jekyll front matter documentation](https://jekyllr
 | layout     | Specify the layout file in the `_layouts` directory. When using the default [minima](https://github.com/jekyll/minima) theme created by `jekyll new`, you can use predefined layouts like `post`, `page`, etc. |
 | title      | Enter the optional title of the article. It's not necessary to be the same as the file name. |
 | date       | Enter the date and time of the post. |
-| categories | Specify the categories. Separate multiple categories with spaces. The article’s URL will look like `/blog/github-pages/2025/05/29/posting-for-github-pages-en`. |
+| categories | Specify the categories. Separate multiple categories with spaces. The article's URL will look like `/blog/github-pages/2025/05/29/posting-for-github-pages-en`. |
 
 Write the content of your article below the front matter.  
 Example:
@@ -88,7 +88,7 @@ Open Command Prompt or PowerShell and run:
 > bundle exec jekyll serve
 ```
 
-2. Access the article’s URL.  
+2. Access the article's URL.  
 The article will be available at `http://localhost:4000/year/month/day/title`.  
 If you defined `categories` or `permalink` in the front matter, the URL may differ.
 

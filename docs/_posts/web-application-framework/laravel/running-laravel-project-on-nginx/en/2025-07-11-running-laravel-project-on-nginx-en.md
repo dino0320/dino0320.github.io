@@ -8,7 +8,7 @@ lang: en
 image: /assets/images/web-application-framework/laravel/running-laravel-project-on-nginx-en/image2.png
 ---
 
-We’ll set up an environment to run a Laravel project using Docker.  
+We'll set up an environment to run a Laravel project using Docker.  
 The project will run on NGINX + PHP-FPM.
 
 ![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image2.png "Thumbnail")
@@ -135,7 +135,7 @@ services:
 
 ### Dockerfile
 This is the Dockerfile for the web service (NGINX + PHP-FPM).  
-We’re using the `amazonlinux` base image with future AWS deployment in mind.  
+We're using the `amazonlinux` base image with future AWS deployment in mind.  
 Create this file in the `docker/web` directory.
 
 `docker/web/Dockerfile` :

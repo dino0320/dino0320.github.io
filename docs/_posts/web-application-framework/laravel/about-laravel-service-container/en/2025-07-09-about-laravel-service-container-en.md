@@ -57,7 +57,7 @@ $class_a = App::make(ClassA::class);
 ```
 
 Here, the `make` function is used to create the instance.   
-In practice, though, Laravel often resolves dependencies automatically when you specify them in a controller’s constructor.  
+In practice, though, Laravel often resolves dependencies automatically when you specify them in a controller's constructor.  
 For example, if you specify ClassA in the constructor of TestController, Laravel will automatically create an instance of ClassA when it creates the controller:
 
 ```php
@@ -85,7 +85,7 @@ class ClassA
 ```
 
 Since the constructor requires an int, the Service Container cannot resolve it automatically.  
-So, let’s define how to resolve this dependency manually so that the `$arg` value is always 1:
+So, let's define how to resolve this dependency manually so that the `$arg` value is always 1:
 
 ```php
 App::bind(ClassA::class, function () {
@@ -118,10 +118,10 @@ arg = 1
 ```
 
 ## Defining Dependency Resolution in a Service Provider
-According to the [official documentation](https://laravel.com/docs/11.x/providers), it’s recommended to define dependency resolution inside the `register` method of a Service Provider.  
+According to the [official documentation](https://laravel.com/docs/11.x/providers), it's recommended to define dependency resolution inside the `register` method of a Service Provider.  
 Service Providers are where you can register many aspects of a Laravel application, such as dependency resolutions and event listeners.
 
-Let’s try defining a dependency resolution in a Service Provider.
+Let's try defining a dependency resolution in a Service Provider.
 
 First, create a Service Provider.  
 Run the following command to create TestServiceProvider:
@@ -188,7 +188,7 @@ To create an instance of ClassA, specify it as a parameter in a route closure, l
 Route::get('/', function (ClassA $class_a) {});
 ```
 
-When you access the root path in your browser, you’ll see logs like this:
+When you access the root path in your browser, you'll see logs like this:
 
 ```
 ClassB instance is created. arg = 1

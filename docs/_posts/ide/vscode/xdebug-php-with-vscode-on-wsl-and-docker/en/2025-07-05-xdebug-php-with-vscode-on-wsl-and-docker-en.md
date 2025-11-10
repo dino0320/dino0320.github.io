@@ -37,7 +37,7 @@ For instructions on how to connect VSCode to WSL, see [this article](/ide/vscode
 Install Xdebug in your Docker container.
 
 Update `docker-compose.yml` to add the host definition.  
-Note: If you’re using Docker Desktop, this may not be necessary.
+Note: If you're using Docker Desktop, this may not be necessary.
 
 `docker-compose.yml` :
 ```yml

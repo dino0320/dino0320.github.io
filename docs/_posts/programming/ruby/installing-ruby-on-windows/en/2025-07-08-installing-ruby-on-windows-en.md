@@ -23,12 +23,12 @@ This guide explains how to install Ruby on a Windows system.
 ## 1. Download RubyInstaller
 Download RubyInstaller from [here](https://rubyinstaller.org/downloads/).  
 Choose the WITH DEVKIT version if you need the DevKit, or WITHOUT DEVKIT if not.  
-In this guide, we’ll use the recommended WITH DEVKIT version.
+In this guide, we'll use the recommended WITH DEVKIT version.
 
 ![Recommended Version of RubyInstaller WITH DEVKIT](/assets/images/programming/ruby/installing-ruby-on-windows-en/image1.png "Recommended Version of RubyInstaller WITH DEVKIT")
 
 DevKit is the MSYS2 toolchain required for building native C/C++ extensions for Ruby.  
-It’s also needed for frameworks like Ruby on Rails.  
+It's also needed for frameworks like Ruby on Rails.  
 Below is an excerpt from the [RubyInstaller for Windows](https://rubyinstaller.org/downloads/) page:
 
 > MSYS2 is required in order to build native C/C++ extensions for Ruby and is necessary for Ruby on Rails. Moreover it allows the download and usage of hundreds of Open Source libraries which Ruby gems often depend on.

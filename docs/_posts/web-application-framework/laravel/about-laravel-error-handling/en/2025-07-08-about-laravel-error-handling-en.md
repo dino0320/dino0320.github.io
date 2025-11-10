@@ -21,7 +21,7 @@ I investigated error handling in Laravel and tried out how to log and handle res
 - [Customizing Responses with render](#customizing-responses-with-render)
 
 ## Preparation
-Before testing error handling, create a custom exception class that extends Laravel’s base `Exception` class.
+Before testing error handling, create a custom exception class that extends Laravel's base `Exception` class.
 
 Run the following Artisan command to generate the `TestException` class:
 
@@ -32,7 +32,7 @@ php artisan make:exception TestException
 This will create the file: `app/Exceptions/TestException.php`.
 
 ## Logging Exceptions with report
-By default, exceptions are logged according to the project’s logging configuration.  
+By default, exceptions are logged according to the project's logging configuration.  
 This behavior can be customized in `bootstrap/app.php` or in individual `Exception` subclasses.
 
 ### Defining in app.php
@@ -58,7 +58,7 @@ return Application::configure(basePath: dirname(__DIR__))
 ```
 
 This configuration logs the message 'test' whenever a `TestException` is thrown.  
-You can specify the exception type using the closure’s type hint.
+You can specify the exception type using the closure's type hint.
 
 To disable the default logging behavior, either use `stop()` or return `false` from the closure:
 
@@ -125,7 +125,7 @@ public function report(Request $request): bool
 ```
 
 ## Customizing Responses with render
-By default, Laravel inspects the HTTP request’s `Accept` header and automatically returns either an HTML or JSON response when an exception occurs.  
+By default, Laravel inspects the HTTP request's `Accept` header and automatically returns either an HTML or JSON response when an exception occurs.  
 You can customize this behavior in `bootstrap/app.php` or in individual exception classes.
 
 ### Defining in app.php

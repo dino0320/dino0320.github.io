@@ -44,7 +44,7 @@ class ModelMakeCommand extends Command
 
 ```
 
-Next, update the class to extend Laravel’s original `ModelMakeCommand`.  
+Next, update the class to extend Laravel's original `ModelMakeCommand`.  
 In my environment, the original class is located at:
 `vendor/laravel/framework/src/Illuminate/Foundation/Console/ModelMakeCommand.php` 
 
@@ -97,8 +97,8 @@ class ModelMakeCommand extends \Illuminate\Foundation\Console\ModelMakeCommand
 
 ```
 
-Now, add a `--path` option to customize the migration file’s location.  
-We’ll use the same directory structure as the model.
+Now, add a `--path` option to customize the migration file's location.  
+We'll use the same directory structure as the model.
 
 `app/Console/Commands/ModelMakeCommand.php` :
 ```php

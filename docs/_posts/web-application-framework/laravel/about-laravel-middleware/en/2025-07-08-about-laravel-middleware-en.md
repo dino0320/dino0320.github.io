@@ -320,7 +320,7 @@ local.INFO: main
 
 This confirms that the middleware registered with the alias was executed properly.
 
-Laravel’s default middleware already comes with predefined aliases.  
+Laravel's default middleware already comes with predefined aliases.  
 You can find the list on the [official documentation](https://laravel.com/docs/11.x/middleware#middleware-aliases).
 
 ## Middleware Parameters

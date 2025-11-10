@@ -9,7 +9,7 @@ image: /assets/images/web-application-framework/laravel/creating-laravel-project
 ---
 
 This guide explains how to create a Laravel project in a Linux environment.  
-We’ll install Laravel using Docker and create a new project.
+We'll install Laravel using Docker and create a new project.
 
 ![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image2.png "Thumbnail")
 
@@ -110,4 +110,4 @@ Since this container is running in Ubuntu on WSL, you can access the project fro
 
 ![Laravel Project Screen](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Laravel Project Screen")
 
-You’ve successfully confirmed that the Laravel project is working.
+You've successfully confirmed that the Laravel project is working.

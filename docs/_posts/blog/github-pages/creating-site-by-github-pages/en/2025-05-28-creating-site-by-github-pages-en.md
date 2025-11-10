@@ -29,10 +29,10 @@ For instructions on creating a site using Jekyll, please refer to [this article]
 
 ## 1. Create a GitHub Account
 
-If you don’t have a GitHub account, create one by following the steps below:
+If you don't have a GitHub account, create one by following the steps below:
 
 1. Go to [GitHub](https://github.com/).  
-2. Click “[Sign up](https://github.com/signup)”.  
+2. Click “[Sign up](https://github.com/signup)".  
    ![GitHub Sign Up Button](/assets/images/blog/github-pages/creating-site-by-github-pages/image1.png "GitHub Sign Up Button")
 3. Follow the instructions to create your account.
 
@@ -47,7 +47,7 @@ If you don’t have a GitHub account, create one by following the steps below:
     | Owner             | Choose your GitHub account. |
     | Repository name   | Set the name as `yourusername.github.io` (all lowercase). |
     | Description       | Optional description for the repository. |
-    | Repository visibility | Choose “Public” (required for free accounts). |
+    | Repository visibility | Choose “Public" (required for free accounts). |
     | Add a README file | Check this option to add a `README.md`. This file, along with `index.html` or `index.md`, can serve as the homepage. |
 
 3. Click **Create repository**.  
@@ -65,7 +65,7 @@ If you don’t have a GitHub account, create one by following the steps below:
 
     | Item   | Description |
     |--------|-------------|
-    | Source | Select “Deploy from a branch”. |
+    | Source | Select “Deploy from a branch". |
     | Branch | Choose the `main` branch and root folder `/`. |
 
 5. Click **Save**.

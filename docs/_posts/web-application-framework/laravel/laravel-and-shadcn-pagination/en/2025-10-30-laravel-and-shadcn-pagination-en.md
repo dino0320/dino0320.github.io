@@ -43,7 +43,7 @@ For more information, refer to [this article](/web-application-framework/laravel
 
 ## 1. Implement Laravel Pagination
 Laravel provides built-in pagination support with both the query builder and the Eloquent ORM.  
-In this example, we’ll use Eloquent.
+In this example, we'll use Eloquent.
 
 Create a `UserController` using the Artisan command:
 
@@ -170,7 +170,7 @@ export default function Index({ users }: { users: PaginationData<User>}) {
 
 ```
 
-If you don’t have the Card component from shadcn/ui, install it as follows:
+If you don't have the Card component from shadcn/ui, install it as follows:
 
 ```bash
 npx shadcn@latest add card
@@ -217,7 +217,7 @@ Laravel provides several other pagination methods.
 
 ### simplePaginate
 As [the official documentation](https://laravel.com/docs/12.x/pagination) explains, the `paginate` method counts the total number of matching records before retrieving them from the database.  
-If you don’t need the total record count, you can use `simplePaginate` instead for better performance.
+If you don't need the total record count, you can use `simplePaginate` instead for better performance.
 
 ```php
 User::simplePaginate(5)

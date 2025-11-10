@@ -45,7 +45,7 @@ After restarting, Ubuntu will launch automatically—just wait a moment.
 ![Ubuntu boot screen](/assets/images/platform/windows/installing-wsl-en/image1.png "Ubuntu boot screen")
 
 ## 3. Create a UNIX User
-After a short wait, you’ll be prompted to create a UNIX user.  
+After a short wait, you'll be prompted to create a UNIX user.  
 Enter a username and password of your choice.
 
 ![UNIX user creation screen](/assets/images/platform/windows/installing-wsl-en/image2.png "UNIX user creation screen")  

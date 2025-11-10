@@ -21,7 +21,7 @@ We'll configure our Docker image to install Composer during the build process.
 3. [Verify That Composer Is Installed](#3-verify-that-composer-is-installed)
 
 ## 1. Create a Script to Install Composer
-We’ll start by creating a script to install Composer.
+We'll start by creating a script to install Composer.
 
 Refer to [this page](https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md) to create the script.  
 Save it as `install-composer.sh`.

@@ -27,7 +27,7 @@ username:x:1000:1000:,,,:/home/username:/bin/bash
 ```
 
 ## Why I wrote this article
-While developing a Laravel application using Docker on WSL, I ran into an issue where files created with `php artisan make:...` couldn’t be edited in VSCode running on WSL.
+While developing a Laravel application using Docker on WSL, I ran into an issue where files created with `php artisan make:...` couldn't be edited in VSCode running on WSL.
 
 The reason is that when files are created inside the Docker container, they are owned by the root user, resulting in file permissions like `-rw-r--r-- 1 root root`.  
 However, in VSCode, files are edited as the WSL default user (not root), so write access is denied.

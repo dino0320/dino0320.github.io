@@ -7,10 +7,10 @@ page_name: setting-nginx-log-to-stdout-en
 lang: en
 ---
 
-We’ll configure NGINX to output access logs to standard output and error logs to standard error.
+We'll configure NGINX to output access logs to standard output and error logs to standard error.
 
-In this setup, we’ll configure NGINX running inside a Docker container.  
-Instead of using the official NGINX Docker image, we’re using an Amazon Linux 2023 image with NGINX installed.
+In this setup, we'll configure NGINX running inside a Docker container.  
+Instead of using the official NGINX Docker image, we're using an Amazon Linux 2023 image with NGINX installed.
 
 ## Reference
 - [コンテナ内のプロセスのログ出力先を標準出力/標準エラー出力に設定する方法 - Qiita](https://qiita.com/sshota0809/items/a86cd3379f88fb5cd1b8)
@@ -37,7 +37,7 @@ First, check where NGINX is outputting access and error logs.
 Open the `nginx.conf` configuration file and check the `access_log` and `error_log` directives.  
 On Amazon Linux 2023, `nginx.conf` is located in the `/etc/nginx` directory by default.
 
-Here’s what the `access_log` and `error_log` settings look like:
+Here's what the `access_log` and `error_log` settings look like:
 
 ```
 access_log  /var/log/nginx/access.log  main;
@@ -48,12 +48,12 @@ The access log is output to `/var/log/nginx/access.log`, and the error log to `/
 The `main` after `access_log` refers to the log format defined in the `log_format` directive within `nginx.conf`.  
 The `notice` after `error_log` specifies the minimum log level.   Logs at `notice` level and above will be output.
 
-With that, we’ve confirmed the locations of the log files.
+With that, we've confirmed the locations of the log files.
 
 ## 2. Create symbolic links to standard output
-To output logs to standard output, we’ll create symbolic links from the log files to standard output and error output.
+To output logs to standard output, we'll create symbolic links from the log files to standard output and error output.
 
-We’ll link the access log to standard output and the error log to standard error.  
+We'll link the access log to standard output and the error log to standard error.  
 Modify the Dockerfile used to build the Docker image that installs NGINX as follows:
 
 `Dockerfile` :
@@ -70,7 +70,7 @@ RUN ln -s /dev/stderr /var/log/nginx/error.log
 Now the log files are symbolic links to standard output and error output.
 
 ## 3. Verify the configuration
-Let’s confirm that logs are being output to standard output.
+Let's confirm that logs are being output to standard output.
 
 Start the Docker container with NGINX installed, and access the NGINX server from a browser or similar tool.  
 Then check the logs from the Docker container by running the following:

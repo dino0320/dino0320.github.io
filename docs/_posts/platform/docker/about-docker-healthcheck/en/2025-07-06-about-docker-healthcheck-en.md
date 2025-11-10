@@ -15,7 +15,7 @@ I looked into how Docker healthchecks work.
 
 ## What is a Healthcheck?
 A Docker healthcheck is a way to determine whether a container is healthy (i.e., operating normally).
-Specifically, a command is executed at regular intervals, and if it succeeds, the container is considered healthy. If it fails a certain number of times in a row, the container is marked as unhealthy. (The container’s initial state is starting.)
+Specifically, a command is executed at regular intervals, and if it succeeds, the container is considered healthy. If it fails a certain number of times in a row, the container is marked as unhealthy. (The container's initial state is starting.)
 
 Healthchecks can be defined in either a `Dockerfile` or a `docker-compose.yml` file.
 If a healthcheck is defined in `docker-compose.yml`, it will override any definition from the `Dockerfile`.

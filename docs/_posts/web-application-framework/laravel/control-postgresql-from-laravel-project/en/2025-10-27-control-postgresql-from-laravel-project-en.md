@@ -75,7 +75,7 @@ RUN yum -y install php8.2-pgsql
 ```
 
 ## 3. Update Laravel Configuration
-Update Laravel’s settings to connect to the PostgreSQL database.  
+Update Laravel's settings to connect to the PostgreSQL database.  
 Edit the environment variables related to the database in your `.env` file as follows:
 
 `.env` :

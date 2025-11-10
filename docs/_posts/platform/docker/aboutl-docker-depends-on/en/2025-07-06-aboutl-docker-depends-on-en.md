@@ -7,7 +7,7 @@ page_name: about-docker-depends-on-en
 lang: en
 ---
 
-I investigated how Docker’s depends_on works.
+I investigated how Docker's depends_on works.
 
 ## Environment
 - Docker Engine 26.0.0

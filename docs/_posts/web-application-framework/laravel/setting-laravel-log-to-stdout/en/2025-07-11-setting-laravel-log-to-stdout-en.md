@@ -112,7 +112,7 @@ LOG_LEVEL=debug
 ```
 
 ## 2. Change PHP-FPM Log Output Destination
-Even after updating Laravel’s log settings, the logs may not appear in Docker logs.  
+Even after updating Laravel's log settings, the logs may not appear in Docker logs.  
 This is because PHP-FPM logs are not sent to standard output by default, so we need to change their destination.
 
 To change the error log output of PHP-FPM, edit the global `error_log` setting in `php-fpm.conf`.  

@@ -8,11 +8,11 @@ lang: en
 ---
 
 Install the MySQL client in a Docker Container Based on Amazon Linux 2023.  
-We’ll install the MySQL client in a Docker container created from the Amazon Linux 2023 Docker image.  
+We'll install the MySQL client in a Docker container created from the Amazon Linux 2023 Docker image.  
 This article is based on [this page](https://dev.classmethod.jp/articles/install-mysql-client-to-amazon-linux-2023/).
 
 ## What is the MySQL Client?  
-It’s a tool that allows you to connect to and interact with a MySQL server.
+It's a tool that allows you to connect to and interact with a MySQL server.
 
 ## Environment  
 - Ubuntu 22.04.3 LTS (running on WSL)  
@@ -35,18 +35,18 @@ RUN yum -y install https://repo.mysql.com/mysql80-community-release-el9-1.noarch
 RUN yum -y install mysql-community-client-8.0.34
 ```
 
-We’re adding a YUM repository intended for EL9-based systems.  
-According to [the reference site](https://dev.classmethod.jp/articles/install-mysql-client-to-amazon-linux-2023/), it’s not possible to use Fedora packages (even though Amazon Linux 2023 includes components from Fedora 34, 35, and 36).
+We're adding a YUM repository intended for EL9-based systems.  
+According to [the reference site](https://dev.classmethod.jp/articles/install-mysql-client-to-amazon-linux-2023/), it's not possible to use Fedora packages (even though Amazon Linux 2023 includes components from Fedora 34, 35, and 36).
 
-Note: The GPG key may have an expiration date. If you’re reading this at a later time, the key might not work anymore.  
+Note: The GPG key may have an expiration date. If you're reading this at a later time, the key might not work anymore.  
 You can find the latest GPG keys and YUM repositories at [repo.mysql.com](https://repo.mysql.com).
 
 In this case, we're targeting future deployment to AWS and plan to use Amazon Aurora, which is compatible with MySQL 8.0.34.  
 Therefore, we install version 8.0.34 of the MySQL client to match the server version.  
-(It’s unclear whether matching versions is strictly necessary, but it’s generally recommended.)
+(It's unclear whether matching versions is strictly necessary, but it's generally recommended.)
 
 ## 2. Verify the Installation  
-We’ll test the installed MySQL client.
+We'll test the installed MySQL client.
 
 Create a `docker-compose.yml` file in the same directory as the above `Dockerfile`.
 

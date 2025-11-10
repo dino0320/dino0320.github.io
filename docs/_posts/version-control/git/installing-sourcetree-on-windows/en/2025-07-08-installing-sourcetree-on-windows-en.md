@@ -38,10 +38,10 @@ Read the license agreement and privacy policy, check "I agree to the Atlassian S
 ![License Agreement Dialog](/assets/images/version-control/git/installing-sourcetree-on-windows-en/image2.png "License Agreement Dialog")
 
 ## 2. Install Sourcetree
-Run the downloaded installer. In this case, we’ll run `SourceTreeSetup-3.4.17.exe`.
+Run the downloaded installer. In this case, we'll run `SourceTreeSetup-3.4.17.exe`.
 
 ### Bitbucket Cloud Account Registration Screen
-You’ll be prompted to sign in with a Bitbucket Cloud account. For now, we’ll skip this by clicking the "Skip" button.
+You'll be prompted to sign in with a Bitbucket Cloud account. For now, we'll skip this by clicking the "Skip" button.
 
 ![Bitbucket Cloud Account Registration Screen](/assets/images/version-control/git/installing-sourcetree-on-windows-en/image3.png "Bitbucket Cloud Account Registration Screen")  
 
@@ -53,7 +53,7 @@ Select the tools you want to install and click "Next".
 |Item|Description|
 |----|----|
 |Git|Choose whether to install Git. In this case, Git was already installed, so it's automatically selected.|
-|Mercurial|Choose whether to install Mercurial (another version control system). It’s not needed here, so the box is unchecked.|
+|Mercurial|Choose whether to install Mercurial (another version control system). It's not needed here, so the box is unchecked.|
 |Enable automatic line ending handling|Automatically convert line endings from LF to CRLF when checking out files. Checked in this example.|
 |Configure Global Ignore|Use a global ignore file (e.g., for IDE-generated files). Unchecked in this example.|
 

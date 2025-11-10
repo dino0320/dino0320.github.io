@@ -8,7 +8,7 @@ lang: en
 image: /assets/images/platform/docker/building-php-cli-environment-by-docker-en/image1.png
 ---
 
-In this guide, we’ll set up an environment where you can run PHP from the command line using Docker.
+In this guide, we'll set up an environment where you can run PHP from the command line using Docker.
 
 ![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
@@ -85,7 +85,7 @@ Hello World
 Instead of launching into an interactive shell, this runs the PHP script directly at container startup.
 
 #### Run PHP Without Creating a File
-If you don’t want to create a separate PHP file, you can skip [Step 1](#1-create-a-php-file) and run this instead:
+If you don't want to create a separate PHP file, you can skip [Step 1](#1-create-a-php-file) and run this instead:
 
 ```
 $ docker run -it --rm --name php-cli -w /app -v `pwd`:/app php:8.2-cli php -r "echo 'Hello World' . PHP_EOL;"

@@ -31,7 +31,7 @@ This article explains how to use Chrome Remote Desktop to control one computer f
 Start by setting up Chrome Remote Desktop on the destination PC.
 
 Open Chrome and go to the [Chrome Web Store](https://chromewebstore.google.com/) to add Chrome Remote Desktop to Chrome.  
-You’ll need to be signed in to your Google account in Chrome.
+You'll need to be signed in to your Google account in Chrome.
 
 ![Chrome Remote Desktop page on the Chrome Web Store](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Chrome Remote Desktop page on the Chrome Web Store")
 
@@ -43,13 +43,13 @@ Click the download button for setting up remote access.
 
 ![Download button for installer](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image3.png "Download button for installer")
 
-Read the Terms of Service and Privacy Policy, then click “Accept & Install.”
+Read the Terms of Service and Privacy Policy, then click “Accept & Install."
 
 ![Ready to install screen](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image4.png "Ready to install screen")
 
 Run the installer named `chromeremotedesktophost.msi` from the status bar or your Downloads folder.
 
-Return to the remote access setup screen and click “Turn On.”
+Return to the remote access setup screen and click “Turn On."
 
 ![Allow remote access button](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image5.png "Allow remote access button")
 
@@ -61,7 +61,7 @@ Enter a PIN of your choice.
 
 ![Enter PIN screen](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image7.png "Enter PIN screen")
 
-Click “Start” to allow this PC to be accessed from another device.
+Click “Start" to allow this PC to be accessed from another device.
 
 ![List of available PCs to connect](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image8.png "List of available PCs to connect")
 
@@ -82,7 +82,7 @@ Enter the PIN you set up on the destination PC.
 You can now control the destination PC.
 
 ## About the options panel
-After connecting to a PC, you can click the “>” symbol on the right side of the screen to open the options panel.
+After connecting to a PC, you can click the “>" symbol on the right side of the screen to open the options panel.
 In the options panel, you can disconnect or adjust various connection settings.
 
 ![Options panel](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image11.png "Options panel")
@@ -90,13 +90,13 @@ In the options panel, you can disconnect or adjust various connection settings.
 Here are some of the available options:
 
 ### Disconnecting
-Click “Disconnect” at the top left of the options panel to end the remote session.
+Click “Disconnect" at the top left of the options panel to end the remote session.
 
 ![Disconnect button](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image12.png "Disconnect button")
 
 ### Video Codec
 You can choose from three video codecs (compression formats): VP8, VP9, and AV1.
-According to this reference page, here’s a rough comparison:
+According to this reference page, here's a rough comparison:
 
 |Item|Order|
 |----|----|

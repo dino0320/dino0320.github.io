@@ -1,6 +1,6 @@
 ---
 layout: my-post
-title: "About Git’s fileMode Setting"
+title: "About Git's fileMode Setting"
 date: 2025-07-08 00:00:00 +0000
 categories: version-control git
 page_name: about-filemode-in-git-config-en
@@ -18,7 +18,7 @@ I investigated the `core.fileMode` setting in Git's config.
 - git version 2.34.1
 
 ## What is core.fileMode?
-The `core.fileMode` setting in Git’s configuration determines whether Git tracks changes to a file’s executable permission (i.e., whether a file is marked as executable).
+The `core.fileMode` setting in Git's configuration determines whether Git tracks changes to a file's executable permission (i.e., whether a file is marked as executable).
 
 When set to `true`, Git will detect and report changes to file permissions (e.g., adding or removing the executable flag).
 
@@ -44,7 +44,7 @@ git config core.filemode
 ```
 
 ## Testing core.fileMode
-Let’s test the effect of `core.fileMode`.  
+Let's test the effect of `core.fileMode`.  
 This example is performed on Ubuntu.
 
 First, set `core.fileMode` to `false`: 
@@ -54,7 +54,7 @@ $ git config core.filemode false
 ```
 
 Next, give executable permissions to a file that currently doesn't have them.
-We’ll use a sample file named `hoge.sh`:
+We'll use a sample file named `hoge.sh`:
 
 ```bash
 $ chmod 755 hoge.sh
@@ -79,7 +79,7 @@ Now, set `core.fileMode` back to `true`:
 $ git config core.filemode true
 ```
 
-Run `git status` again, and you’ll see that Git detects the change in file permissions:
+Run `git status` again, and you'll see that Git detects the change in file permissions:
 
 ```bash
 $ git status

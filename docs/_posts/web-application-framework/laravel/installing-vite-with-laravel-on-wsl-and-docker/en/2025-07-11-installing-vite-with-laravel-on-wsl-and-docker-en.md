@@ -52,7 +52,7 @@ Since Vite is already included in the default `package.json`, just run the follo
 npm install
 ```
 
-Here’s an example of the `package.json` generated in my environment:
+Here's an example of the `package.json` generated in my environment:
 
 `package.json` :
 ```json
@@ -139,12 +139,12 @@ WSL can only detect changes to files on the Windows file system via polling, so 
 Polling can increase CPU usage, so reduce its frequency by setting `server.watch.interval` to `1000` (1 second).
 
 Polling is generally discouraged due to performance concerns.  
-It’s better to place your Laravel project outside the Windows file system, such as under `/home`.
+It's better to place your Laravel project outside the Windows file system, such as under `/home`.
 
 ## 4. Configure the Docker Container
 Change the port settings for your Docker container.
 
-In your Laravel project’s Docker container settings, expose port 5173 for Vite’s HMR.  
+In your Laravel project's Docker container settings, expose port 5173 for Vite's HMR.  
 Update your `docker-compose.yml` as follows:
 
 `docker-compose.yml` :
@@ -232,7 +232,7 @@ npm run dev
 ```
 
 Access `/` in your browser.  
-You should see the output from `console.log('test')` in the browser’s developer console, indicating that `resources/js/test.js` is working.
+You should see the output from `console.log('test')` in the browser's developer console, indicating that `resources/js/test.js` is working.
 
 If you modify `resources/js/test.js` as follows:
 

@@ -9,7 +9,7 @@ image: /assets/images/platform/docker/installing-docker-engine-on-windows-en/ima
 ---
 
 This guide explains how to install Docker Engine on Windows.  
-Although using [Docker Desktop for Windows](https://www.docker.com/ja-jp/products/docker-desktop/) is the standard method for installing Docker on Windows, here we’ll install Docker Engine using WSL (Windows Subsystem for Linux).
+Although using [Docker Desktop for Windows](https://www.docker.com/ja-jp/products/docker-desktop/) is the standard method for installing Docker on Windows, here we'll install Docker Engine using WSL (Windows Subsystem for Linux).
 
 ![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
@@ -28,7 +28,7 @@ Although using [Docker Desktop for Windows](https://www.docker.com/ja-jp/product
 ## 1. Install WSL and Ubuntu
 For details on installing WSL and Ubuntu, see [this guide](/platform/windows/installing-wsl-en).
 
-If the WSL version for Ubuntu is 1, you’ll need to upgrade it to version 2.
+If the WSL version for Ubuntu is 1, you'll need to upgrade it to version 2.
 
 To check the WSL version of your installed Linux distributions, open Command Prompt or PowerShell and run:
 
@@ -45,7 +45,7 @@ wsl --set-version Ubuntu 2
 ```
 
 ## 2. Install Docker Engine
-Now let’s install Docker Engine on Ubuntu inside WSL.
+Now let's install Docker Engine on Ubuntu inside WSL.
 
 #### 1. Connect to Ubuntu via WSL
 Open Command Prompt or PowerShell and run:
@@ -54,7 +54,7 @@ Open Command Prompt or PowerShell and run:
 > wsl --distribution Ubuntu --user <UNIX-username>
 ```
 
-#### 2. Add Docker’s official GPG key 
+#### 2. Add Docker's official GPG key 
 In Ubuntu, run:
 
 ```

@@ -20,7 +20,7 @@ Install SQLite in a Docker Container Based on Amazon Linux 2023.
 
 ## 1. Install SQLite  
 Create a `Dockerfile` for Amazon Linux 2023 and add a line to install SQLite.  
-We’ll install version `3.40.0`.
+We'll install version `3.40.0`.
 
 `Dockerfile`:
 ```dockerfile
