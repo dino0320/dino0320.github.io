@@ -5,10 +5,13 @@ date: 2025-07-05 00:00:00 +0000
 categories: ide vscode
 page_name: setting-php-on-docker-to-executable-path-of-vscode-en
 lang: en
+image: /assets/images/ide/vscode/setting-php-on-docker-to-executable-path-of-vscode-en/image3.png
 ---
 
 This guide explains how to configure Visual Studio Code (VSCode) to use PHP inside a Docker container as the executable path.
 Reference: [How to setup VSCode with PHP inside docker](https://www.webdeveloperpal.com/2022/02/08/how-to-setup-vscode-with-php-inside-docker/#google_vignette)
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image3.png "Thumbnail")
 
 ## Environment
 - Ubuntu 22.04.3 LTS (running on WSL)

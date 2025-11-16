@@ -5,10 +5,13 @@ date: 2024-04-03 00:00:00 +0000
 categories: ide vscode
 page_name: setting-php-on-docker-to-executable-path-of-vscode
 lang: ja
+image: /assets/images/ide/vscode/setting-php-on-docker-to-executable-path-of-vscode/image3.png
 ---
 
 Visual Studio Code(VSCode)のPHPのExecutable PathにDockerコンテナ内のPHPを設定します。  
 [こちらのページ](https://www.webdeveloperpal.com/2022/02/08/how-to-setup-vscode-with-php-inside-docker/#google_vignette)を参考にさせていただいてます。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image3.png "サムネイル")
 
 ## 環境
 - Ubuntu 22.04.3 LTS (WSLで起動している)
