@@ -22,6 +22,7 @@ image: /assets/images/platform/docker/about-docker-commands/image1.png
 - [docker rm](#docker-rm)
 - [docker images](#docker-images)
 - [docker rmi](#docker-rmi)
+- [docker build](#docker-build)
 - [docker run](#docker-run)
 - [docker stop](#docker-stop)
 - [docker compose up](#docker-compose-up)
@@ -108,6 +109,32 @@ docker rmi php:8.2
 |引数|説明|
 |----|----|
 |IMAGE|イメージIDを指定します。複数指定できます。イメージIDは `docker images` コマンドで確認できます。同じイメージIDの複数のタグがある場合、イメージIDの代わりに `<リポジトリ名>:<タグ名>` を指定することでタグを削除できます。使用例2では `php:8.2` を指定しています。|
+
+## docker build
+`docker build` コマンドは `Dockerfile` からDockerイメージを構築するコマンドです。
+
+使い方:  
+```
+docker build [OPTIONS] PATH | URL
+```
+
+使用例:  
+```
+docker build -t test:1.0 .
+```
+
+引数:
+
+|引数|説明|
+|----|----|
+|PATH|`Dockerfile` のあるディレクトリのパスを指定します。 使用例では `.` を指定しています。|
+|URL|リモートの `Dockerfile` のURLをしてします。|
+
+オプション: 
+
+|オプション|説明|
+|----|----|
+|t|Dockerイメージにタグを割り当てます。形式は `名前:タグ` です。使用例では `test:1.0` を指定しています。|
 
 ## docker run
 `docker run` コマンドはDockerイメージからDockerコンテナを起動するコマンドです。  

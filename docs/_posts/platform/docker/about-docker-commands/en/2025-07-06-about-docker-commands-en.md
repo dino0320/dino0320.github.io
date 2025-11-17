@@ -22,6 +22,7 @@ Only the commands and options I personally use are listed here.
 - [docker rm](#docker-rm)
 - [docker images](#docker-images)
 - [docker rmi](#docker-rmi)
+- [docker build](#docker-build)
 - [docker run](#docker-run)
 - [docker stop](#docker-stop)
 - [docker compose up](#docker-compose-up)
@@ -108,6 +109,32 @@ Arguments:
 |Argument|Description|
 |----|----|
 |IMAGE|Specify the image ID. Multiple IDs can be specified. You can check image IDs with `docker images`. If there are multiple tags for the same image ID, you can delete a specific tag by using `<repository>:<tag>` instead. Example 2 shows this with `php:8.2`.|
+
+## docker build
+The `docker build` command builds a Docker image from a `Dockerfile`.
+
+Usage:  
+```
+docker build [OPTIONS] PATH | URL
+```
+
+Example:  
+```
+docker build -t test:1.0 .
+```
+
+Arguments:
+
+|Argument|Description|
+|----|----|
+|PATH|Specify the path to the `Dockerfile`. In the example, `.` is used.|
+|URL|Specify the URL of a remote `Dockerfile`.|
+
+Options: 
+
+|Option|Description|
+|----|----|
+|t|Assigns a tag to the Docker image. The format is `name:tag`. In the example, `test:1.0` is used.|
 
 ## docker run
 The `docker run` command launches a Docker container from a Docker image.
