@@ -5,10 +5,13 @@ date: 2024-04-05 00:00:00 +0000
 categories: database mysql
 page_name: installing-mysql-client-on-amazon-linux
 lang: ja
+image: /assets/images/database/mysql/installing-mysql-client-on-amazon-linux/image1.png
 ---
 
 Amazon Linux 2023のDockerイメージから作成したDockerコンテナにMySQLクライアントをインストールします。  
 [こちらのページ](https://dev.classmethod.jp/articles/install-mysql-client-to-amazon-linux-2023/)を参考にさせていただいています。  
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## MySQLクライアントとは
 MySQLサーバーへの接続・操作ができるようになるツールです。

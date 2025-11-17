@@ -5,11 +5,14 @@ date: 2025-05-29 00:00:00 +0000
 categories: database mysql
 page_name: installing-mysql-client-on-amazon-linux-en
 lang: en
+image: /assets/images/database/mysql/installing-mysql-client-on-amazon-linux-en/image1.png
 ---
 
 Install the MySQL client in a Docker Container Based on Amazon Linux 2023.  
 We'll install the MySQL client in a Docker container created from the Amazon Linux 2023 Docker image.  
 This article is based on [this page](https://dev.classmethod.jp/articles/install-mysql-client-to-amazon-linux-2023/).
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## What is the MySQL Client?  
 It's a tool that allows you to connect to and interact with a MySQL server.
