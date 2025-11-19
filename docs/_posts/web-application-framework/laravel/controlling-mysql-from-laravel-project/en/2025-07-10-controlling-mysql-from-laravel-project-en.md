@@ -5,10 +5,13 @@ date: 2025-07-10 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: controlling-mysql-from-laravel-project-en
 lang: en
+image: /assets/images/web-application-framework/laravel/controlling-mysql-from-laravel-project-en/image1.png
 ---
 
 This guide explains how to configure a Laravel project to interact with MySQL.  
 We're using Docker to set up the environment.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Environment
 - Ubuntu 22.04.3 LTS (running on WSL)

@@ -5,10 +5,13 @@ date: 2024-04-09 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: controlling-mysql-from-laravel-project
 lang: ja
+image: /assets/images/web-application-framework/laravel/controlling-mysql-from-laravel-project/image1.png
 ---
 
 LaravelプロジェクトからMySQLを操作するための設定を行います。  
 Dockerを使用して環境を構築しています。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 環境
 - Ubuntu 22.04.3 LTS (WSLで起動している)
