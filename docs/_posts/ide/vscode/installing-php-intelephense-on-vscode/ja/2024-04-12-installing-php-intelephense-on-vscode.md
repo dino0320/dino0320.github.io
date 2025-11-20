@@ -5,9 +5,12 @@ date: 2024-04-12 00:00:00 +0000
 categories: ide vscode
 page_name: installing-php-intelephense-on-vscode
 lang: ja
+image: /assets/images/ide/vscode/installing-php-intelephense-on-vscode/image9.png
 ---
 
 Visual Studio Code(VSCode)で拡張機能のPHP Intelephenseをインストールします。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image9.png "サムネイル")
 
 ## PHP Intelephenseとは
 VSCodeのPHP用の拡張機能です。コード補完や定義へのジャンプなどのPHP開発に必要な機能が使えるようになります。

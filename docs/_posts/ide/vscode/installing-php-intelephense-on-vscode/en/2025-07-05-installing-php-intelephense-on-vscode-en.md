@@ -5,9 +5,12 @@ date: 2025-07-05 00:00:00 +0000
 categories: ide vscode
 page_name: installing-php-intelephense-on-vscode-en
 lang: en
+image: /assets/images/ide/vscode/installing-php-intelephense-on-vscode-en/image9.png
 ---
 
 This guide explains how to install the PHP Intelephense extension in Visual Studio Code (VSCode).
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image9.png "Thumbnail")
 
 ## What is PHP Intelephense?
 PHP Intelephense is an extension for Visual Studio Code that provides essential PHP development features such as code completion, go to definition, and more.
