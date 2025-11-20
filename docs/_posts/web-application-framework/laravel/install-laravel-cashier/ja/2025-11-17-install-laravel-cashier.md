@@ -5,7 +5,7 @@ date: 2025-11-17 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: install-laravel-cashier
 lang: ja
-image: /assets/images/web-application-framework/laravel/use-laravel-cashier/image1.png
+image: /assets/images/web-application-framework/laravel/install-laravel-cashier/image1.png
 ---
 
 Laravel Cashier (Stripe) をインストールする際につまずいたのでそれをまとめようと思います。
