@@ -5,10 +5,13 @@ date: 2025-07-05 00:00:00 +0000
 categories: ide vscode
 page_name: setting-environment-for-php-on-wsl-and-docker-with-vscode-en
 lang: en
+image: /assets/images/ide/vscode/setting-environment-for-php-on-wsl-and-docker-with-vscode-en/image4.png
 ---
 
 This guide explains how to configure Visual Studio Code (VSCode) for PHP development on WSL + Docker.  
 Note: This is based on personal experience.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image4.png "Thumbnail")
 
 ## Environment
 - Windows 10 64-bit

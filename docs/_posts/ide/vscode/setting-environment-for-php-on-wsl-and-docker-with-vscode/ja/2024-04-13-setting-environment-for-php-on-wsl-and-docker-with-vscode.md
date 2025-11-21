@@ -5,11 +5,14 @@ date: 2024-04-13 00:00:00 +0000
 categories: ide vscode
 page_name: setting-environment-for-php-on-wsl-and-docker-with-vscode
 lang: ja
+image: /assets/images/ide/vscode/setting-environment-for-php-on-wsl-and-docker-with-vscode/image4.png
 ---
 
 Visual Studio Code(VSCode)でWSL + Docker上のPHPを開発するための設定を行います。  
 個人的な意見になります。
 <!--more-->
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image4.png "サムネイル")
 
 ## 環境
 - Windows 10 64ビット
