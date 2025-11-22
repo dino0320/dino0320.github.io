@@ -5,9 +5,12 @@ date: 2024-04-16 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: about-laravel-service-container
 lang: ja
+image: /assets/images/web-application-framework/laravel/about-laravel-service-container/image1.png
 ---
 
 LaravelのService Containerについて調査しました。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 参考ページ
 - [Service Container - Laravel 11.x](https://laravel.com/docs/11.x/container)
