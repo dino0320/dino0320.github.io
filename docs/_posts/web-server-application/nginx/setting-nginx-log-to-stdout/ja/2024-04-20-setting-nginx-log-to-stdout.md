@@ -5,11 +5,14 @@ date: 2024-04-20 00:00:00 +0000
 categories: web-server-application nginx
 page_name: setting-nginx-log-to-stdout
 lang: ja
+image: /assets/images/web-server-application/nginx/setting-nginx-log-to-stdout/image1.png
 ---
 
 NGINXのアクセスログを標準出力に、エラーログを標準エラー出力に出力するように設定します。  
 
 今回はDockerコンテナ上のNGINXを設定します。NGINXの公式Dockerイメージではなく、Amazon Linux 2023のイメージにNGINXをインストールしたものを使用しています。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 参考ページ
 - [コンテナ内のプロセスのログ出力先を標準出力/標準エラー出力に設定する方法 - Qiita](https://qiita.com/sshota0809/items/a86cd3379f88fb5cd1b8)

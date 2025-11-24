@@ -5,12 +5,15 @@ date: 2025-07-11 00:00:00 +0000
 categories: web-server-application nginx
 page_name: setting-nginx-log-to-stdout-en
 lang: en
+image: /assets/images/web-server-application/nginx/setting-nginx-log-to-stdout-en/image1.png
 ---
 
 We'll configure NGINX to output access logs to standard output and error logs to standard error.
 
 In this setup, we'll configure NGINX running inside a Docker container.  
 Instead of using the official NGINX Docker image, we're using an Amazon Linux 2023 image with NGINX installed.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Reference
 - [コンテナ内のプロセスのログ出力先を標準出力/標準エラー出力に設定する方法 - Qiita](https://qiita.com/sshota0809/items/a86cd3379f88fb5cd1b8)
