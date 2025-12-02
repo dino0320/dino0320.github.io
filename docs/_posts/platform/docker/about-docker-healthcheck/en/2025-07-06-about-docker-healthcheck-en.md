@@ -8,7 +8,7 @@ lang: en
 image: /assets/images/platform/docker/about-docker-healthcheck-en/image1.png
 ---
 
-I looked into how Docker healthchecks work.
+I looked into how a Docker healthcheck works.
 
 ![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
