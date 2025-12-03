@@ -8,3 +8,19 @@ layout: post
 </p>
 
 {{ content }}
+
+{% if page.lang == "ja" %}
+  <h3>関連記事</h3>
+{% else %}
+  <h3>Related articles</h3>
+{% endif %}
+
+<ul>
+  {% assign category = page.categories[1] %}
+  {% assign related_posts = site.categories[category] | where:"lang",page.lang | slice:0,10 %}
+  {% for post in related_posts %}
+    {% if page.lang == post.lang %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
