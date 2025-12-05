@@ -5,9 +5,12 @@ date: 2024-04-23 00:00:00 +0000
 categories: platform docker
 page_name: about-docker-depends-on
 lang: ja
+image: /assets/images/platform/docker/about-docker-depends-on/image1.png
 ---
 
 Dockerの `depends on` について調査しました。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 環境
 - Docker Engine 26.0.0

@@ -5,9 +5,12 @@ date: 2025-07-06 00:00:00 +0000
 categories: platform docker
 page_name: about-docker-depends-on-en
 lang: en
+image: /assets/images/platform/docker/about-docker-depends-on-en/image1.png
 ---
 
 I investigated how Docker's depends_on works.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Environment
 - Docker Engine 26.0.0
