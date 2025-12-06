@@ -5,12 +5,15 @@ date: 2024-05-01 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: setting-laravel-log-to-stdout
 lang: ja
+image: /assets/images/web-application-framework/laravel/setting-laravel-log-to-stdout/image1.png
 ---
 
 Laravelのログを標準出力に出力するように設定します。  
 
 Dockerコンテナ上のLaravelアプリケーションのログをDockerのログとして確認できるようにするため、Laravelのログを標準出力に出力するようにします。  
 今回はAmazon Linux 2023のイメージのコンテナ上に作成したLaravelアプリケーションの設定を行います。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 参考ページ
 - [Logging - Laravel 11.x](https://laravel.com/docs/11.x/logging)

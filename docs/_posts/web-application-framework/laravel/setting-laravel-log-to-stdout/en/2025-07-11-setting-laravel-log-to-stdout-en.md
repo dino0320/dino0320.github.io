@@ -5,12 +5,15 @@ date: 2025-07-11 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: setting-laravel-log-to-stdout-en
 lang: en
+image: /assets/images/web-application-framework/laravel/setting-laravel-log-to-stdout-en/image1.png
 ---
 
 This article is how to configure Laravel to output logs to standard output.
 
 To make it possible to view logs from a Laravel application running inside a Docker container as Docker logs, we will configure Laravel to output its logs to standard output.  
 In this example, we will configure a Laravel application running in a container based on the Amazon Linux 2023 image.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## References
 - [Logging - Laravel 11.x](https://laravel.com/docs/11.x/logging)
