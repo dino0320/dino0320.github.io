@@ -5,9 +5,12 @@ date: 2024-05-02 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: about-laravel-middleware
 lang: ja
+image: /assets/images/web-application-framework/laravel/about-laravel-middleware/image1.png
 ---
 
 LaravelのMiddlewareについて調査しました。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 参考ページ
 - [Middleware - Laravel 11.x](https://laravel.com/docs/11.x/middleware)

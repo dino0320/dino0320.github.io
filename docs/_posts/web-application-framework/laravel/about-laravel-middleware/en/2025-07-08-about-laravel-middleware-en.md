@@ -5,9 +5,12 @@ date: 2025-07-08 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: about-laravel-middleware-en
 lang: en
+image: /assets/images/web-application-framework/laravel/about-laravel-middleware-en/image1.png
 ---
 
 I have researched Laravel Middleware.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Reference
 - [Middleware - Laravel 11.x](https://laravel.com/docs/11.x/middleware)
