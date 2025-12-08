@@ -5,9 +5,12 @@ date: 2024-05-08 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: implicitly-binding-multiple-eloquent-models-in-route
 lang: ja
+image: /assets/images/web-application-framework/laravel/implicitly-binding-multiple-eloquent-models-in-route/image1.png
 ---
 
 Laravelのルート定義で複数のEloquentモデルを暗黙的にバインドすることについて試しました。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 参考ページ
 - [Routing - Laravel 11.x](https://laravel.com/docs/11.x/routing#implicit-binding)
