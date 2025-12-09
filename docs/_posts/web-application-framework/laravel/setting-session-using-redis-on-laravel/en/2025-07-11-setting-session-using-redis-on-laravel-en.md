@@ -5,10 +5,13 @@ date: 2025-07-11 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: setting-session-using-redis-on-laravel-en
 lang: en
+image: /assets/images/web-application-framework/laravel/setting-session-using-redis-on-laravel-en/image1.png
 ---
 
 In this guide, we'll configure Laravel to store sessions in Redis.  
 The environment is set up using Docker.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Environment
 - Ubuntu 22.04.3 LTS (running on WSL)

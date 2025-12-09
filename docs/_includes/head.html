@@ -16,5 +16,6 @@
     {%- assign en_url = ja_url | replace: '.html', '-en.html' -%}
     <link rel="alternate" href="{{ site.url }}{{ ja_url }}" hreflang="ja" />
     <link rel="alternate" href="{{ site.url }}{{ en_url }}" hreflang="en" />
+    <link rel="alternate" href="{{ site.url }}" hreflang="x-default" />
   {%- endif -%}
 </head>
