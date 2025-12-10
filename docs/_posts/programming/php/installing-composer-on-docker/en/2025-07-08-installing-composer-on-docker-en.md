@@ -5,9 +5,12 @@ date: 2025-07-08 00:00:00 +0000
 categories: programming php
 page_name: installing-composer-on-docker-en
 lang: en
+image: /assets/images/programming/php/installing-composer-on-docker-en/image1.png
 ---
 
 We'll configure our Docker image to install Composer during the build process.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Environment
 - Windows 10 64-bit

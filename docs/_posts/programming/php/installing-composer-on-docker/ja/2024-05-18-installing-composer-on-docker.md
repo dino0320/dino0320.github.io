@@ -5,9 +5,12 @@ date: 2024-05-18 00:00:00 +0000
 categories: programming php
 page_name: installing-composer-on-docker
 lang: ja
+image: /assets/images/programming/php/installing-composer-on-docker/image1.png
 ---
 
 Dockerイメージビルド時にComposerをインストールするようにします。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 環境
 - Windows 10 64ビット
