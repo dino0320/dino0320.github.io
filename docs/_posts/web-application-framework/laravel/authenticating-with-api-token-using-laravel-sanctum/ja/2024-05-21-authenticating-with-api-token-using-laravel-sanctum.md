@@ -5,9 +5,12 @@ date: 2024-05-21 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: authenticating-with-api-token-using-laravel-sanctum
 lang: ja
+image: /assets/images/web-application-framework/laravel/authenticating-with-api-token-using-laravel-sanctum/image1.png
 ---
 
 Laravel Sanctumを使ったAPIトークンでの認証を試します。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 参考ページ
 - [Laravel Sanctum - Laravel 11.x](https://laravel.com/docs/11.x/sanctum)
