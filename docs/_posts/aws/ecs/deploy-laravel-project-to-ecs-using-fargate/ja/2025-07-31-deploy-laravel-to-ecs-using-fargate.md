@@ -245,7 +245,7 @@ Createをクリックします。
 ## 7. セキュリティグループの作成
 AWS管理コンソールの[VPC](https://console.aws.amazon.com/vpc/)にアクセスし、Security groupsをクリックします。
 
-![AWSマネジメント管理のVPC](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image36.png "AWSマネジメント管理のVPC")
+![AWS管理コンソールのVPC](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image36.png "AWS管理コンソールのVPC")
 
 Create security groupをクリックし、以下のセキュリティグループを作成します。
 
@@ -287,7 +287,7 @@ ECRはイメージレイヤーの保存にAmazon S3を使用しているため�
 
 AWS管理コンソールの[VPC](https://console.aws.amazon.com/vpc/)にアクセスし、Endpointsをクリックします。
 
-![AWSマネジメント管理のVPC](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image32.png "AWSマネジメント管理のVPC")
+![AWS管理コンソールのVPC](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image32.png "AWS管理コンソールのVPC")
 
 Create endpointをクリックします。
 
@@ -310,9 +310,9 @@ Create endpointをクリックします。
 ## 9. アプリケーションロードバランサーの作成
 Fargateコンテナに対するトラフィックを分散させるために、アプリケーションロードバランサーを作成します。
 
-AWSマネジメント管理の[EC2](https://console.aws.amazon.com/ec2/)にアクセスし、Load Balancersをクリックします。
+AWS管理コンソールの[EC2](https://console.aws.amazon.com/ec2/)にアクセスし、Load Balancersをクリックします。
 
-![AWSマネジメント管理のEC2](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image21.png "AWS管理コンソールのEC2")
+![AWS管理コンソールのEC2](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image21.png "AWS管理コンソールのEC2")
 
 Create Application Load Balancerをクリックします。
 
