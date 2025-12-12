@@ -100,6 +100,18 @@ services:
     command: bash -c "chmod 755 /srv/example.com/docker/web/start.sh && /srv/example.com/docker/web/start.sh"
 ```
 
+Please make sure not to include any Git-related files or other files that are unnecessary for the production environment for security reasons.  
+It's a good idea to create a `.dockerignore` file like the following:
+
+`.dockerignore`:
+
+```
+**.git
+**.gitignore
+**.gitattributes
+**.md
+```
+
 ## 2. Create Repository
 Navigate to [ECR on AWS Management Console](https://console.aws.amazon.com/ecr/).  
 Click the "Create" button.

@@ -98,6 +98,18 @@ services:
     command: bash -c "chmod 755 /srv/example.com/docker/web/start.sh && /srv/example.com/docker/web/start.sh"
 ```
 
+また、本番環境にGit関連ファイルや不要なファイルを含まないようにしてください。  
+`.dockerignore` などでDockerイメージに入れたくないファイルは除外するといいと思います。
+
+`.dockerignore`:
+
+```
+**.git
+**.gitignore
+**.gitattributes
+**.md
+```
+
 ## 2. リポジトリの作成
 AWS管理コンソールから[ECR](https://console.aws.amazon.com/ecr/)に移動し、Createボタンをクリックします。
 
