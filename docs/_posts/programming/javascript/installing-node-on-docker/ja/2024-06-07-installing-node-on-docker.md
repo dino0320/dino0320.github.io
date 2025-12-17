@@ -5,9 +5,12 @@ date: 2024-06-07 00:00:00 +0000
 categories: programming javascript
 page_name: installing-node-on-docker
 lang: ja
+image: /assets/images/programming/javascript/installing-node-on-docker/image1.png
 ---
 
 Dockerイメージビルド時にNode.jsをインストールするようにします。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 参考ページ
 - [Download Node.js® - Node.js](https://nodejs.org/en/download/package-manager)

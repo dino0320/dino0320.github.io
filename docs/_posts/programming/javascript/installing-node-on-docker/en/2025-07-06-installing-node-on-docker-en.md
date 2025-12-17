@@ -5,9 +5,12 @@ date: 2025-07-06 00:00:00 +0000
 categories: programming javascript
 page_name: installing-node-on-docker-en
 lang: en
+image: /assets/images/programming/javascript/installing-node-on-docker-en/image1.png
 ---
 
 This guide explains how to install Node.js during the Docker image build process.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Reference
 - [Download Node.js® - Node.js](https://nodejs.org/en/download/package-manager)
