@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "WSL + Dockerコンテナ上のLaravelでViteをインストールする"
+title: "WSL + Docker環境のLaravelでViteをインストールする方法"
 date: 2024-06-08 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: installing-vite-with-laravel-on-wsl-and-docker
 lang: ja
+image: /assets/images/web-application-framework/laravel/installing-vite-with-laravel-on-wsl-and-docker/image3.png
 ---
 
 WSL + Dockerコンテナ上で動くLaravelプロジェクトでViteをインストールします。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image3.png "サムネイル")
 
 ## 参考ページ
 - [Asset Bundling (Vite) - Laravel 11.x](https://laravel.com/docs/11.x/vite)
