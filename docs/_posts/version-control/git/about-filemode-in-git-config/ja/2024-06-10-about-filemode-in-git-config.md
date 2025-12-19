@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "GitのfileModeについて"
+title: "WindowsでGitの差分が出る原因と対処法【core.fileMode】"
 date: 2024-06-10 00:00:00 +0000
 categories: version-control git
 page_name: about-filemode-in-git-config
 lang: ja
+image: /assets/images/version-control/git/about-filemode-in-git-config/image1.png
 ---
 
 Gitのconfigの `core.fileMode` について調査しました。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 参考ページ
 - [git-config Documentation - Git](https://git-scm.com/docs/git-config)

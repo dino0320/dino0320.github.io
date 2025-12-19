@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "About Git's fileMode Setting"
+title: "Why Git Shows File Permission Diffs on Windows and How to Fix It (core.fileMode)"
 date: 2025-07-08 00:00:00 +0000
 categories: version-control git
 page_name: about-filemode-in-git-config-en
 lang: en
+image: /assets/images/version-control/git/about-filemode-in-git-config-en/image1.png
 ---
 
 I investigated the `core.fileMode` setting in Git's config.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Reference
 - [git-config Documentation - Git](https://git-scm.com/docs/git-config)
