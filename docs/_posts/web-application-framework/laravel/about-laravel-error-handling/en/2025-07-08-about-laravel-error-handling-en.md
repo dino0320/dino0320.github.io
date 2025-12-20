@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "About Error Handling in Laravel"
+title: "Laravel 11 Error Handling Guide: Using report and render"
 date: 2025-07-08 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: about-laravel-error-handling-en
 lang: en
+image: /assets/images/web-application-framework/laravel/about-laravel-error-handling-en/image1.png
 ---
 
 I investigated error handling in Laravel and tried out how to log and handle responses when exceptions occur.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Reference
 - [Error Handling - Laravel 11.x](https://laravel.com/docs/11.x/errors)

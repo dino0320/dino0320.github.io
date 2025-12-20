@@ -1,14 +1,17 @@
 ---
 layout: my-post
-title: "LaravelのError Handlingについて"
+title: "Laravel 11のエラーハンドリング方法まとめ【report / render の使い分け】"
 date: 2024-06-23 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: about-laravel-error-handling
 lang: ja
+image: /assets/images/web-application-framework/laravel/about-laravel-error-handling/image1.png
 ---
 
 LaravelのError Handlingについて調査しました。  
 例外発生時のログ記録処理やレスポンス処理などを試しました。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 参考ページ
 - [Error Handling - Laravel 11.x](https://laravel.com/docs/11.x/errors)
