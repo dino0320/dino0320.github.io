@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "Amazon Linux 2023にSQLiteをインストールする"
+title: "Amazon Linux 2023にSQLiteをインストールする手順"
 date: 2024-06-29 00:00:00 +0000
 categories: database sqlite
 page_name: installing-sqlite-on-amazon-linux
 lang: ja
+image: /assets/images/database/sqlite/installing-sqlite-on-amazon-linux/image1.png
 ---
 
 Amazon Linux 2023のDockerイメージから作成したDockerコンテナにSQLiteをインストールします。  
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 環境
 - Windows 10 64ビット

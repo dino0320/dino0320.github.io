@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "Installing SQLite on Amazon Linux"
+title: "How to Install SQLite on Amazon Linux 2023"
 date: 2025-05-29 00:00:00 +0000
 categories: database sqlite
 page_name: installing-sqlite-on-amazon-linux-en
 lang: en
+image: /assets/images/database/sqlite/installing-sqlite-on-amazon-linux-en/image1.png
 ---
 
 Install SQLite in a Docker Container Based on Amazon Linux 2023.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Environment
 - Windows 10 64-bit  
