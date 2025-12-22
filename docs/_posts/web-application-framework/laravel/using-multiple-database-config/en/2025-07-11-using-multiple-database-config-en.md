@@ -1,14 +1,17 @@
 ---
 layout: my-post
-title: "Using Multiple Database Configurations in Laravel"
+title: "Using Multiple Database Connections in Laravel"
 date: 2025-07-11 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: using-multiple-database-config-en
 lang: en
+image: /assets/images/web-application-framework/laravel/using-multiple-database-config-en/image1.png
 ---
 
 This guide explains how to use multiple database configurations in Laravel.  
 In this example, we are using Eloquent models.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Environment
 - Laravel 11

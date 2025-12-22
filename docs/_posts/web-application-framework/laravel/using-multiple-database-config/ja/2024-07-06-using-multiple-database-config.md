@@ -1,14 +1,17 @@
 ---
 layout: my-post
-title: "Laravelで複数のデータベース設定を利用する"
+title: "Laravelで複数のデータベース接続を利用する方法"
 date: 2024-07-06 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: using-multiple-database-config
 lang: ja
+image: /assets/images/web-application-framework/laravel/using-multiple-database-config/image1.png
 ---
 
 Laravelで複数のデータベース設定を利用する方法です。  
 今回はEloquentモデルを使っています。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 環境
 - Laravel 11
