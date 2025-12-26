@@ -1,14 +1,17 @@
 ---
 layout: my-post
-title: "Building Self PC"
+title: "What I Learned from Building My First Gaming PC as a Beginner"
 date: 2025-05-29 00:00:00 +0000
 categories: hardware pc
 page_name: building-self-pc-en
 lang: en
+image: /assets/images/hardware/pc/building-self-pc-en/image1.png
 ---
 
 This is a record of building my first custom PC.  
 Since I'm a beginner, there might be some misunderstandings or better ways to choose parts—thank you in advance for your understanding.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Table of Contents
 - [PC Budget](#pc-budget)

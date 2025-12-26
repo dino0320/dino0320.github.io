@@ -1,14 +1,17 @@
 ---
 layout: my-post
-title: "初心者がゲーミングPCを自作する"
+title: "初心者がゲーミングPCを自作して分かったパーツ選びと注意点"
 date: 2024-07-24 00:00:00 +0000
 categories: hardware pc
 page_name: building-self-pc
 lang: ja
+image: /assets/images/hardware/pc/building-self-pc/image1.png
 ---
 
 初めての自作PCの記録になります。  
 初心者のため勘違いしていたり、もっといいパーツの選び方があったりするかもしれませんが、ご了承いただけると幸いです。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## もくじ
 - [PCの予算](#pcの予算)
