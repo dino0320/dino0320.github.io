@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "Trying Out Chrome Remote Desktop"
+title: "How to Set Up Chrome Remote Desktop"
 date: 2025-07-11 00:00:00 +0000
 categories: web-browser google-chrome
 page_name: set-up-chrome-remote-desktop-en
 lang: en
+image: /assets/images/web-browser/google-chrome/set-up-chrome-remote-desktop-en/image14.png
 ---
 
 This article explains how to use Chrome Remote Desktop to control one computer from another.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image14.png "Thumbnail")
 
 ## Reference
 - [【AV1 VS VP9】AV1とVP9の違い：次世代ビデオコーデック徹底比較（画質、圧縮率、互換性、応用…） - Digiarty WinXDVD](https://www.winxdvd.com/video-convert/av1-vs-vp9.htm)
