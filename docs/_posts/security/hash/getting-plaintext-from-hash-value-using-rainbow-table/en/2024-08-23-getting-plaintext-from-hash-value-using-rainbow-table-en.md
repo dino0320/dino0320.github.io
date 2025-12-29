@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "Using the rainbow table to get a plaintext from a hash value"
+title: "Understanding Rainbow Tables: Recovering Plaintext from Hashes (PHP)"
 date: 2024-08-23 00:00:00 +0000
 categories: security hash
 page_name: getting-plaintext-from-hash-value-using-rainbow-table-en
 lang: en
+image: /assets/images/security/hash/getting-plaintext-from-hash-value-using-rainbow-table-en/image1.png
 ---
+ 
+This article explores how rainbow tables work by experimentally recovering plaintext from hash values for educational purposes.
 
-I got a plaintext from a hash value using the rainbow table with PHP.
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## References
 - [レインボーテーブルとは？攻撃の仕組みや対策方法をわかりやすく解説 - ITトレンド](https://it-trend.jp/encryption/article/64-0067)

@@ -1,13 +1,17 @@
 ---
 layout: my-post
-title: "レインボーテーブルを使ってハッシュ値から平文を取得する"
+title: "レインボーテーブルによるハッシュ復元の仕組みと検証【PHP】"
 date: 2024-08-21 00:00:00 +0000
 categories: security hash
 page_name: getting-plaintext-from-hash-value-using-rainbow-table
 lang: ja
+image: /assets/images/security/hash/getting-plaintext-from-hash-value-using-rainbow-table/image1.png
 ---
 
-PHPでレインボーテーブルを使ってハッシュ値から平文を取得する処理を試しました。
+PHPでレインボーテーブルを使ってハッシュ値から平文を特定する仕組みを検証しました。  
+※ 本記事は攻撃を目的としたものではなく、レインボーテーブルの仕組みや脆弱性を理解するための検証です。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 参考ページ
 - [レインボーテーブルとは？攻撃の仕組みや対策方法をわかりやすく解説 - ITトレンド](https://it-trend.jp/encryption/article/64-0067)
