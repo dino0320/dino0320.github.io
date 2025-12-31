@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "About the User ID in WSL"
+title: "Understanding WSL User IDs and File Permission Issues with Docker"
 date: 2025-07-06 00:00:00 +0000
 categories: platform windows
 page_name: about-user-id-of-wsl-en
 lang: en
+image: /assets/images/platform/windows/about-user-id-of-wsl-en/image1.png
 ---
 
 I looked into the User ID (uid) in WSL.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Reference
 - [Advanced settings configuration in WSL](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)
