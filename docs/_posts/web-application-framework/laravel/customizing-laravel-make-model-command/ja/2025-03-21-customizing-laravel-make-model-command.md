@@ -1,14 +1,17 @@
 ---
 layout: my-post
-title: "Laravelのモデル作成コマンドをカスタマイズする"
+title: "Laravelのmake:modelコマンドをカスタマイズする方法"
 date: 2025-03-21 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: customizing-laravel-make-model-command
 lang: ja
+image: /assets/images/web-application-framework/laravel/customizing-laravel-make-model-command/image1.png
 ---
 
 Laravelのモデル作成コマンド `php artisan make:model` の挙動をカスタマイズします。  
 今回は `--migration` オプションをつけたときに生成されるMigrationファイルの場所を変更します。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 
 ## 参考ページ

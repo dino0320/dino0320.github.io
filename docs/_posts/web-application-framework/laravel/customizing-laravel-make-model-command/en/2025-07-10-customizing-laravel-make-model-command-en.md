@@ -1,14 +1,17 @@
 ---
 layout: my-post
-title: "Customizing the Laravel make:model Command"
+title: "How to Customize the Laravel make:model Command"
 date: 2025-07-10 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: customizing-laravel-make-model-command-en
 lang: en
+image: /assets/images/web-application-framework/laravel/customizing-laravel-make-model-command-en/image1.png
 ---
 
 This post explains how to customize the behavior of Laravel's `php artisan make:model` command.  
 In this case, we'll modify where the migration file is generated when using the `--migration` option.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Reference
 - [Laravel 5.4 make:model コマンド改造入門](https://qiita.com/morisuke/items/93195ef8c031ca2d0976)
