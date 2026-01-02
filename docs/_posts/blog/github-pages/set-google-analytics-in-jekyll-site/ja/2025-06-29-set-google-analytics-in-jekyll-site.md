@@ -1,14 +1,17 @@
 ---
 layout: my-post
-title: "JekyllのWebサイトでGoogle Analyticsを設定する"
+title: "JekyllサイトにGoogle Analyticsを設定する方法"
 date: 2025-06-29 00:00:00 +0000
 categories: blog github-pages
 page_name: set-google-analytics-in-jekyll-site
 lang: ja
+image: /assets/images/blog/github-pages/set-google-analytics-in-jekyll-site/image1.png
 ---
 
 JekyllのWebサイトにGoogle AnalyticsのGoogleタグを設定する方法を解説します。  
 ここではJekyllのテーマとしてMinimaを使用しています。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 参考ページ
 - [GitHub PagesでMinimaテンプレートを用いてGoogle Analytics GA4を設定する方法](https://zenn.dev/mato/articles/5c9f8e389e231b)
