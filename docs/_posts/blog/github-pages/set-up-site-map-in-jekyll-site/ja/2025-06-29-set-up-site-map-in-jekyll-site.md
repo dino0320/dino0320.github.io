@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "JekyllのWebサイトでサイトマップを設定する"
+title: "Jekyllサイトにサイトマップを設定する方法"
 date: 2025-06-29 00:00:00 +0000
 categories: blog github-pages
 page_name: set-up-site-map-in-jekyll-site
 lang: ja
+image: /assets/images/blog/github-pages/set-up-site-map-in-jekyll-site/image1.png
 ---
 
 Jekyll Sitemap Generator Pluginを使ってJekyllのWebサイトにサイトマップを追加します。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 参考ページ
 - [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)

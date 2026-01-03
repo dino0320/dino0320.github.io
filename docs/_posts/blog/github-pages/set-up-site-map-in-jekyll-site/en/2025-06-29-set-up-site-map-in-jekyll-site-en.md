@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "Set Up Site Map in Jekyll Site"
+title: "How to Set Up a Sitemap in a Jekyll Site"
 date: 2025-06-29 00:00:00 +0000
 categories: blog github-pages
 page_name: set-up-site-map-in-jekyll-site-en
 lang: en
+image: /assets/images/blog/github-pages/set-up-site-map-in-jekyll-site-en/image1.png
 ---
 
 This article is is about adding a site map to a Jekyll website using the Jekyll Sitemap Generator Plugin.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## Reference
 - [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
