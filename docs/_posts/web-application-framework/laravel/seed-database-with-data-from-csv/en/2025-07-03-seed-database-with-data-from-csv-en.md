@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "Seed Database with Data from CSV"
+title: "How to Seed a Database from a CSV File in Laravel"
 date: 2025-07-03 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: seed-database-with-data-from-csv-en
 lang: en
+image: /assets/images/web-application-framework/laravel/seed-database-with-data-from-csv-en/image1.png
 ---
 
 This article is how to seed a database with data from a CSV file in Laravel.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "Thumbnail")
 
 ## What's Seeder?
 Seeder in Laravel is an ability to insert any data into a database.

@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "CSVファイルからデータベースにデータを挿入する"
+title: "LaravelでCSVファイルからデータベースにデータをシードする方法"
 date: 2025-07-03 00:00:00 +0000
 categories: web-application-framework laravel
 page_name: seed-database-with-data-from-csv
 lang: ja
+image: /assets/images/web-application-framework/laravel/seed-database-with-data-from-csv/image1.png
 ---
 
 この記事では、LaravelでSeederを使ってCSVファイルからデータを読み込み、データベースに挿入する方法について解説します。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## Seederとは？
 LaravelにおけるSeederとは、任意のデータをデータベースに挿入するための機能です。
