@@ -1,14 +1,17 @@
 ---
 layout: my-post
-title: "IAM Identity Center で管理者アクセス権を持つユーザーを作成する"
+title: "IAM Identity Center で管理者アクセス権ユーザーを作成する手順"
 date: 2025-07-05 00:00:00 +0000
 categories: aws iam
 page_name: create-user-with-administrative-access-in-iam-identity-center
 lang: ja
+image: /assets/images/aws/iam/create-user-with-administrative-access-in-iam-identity-center/image10.png
 ---
 
 この記事では、AWS Management Consoleを使用して、IAM Identity Center上に管理者権限を持つユーザーを作成する手順を解説します。  
 AWSアカウントのルートユーザーは通常サービスの操作に使用すべきではありません。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image10.png "サムネイル")
 
 ## 参考
 - [Set up to use Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/get-set-up-for-amazon-ecs.html)

@@ -1,14 +1,17 @@
 ---
 layout: my-post
-title: "Create User with Administrative Access in IAM Identity Center"
+title: "How to Create an Administrator User in AWS IAM Identity Center"
 date: 2025-07-05 00:00:00 +0000
 categories: aws iam
 page_name: create-user-with-administrative-access-in-iam-identity-center-en
 lang: en
+image: /assets/images/aws/iam/create-user-with-administrative-access-in-iam-identity-center-en/image10.png
 ---
 
 This is an article how to create a user with administrative access in IAM Identity Center using AWS Management Console.  
 You shouldn't use your AWS account root user for every tasks.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image10.png "Thumbnail")
 
 ## Reference
 - [Set up to use Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/get-set-up-for-amazon-ecs.html)
