@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "AWS CLIでSSOとプロファイルを設定する"
+title: "AWS CLIでIAM Identity Center (SSO) を設定してプロファイルを作成する"
 date: 2025-07-15 00:00:00 +0000
 categories: aws cli
 page_name: configure-sso-session-and-profile-with-aws-cli
 lang: ja
+image: /assets/images/aws/cli/configure-sso-session-and-profile-with-aws-cli/image3.png
 ---
 
 この記事では、AWS CLIを使用してSSOとプロファイルを設定する方法を説明します。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image3.png "サムネイル")
 
 ## 参考
 - [Configuring IAM Identity Center authentication with the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html)

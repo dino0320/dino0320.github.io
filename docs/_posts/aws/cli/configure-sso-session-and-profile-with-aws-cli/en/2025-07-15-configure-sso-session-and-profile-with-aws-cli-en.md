@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "Configure an SSO Session and a Profile with AWS CLI"
+title: "How to Configure AWS CLI SSO with IAM Identity Center"
 date: 2025-07-15 00:00:00 +0000
 categories: aws cli
 page_name: configure-sso-session-and-profile-with-aws-cli-en
 lang: en
+image: /assets/images/aws/cli/configure-sso-session-and-profile-with-aws-cli-en/image3.png
 ---
 
 This article explains how to configure an SSO session and a profile with the AWS CLI.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image3.png "Thumbnail")
 
 ## Reference
 - [Configuring IAM Identity Center authentication with the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html)
