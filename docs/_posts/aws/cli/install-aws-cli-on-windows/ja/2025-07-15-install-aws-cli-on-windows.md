@@ -1,14 +1,17 @@
 ---
 layout: my-post
-title: "WindowsでAWS CLIをインストールする"
+title: "WindowsにAWS CLI v2をインストールする方法"
 date: 2025-07-15 00:00:00 +0000
 categories: aws cli
 page_name: install-aws-cli-on-windows
 lang: ja
+image: /assets/images/aws/cli/install-aws-cli-on-windows/image6.png
 ---
 
 この記事では、WindowsにAWS CLIをインストールする方法を説明します。  
 ※64ビット版のWindowsのみがサポートされています。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image6.png "サムネイル")
 
 ## 参考
 - [Installing or updating to the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)

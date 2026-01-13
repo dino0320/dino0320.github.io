@@ -1,14 +1,17 @@
 ---
 layout: my-post
-title: "Install AWS CLI on Windows"
+title: "How to Install AWS CLI v2 on Windows"
 date: 2025-07-15 00:00:00 +0000
 categories: aws cli
 page_name: install-aws-cli-on-windows-en
 lang: en
+image: /assets/images/aws/cli/install-aws-cli-on-windows-en/image6.png
 ---
 
 This article explains how to install the AWS CLI on Windows.  
 Only 64-bit versions of Windows are supported.
+
+![Thumbnail](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image6.png "Thumbnail")
 
 ## Reference
 - [Installing or updating to the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
