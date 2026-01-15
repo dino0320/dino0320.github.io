@@ -1,13 +1,16 @@
 ---
 layout: my-post
-title: "LinuxでAWS CLIをインストールする"
+title: "LinuxにAWS CLI v2をインストールする方法"
 date: 2025-07-19 00:00:00 +0000
 categories: aws cli
 page_name: install-aws-cli-on-linux
 lang: ja
+image: /assets/images/aws/cli/install-aws-cli-on-linux/image1.png
 ---
 
 この記事では、UbuntuにAWS CLIをインストールする方法を説明します。
+
+![サムネイル](/assets/images/{{ page.categories[0] }}/{{ page.categories[1] }}/{{ page.page_name }}/image1.png "サムネイル")
 
 ## 参考
 - [Installing or updating to the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
