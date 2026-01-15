@@ -1,6 +1,6 @@
 ---
 layout: my-post
-title: "LinuxにAWS CLI v2をインストールする方法"
+title: "UbuntuにAWS CLI v2をインストールする方法"
 date: 2025-07-19 00:00:00 +0000
 categories: aws cli
 page_name: install-aws-cli-on-linux
