@@ -37,10 +37,10 @@ Laravelプロジェクトのディレクトリ以下で下記の設定ファイ�
 記載方法について、Laravelプロジェクトのルートディレクトリをルートディレクトリ(`/`)とします。
 
 ### nginx.repo
-Amazon Linux 2023用にyumリポジトリをセットアップするための設定ファイルです。[こちら](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-prebuilt-amazon-linux-packages)を参考にしています。  
-`docker/web/nginx` ディレクトリに作成します。
+Amazon Linux 2023用にyumリポジトリをセットアップするための設定ファイルです。[こちら](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#amazon-linux-2023-packages)を参考にしています。  
+`/docker/web/nginx` ディレクトリに作成します。
 
-`docker/web/nginx/nginx.repo` :
+`/docker/web/nginx/nginx.repo` :
 ```
 [nginx-stable]
 name=nginx stable repo
@@ -62,9 +62,9 @@ module_hotfixes=true
 ### default.conf
 LaravelプロジェクトのためのNGINXの設定ファイルです。[こちら](https://laravel.com/docs/11.x/deployment#nginx)を参考にしています。  
 `server_name` を `localhost` に変更しています。動作確認が目的なので、少し変更を加えるだけにしています。  
-`docker/web/nginx/conf.d` ディレクトリに作成します。
+`/docker/web/nginx/conf.d` ディレクトリに作成します。
 
-`docker/web/nginx/conf.d/default.conf` :
+`/docker/web/nginx/conf.d/default.conf` :
 ```conf
 server {
     listen 80;
@@ -102,9 +102,9 @@ server {
 
 ### zzz-www.conf
 php-fpmの追加の設定ファイルです。実行ユーザーとグループを `nginx` にし、`.sock` ファイルのパスを上書きするために作成します。  
-`docker/web/php/php-fpm.d` ディレクトリに作成します。
+`/docker/web/php/php-fpm.d` ディレクトリに作成します。
 
-`docker/web/php/php-fpm.d/zzz-www.conf` :
+`/docker/web/php/php-fpm.d/zzz-www.conf` :
 ```conf
 [www]
 user = nginx
@@ -120,7 +120,7 @@ Laravelプロジェクトのディレクトリ以下に下記の設定ファイ�
 Docker Composeの設定ファイルです。  
 プロジェクトのルートディレクトリに作成します。
 
-`docker-compose.yml` :
+`/docker-compose.yml` :
 ```yml
 services:
   web:
@@ -135,9 +135,9 @@ services:
 ### Dockerfile
 webのDockerfileです。(NGINX + php-fpmをインストールするDockerコンテナ)  
 Dockerイメージは、今回は後でAWSにデプロイすることを考えて `amazonlinux` にしています。  
-`docker/web` ディレクトリに作成します。
+`/docker/web` ディレクトリに作成します。
 
-`docker/web/Dockerfile` :
+`/docker/web/Dockerfile` :
 ```dockerfile
 FROM amazonlinux:2023
 
@@ -157,9 +157,9 @@ COPY php/php-fpm.d/zzz-www.conf /etc/php-fpm.d/zzz-www.conf
 
 ### start.sh
 Dockerコンテナ起動時に実行される `start.sh` を作成します。  
-`docker/web` ディレクトリに作成します。
+`/docker/web` ディレクトリに作成します。
 
-`docker/web/start.sh`:
+`/docker/web/start.sh`:
 
 ```sh
 #!/bin/bash

@@ -38,10 +38,10 @@ In this explanation, the root directory of the Laravel project is referred to as
 
 ### nginx.repo
 This configuration file sets up a YUM repository for Amazon Linux 2023.  
-Based on [this guide](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#installing-prebuilt-amazon-linux-packages).
-Create this file in the `docker/web/nginx` directory.
+Based on [this guide](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/#amazon-linux-2023-packages).
+Create this file in the `/docker/web/nginx` directory.
 
-`docker/web/nginx/nginx.repo` :
+`/docker/web/nginx/nginx.repo` :
 ```
 [nginx-stable]
 name=nginx stable repo
@@ -63,9 +63,9 @@ module_hotfixes=true
 ### default.conf
 This is the NGINX configuration file for the Laravel project, based on [this official documentation](https://laravel.com/docs/11.x/deployment#nginx).  
 We only change it as setting `server_name` to `localhost` as this is for testing.  
-Create this file in the `docker/web/nginx/conf.d` directory.
+Create this file in the `/docker/web/nginx/conf.d` directory.
 
-`docker/web/nginx/conf.d/default.conf` :
+`/docker/web/nginx/conf.d/default.conf` :
 ```conf
 server {
     listen 80;
@@ -103,9 +103,9 @@ server {
 
 ### zzz-www.conf
 This is an additional PHP-FPM configuration file used to set the user and group to `nginx` and to override the `.sock` file path.  
-Create this file in the `docker/web/php/php-fpm.d` directory.
+Create this file in the `/docker/web/php/php-fpm.d` directory.
 
-`docker/web/php/php-fpm.d/zzz-www.conf` :
+`/docker/web/php/php-fpm.d/zzz-www.conf` :
 ```conf
 [www]
 user = nginx
@@ -136,9 +136,9 @@ services:
 ### Dockerfile
 This is the Dockerfile for the web service (NGINX + PHP-FPM).  
 We're using the `amazonlinux` base image with future AWS deployment in mind.  
-Create this file in the `docker/web` directory.
+Create this file in the `/docker/web` directory.
 
-`docker/web/Dockerfile` :
+`/docker/web/Dockerfile` :
 ```dockerfile
 FROM amazonlinux:2023
 
@@ -158,9 +158,9 @@ COPY php/php-fpm.d/zzz-www.conf /etc/php-fpm.d/zzz-www.conf
 
 ### start.sh
 Create `start.sh` which runs when the Docker container starts.  
-Create this file in the `docker/web` directory.
+Create this file in the `/docker/web` directory.
 
-`docker/web/start.sh`:
+`/docker/web/start.sh`:
 
 ```sh
 #!/bin/bash
