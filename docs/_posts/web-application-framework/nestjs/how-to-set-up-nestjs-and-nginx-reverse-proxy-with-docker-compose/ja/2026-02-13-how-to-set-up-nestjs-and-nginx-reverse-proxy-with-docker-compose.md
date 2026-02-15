@@ -3,9 +3,9 @@ layout: my-post
 title: "Docker ComposeでNestJS + Nginxのリバースプロキシ構成を作る方法"
 date: 2026-02-13 00:00:00 +0000
 categories: web-application-framework nestjs
-page_name: how_to_set_up_nestjs_and_nginx_reverse_proxy_with_docker_compose
+page_name: how-to-set-up-nestjs-and-nginx-reverse-proxy-with-docker-compose
 lang: ja
-image: /assets/images/web-application-framework/nestjs/how_to_set_up_nestjs_and_nginx_reverse_proxy_with_docker_compose/image1.png
+image: /assets/images/web-application-framework/nestjs/how-to-set-up-nestjs-and-nginx-reverse-proxy-with-docker-compose/image1.png
 ---
 
 Docker Composeを使用してリバースプロキシ構成のNestJS + Nginx環境を構築する方法をまとめました。

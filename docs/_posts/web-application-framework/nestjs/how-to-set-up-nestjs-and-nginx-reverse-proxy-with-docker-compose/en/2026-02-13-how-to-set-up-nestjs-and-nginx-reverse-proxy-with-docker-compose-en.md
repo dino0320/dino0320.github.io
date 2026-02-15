@@ -3,9 +3,9 @@ layout: my-post
 title: "How to Set Up a NestJS + Nginx Reverse Proxy with Docker Compose"
 date: 2026-02-13 00:00:00 +0000
 categories: web-application-framework nestjs
-page_name: how_to_set_up_nestjs_and_nginx_reverse_proxy_with_docker_compose-en
+page_name: how-to-set-up-nestjs-and-nginx-reverse-proxy-with-docker-compose-en
 lang: en
-image: /assets/images/web-application-framework/nestjs/how_to_set_up_nestjs_and_nginx_reverse_proxy_with_docker_compose-en/image1.png
+image: /assets/images/web-application-framework/nestjs/how-to-set-up-nestjs-and-nginx-reverse-proxy-with-docker-compose-en/image1.png
 ---
 
 In this article, we'll set up a NestJS + Nginx environment using a reverse proxy with Docker Compose.
