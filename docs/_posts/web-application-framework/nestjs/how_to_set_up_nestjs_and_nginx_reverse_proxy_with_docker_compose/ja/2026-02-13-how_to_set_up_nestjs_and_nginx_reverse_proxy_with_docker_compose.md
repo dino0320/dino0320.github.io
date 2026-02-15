@@ -10,9 +10,6 @@ image: /assets/images/web-application-framework/nestjs/how_to_set_up_nestjs_and_
 
 Docker Composeを使用してリバースプロキシ構成のNestJS + Nginx環境を構築する方法をまとめました。
 
-*この構成は開発を目的としています。*  
-*本番環境では、NginxとNestJSアプリケーションを別々のコンテナに分離し、適切なプロセス管理を行うことを推奨します。*
-
 *本記事では、AWS環境との整合性を保ち、OSレベルで柔軟なカスタマイズを可能にするため、Amazon Linuxをベースイメージとして使用しています。*  
 *一般的には公式のNode.jsやNginxイメージが利用されますが、本構成ではよりインフラ寄りのアプローチを採用しています。*
 
@@ -208,7 +205,9 @@ set -euxo pipefail
 # nginxユーザーをrootグループに追加（アクセス権限のため）
 usermod -aG root nginx
 
-# npmパッケージをインストールする
+# nvmをロードしnpmパッケージをインストールする
+cd /srv/example.com
+source ~/.bashrc
 npm ci
 
 # Nginxを起動する

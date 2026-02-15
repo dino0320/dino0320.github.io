@@ -10,9 +10,6 @@ image: /assets/images/web-application-framework/nestjs/how_to_set_up_nestjs_and_
 
 In this article, we'll set up a NestJS + Nginx environment using a reverse proxy with Docker Compose.
 
-*This setup is intended for development purposes.*  
-*For production environments, it is recommended to separate Nginx and the NestJS application into different containers and use proper process management.*
-
 *This project uses Amazon Linux as the base image to align with AWS environments and to allow flexible OS-level customization.*  
 *While official Node.js or Nginx images are commonly used in production, this setup reflects a more infrastructure-oriented approach.*
 
@@ -207,7 +204,9 @@ set -euxo pipefail
 # Add the nginx user to the root group for permission access.
 usermod -aG root nginx
 
-# Install npm packages
+# Load nvm and install npm packages
+cd /srv/example.com
+source ~/.bashrc
 npm ci
 
 # Start Nginx
