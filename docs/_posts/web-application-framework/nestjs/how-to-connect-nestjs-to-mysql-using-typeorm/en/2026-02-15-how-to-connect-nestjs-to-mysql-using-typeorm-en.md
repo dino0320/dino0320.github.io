@@ -1,7 +1,7 @@
 ---
 layout: my-post
 title: "How to Connect NestJS to MySQL Using TypeORM (With Example Implementation)"
-date: 2026-02-16 00:00:00 +0000
+date: 2026-02-15 00:00:00 +0000
 categories: web-application-framework nestjs
 page_name: how-to-connect-nestjs-to-mysql-using-typeorm-en
 lang: en
