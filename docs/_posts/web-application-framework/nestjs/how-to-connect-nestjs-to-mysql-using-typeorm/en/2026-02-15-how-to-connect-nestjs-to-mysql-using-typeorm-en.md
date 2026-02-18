@@ -107,11 +107,15 @@ export const getDatabaseConfig = () => ({
   username: process.env.DATABASE_USERNAME,
   password: process.env.DATABASE_PASSWORD,
   database: process.env.DATABASE_DATABASE,
+  synchronize: true,
 })
 ```
 
 Since I use this configuration outside the NestJS application (for example, in TypeORM migrations), I defined a `getDatabaseConfig` function so that the configuration can be accessed from anywhere.  
 If you only use it in your NestJS application, it's fine to define only a `registerAs` method to load it in `app.module.ts`.
+
+If `synchronize` is set to `true`, database tables are automatically generated from entities, which makes development easier.  
+In a production environment, it is recommended to set it to `false`.
 
 ## 4. Configure ConfigModule
 To load the MySQL configuration into the global `process.env`.  
@@ -171,7 +175,7 @@ import databaseConfig from './config/database.config';
         username: configService.get<string>('database.username'),
         password: configService.get<string>('database.password'),
         database: configService.get<string>('database.database'),
-        synchronize: true,
+        synchronize: configService.get<boolean>('database.synchronize'),
         autoLoadEntities: true,
       }),
       inject: [ConfigService],
@@ -185,9 +189,6 @@ export class AppModule {}
 ```
 
 As mentioned above, you do not need to add `imports: [ConfigModule]` as long as `isGlobal` is set to `true`.
-
-If `synchronize` is set to `true`, database tables are automatically generated from entities, which makes development easier.  
-In a production environment, it is recommended to set it to `false`.
 
 ## 6. Verify Database Connection
 Now let's verify the database connection.

@@ -107,11 +107,15 @@ export const getDatabaseConfig = () => ({
   username: process.env.DATABASE_USERNAME,
   password: process.env.DATABASE_PASSWORD,
   database: process.env.DATABASE_DATABASE,
+  synchronize: true,
 })
 ```
 
 TypeORMのマイグレーションなど、NestJSアプリケーション外でもこの設定を使用するためどこからでも参照できるように `getDatabaseConfig` 関数を定義しています。  
 NestJSアプリケーション内のみで使用する場合は `registerAs` のみを定義し `app.module.ts` で読み込めば問題ありません。
+
+`synchronize` を `true` に設定すると、エンティティから自動的にデータベーステーブルが生成されるため開発が容易になります。  
+本番環境では `false` に設定することを推奨します。
 
 ## 4. ConfigModuleを設定する
 MySQL設定をグローバルの `process.env` に読み込むため `src/app.module.ts` を以下のように編集します。
@@ -170,7 +174,7 @@ import databaseConfig from './config/database.config';
         username: configService.get<string>('database.username'),
         password: configService.get<string>('database.password'),
         database: configService.get<string>('database.database'),
-        synchronize: true,
+        synchronize: configService.get<boolean>('database.synchronize'),
         autoLoadEntities: true,
       }),
       inject: [ConfigService],
@@ -184,9 +188,6 @@ export class AppModule {}
 ```
 
 前述のとおり、`isGlobal` を `true` に設定していれば `imports: [ConfigModule]` を追加する必要はありません。
-
-`synchronize` を `true` に設定すると、エンティティから自動的にデータベーステーブルが生成されるため開発が容易になります。  
-本番環境では `false` に設定することを推奨します。
 
 ## 6. データベース接続を確認する
 データベース接続を確認します。
