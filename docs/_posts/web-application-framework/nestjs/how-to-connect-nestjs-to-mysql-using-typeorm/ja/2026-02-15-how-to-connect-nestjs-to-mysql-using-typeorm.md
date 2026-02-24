@@ -41,12 +41,12 @@ TypeORMはTypeScriptまたはJavaScriptでデータベースを扱うためのOR
 NestJSとNGINXの構築方法については「[Docker ComposeでNestJS + Nginxのリバースプロキシ構成を作る方法](/web-application-framework/nestjs/how-to-set-up-nestjs-and-nginx-reverse-proxy-with-docker-compose)」を参照してください。
 
 ## セットアップ手順
-1. [Create MySQL Docker Container](#1-create-mysql-docker-container)
-2. [Install Config and TypeORM](#2-install-config-and-typeorm)
-3. [Configure MySQL](#3-configure-mysql)
-4. [Configure ConfigModule](#4-configure-configmodule)
-5. [Configure TypeORM](#5-configure-typeorm)
-6. [Verify Database Connection](#6-verify-database-connection)
+1. [MySQLのDockerコンテナを作成する](#1-mysqlのdockerコンテナを作成する)
+2. [ConfigとTypeORMをインストールする](#2-configとtypeormをインストールする)
+3. [MySQLを設定する](#3-mysqlを設定する)
+4. [ConfigModuleを設定する](#4-configmoduleを設定する)
+5. [TypeORMを設定する](#5-typeormを設定する)
+6. [データベース接続を確認する](#6-データベース接続を確認する)
 
 ## 1. MySQLのDockerコンテナを作成する
 MySQL用のDockerコンテナを作成します。  
