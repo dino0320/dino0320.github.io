@@ -4,7 +4,7 @@ title: "NestJSでMySQLに接続する方法【TypeORMで実装例付き】"
 date: 2026-02-15 00:00:00 +0000
 categories: web-application-framework nestjs
 page_name: how-to-connect-nestjs-to-mysql-using-typeorm
-lang: en
+lang: ja
 image: /assets/images/web-application-framework/nestjs/how-to-connect-nestjs-to-mysql-using-typeorm/image1.png
 ---
 
